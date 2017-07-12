@@ -62,7 +62,7 @@ def stopWords(stop_words_path):
 
 if __name__ == '__main__':
 
-    #
+    # first convert encoding
     # cat news_sohusite_xml.dat | iconv -f gbk -t utf-8 -c > news_sohusite_xml.full.txt
 
     data_dir_path = 'E:/2017_Deep_learning/text classification/sougou_corpus'
