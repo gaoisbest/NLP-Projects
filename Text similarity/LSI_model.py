@@ -28,7 +28,7 @@ class sogou_corpus_file(object):
 if __name__ == '__main__':
 
     # training_file_path = 'E:/2017_Deep_learning/text similarity'
-    training_file_path = './'
+    training_file_path = './sogou_corpus'
 
     # Lsi model
     dictionary = Dictionary()
