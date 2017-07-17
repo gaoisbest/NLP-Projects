@@ -27,7 +27,7 @@ if __name__ == '__main__':
 
     #training_file_path = 'E:/2017_Deep_learning/text similarity'
 
-    training_file_path = './'
+    training_file_path = './sogou_corpus'
     training_file = sogou_corpus(os.path.join(training_file_path, 'sohu_text_similarity_training.corpus'))
 
     # build model
