@@ -1,5 +1,3 @@
-Simple codes about using gensim.
-
 # Example of word representations
 
 ```
@@ -62,4 +60,6 @@ The results of window size **2** and **both** direction:
 * applying SVD
 
 
+## Word2vec
+Visualization tool: https://ronxin.github.io/wevi/
 
