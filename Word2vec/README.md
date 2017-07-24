@@ -7,6 +7,11 @@ Document 1: I like drinking water. They also like drinking water.
 
 Document 2: They like drinking coffee.
 ```
+## One-hot vector
+Represent every word as |V|*1 vector, with one denotes the word index, and others are all 0.
+
+#### Pros and cons
+* Dot product of any two word vectors is zero, therefore, one-hot vector can not tell the similarity.
 
 ## Count vector
 
@@ -16,6 +21,7 @@ Document 2: They like drinking coffee.
 |Document 2| 0    |      1        |      1     |        0       |      1        |      1       |     0        |
 
 #### Pros and cons
+* Ignore the word order
 * sparsity
 * only selecting top frequency words
 
