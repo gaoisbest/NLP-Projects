@@ -67,7 +67,10 @@ The results of window size **2** and **both** direction:
 
 
 ## Word2vec
-Visualization tool: https://ronxin.github.io/wevi/
+### Distributional hypothesis
+**Similar words have similar context.**
+
+### Visualization tool: https://ronxin.github.io/wevi/
 
 
 Reference:
