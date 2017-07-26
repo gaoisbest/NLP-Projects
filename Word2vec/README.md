@@ -21,9 +21,9 @@ Represent every word as |V|*1 vector, with one denotes the word index, and other
 |Document 2| 0    |      1        |      1     |        0       |      1        |      1       |     0        |
 
 #### Pros and cons
-* Ignore the word order
-* sparsity
-* only selecting top frequency words
+* High dimension (#Vocabulary size * #Corpus size) and sparsity
+* Ignore the word order 
+* Filter low frequency words
 
 ## TF-IDF
 
@@ -40,7 +40,7 @@ Represent every word as |V|*1 vector, with one denotes the word index, and other
 
 
 #### Pros and cons
-Penalising common words that appeared in the corpus.
+* Penalising common words that appeared in the corpus.
 
 ## Co-occurence matrix
 
@@ -69,3 +69,7 @@ The results of window size **2** and **both** direction:
 ## Word2vec
 Visualization tool: https://ronxin.github.io/wevi/
 
+
+Reference:
+
+http://web.stanford.edu/class/cs224n/lecture_notes/cs224n-2017-notes1.pdf
