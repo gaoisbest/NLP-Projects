@@ -67,8 +67,18 @@ The results of window size **2** and **both** direction:
 
 
 ## Word2vec
+
 ### Distributional hypothesis
 **Similar words have similar context.**
+
+### Subsampling
+Frequent words (such as the, and) are [subsampling](http://mccormickml.com/2017/01/11/word2vec-tutorial-part-2-negative-sampling/) .
+For each word in one sentence, it can be deleted or not according its frequency. And the hyper-parameter sampling rate (i.e., `sample` in [gensim](https://radimrehurek.com/gensim/models/word2vec.html) `Word2Vec`, default value is `1e-3`)
+
+
+### Negative Sampling
+Negative samples are selected proportional to its frequency (`f(w)^3/4`).
+
 
 ### Visualization tool: https://ronxin.github.io/wevi/
 
