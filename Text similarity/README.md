@@ -4,6 +4,13 @@
 * Model principles: during training, concatenate the paragraph vector with several word vectors from a paragraph and predict the following word in the given context. While paragraph vectors are unique among paragraphs, the word vectors are shared. At
 prediction time, the paragraph vectors are inferred by fixing the word vectors and training the new paragraph vector until convergence.
 * For PV-DM: using concatenation in PV-DM is often better than sum.
+
+![PV-DM](https://github.com/gaoisbest/NLP-Projects/blob/master/Text%20similarity/PV-DM.png)
+
+* For PV-DBOW:
+
+![PV-DBOW](https://github.com/gaoisbest/NLP-Projects/blob/master/Text%20similarity/PV-DBOW.png)
+
 * BOW features lose the ordering of the words and also ignore semantics of the words (Dot product of any two word vector is zero). Word vector concatenation reserve the word order.
 * Weighted averaging of word vectors loses the word order in the same way as the standard bag-of-words models do.
 * For long documents, bag-of-words models perform quite well.
