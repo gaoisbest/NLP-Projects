@@ -67,6 +67,7 @@ The results of window size **2** and **both** direction:
 
 
 ## Word2vec
+**The word orders are ignored in each window.**
 
 ### Distributional hypothesis
 **Similar words have similar context.**
