@@ -1,4 +1,13 @@
 
+# Notes of paper: Distributed Representations of Sentences and Documents
+* Two models are proposed: **PV-DM (Paragraph Vector-Distributed Memory) and PV-DBOW (Paragraph Vector-Distributed Bag of Words). PV-DM just likes CBOW in Word2vec and PV-DBOW just likes Skip-gram in Word2vec**. PV-DM is consistently better than PV-DBOW. 
+* Model principles: during training, concatenate the paragraph vector with several word vectors from a paragraph and predict the following word in the given context. While paragraph vectors are unique among paragraphs, the word vectors are shared. At
+prediction time, the paragraph vectors are inferred by fixing the word vectors and training the new paragraph vector until convergence.
+* For PV-DM: using concatenation in PV-DM is often better than sum.
+* BOW features lose the ordering of the words and also ignore semantics of the words (Dot product of any two word vector is zero). Word vector concatenation reserve the word order.
+* Weighted averaging of word vectors loses the word order in the same way as the standard bag-of-words models do.
+* For long documents, bag-of-words models perform quite well.
+
 # Cosine similarity
 
 ```
