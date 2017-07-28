@@ -80,6 +80,12 @@ For each word in one sentence, it can be deleted or not according its frequency.
 ### Negative Sampling
 Negative samples are selected proportional to its frequency (`f(w)^3/4`).
 
+### [Comparisons of HS and SG](https://code.google.com/archive/p/word2vec/) :
+* skip-gram (slower, better for infrequent words) vs CBOW (fast)
+* hierarchical softmax (better for infrequent words) vs negative sampling (better for frequent words, better with low dimensional vectors), [why](https://stats.stackexchange.com/questions/180076/why-is-hierarchical-softmax-better-for-infrequent-words-while-negative-sampling)?
+* sub-sampling of frequent words: can improve both accuracy and speed for large data sets (useful values are in range 1e-3 to 1e-5), [why](https://www.quora.com/How-does-sub-sampling-of-frequent-words-work-in-the-context-of-Word2Vec)?
+* dimensionality of the word vectors: usually more is better, but not always
+* context (window) size: for skip-gram usually around 10, for CBOW around 5
 
 ### Visualization tool: https://ronxin.github.io/wevi/
 
