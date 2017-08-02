@@ -63,9 +63,13 @@ The results of window size **2** and **both** direction:
 
 #### Pros and cons
 * high dimension
-* ![applying SVD](https://github.com/gaoisbest/NLP-Projects/blob/master/Word2vec/svd.png)
-
+* applying SVD
 ```
+# input texts
+# 1. I enjoy flying.
+# 2. I like NLP.
+# 3. I like deep learning.
+
 %matplotlib inline
 import numpy as np
 import matplotlib.pyplot as plt
@@ -89,6 +93,8 @@ for i in range(len(words)):
     plt.ylim((-1,1))
     plt.text(U[i, 0], U[i, 1], words[i])
 ```
+
+![applying SVD](https://github.com/gaoisbest/NLP-Projects/blob/master/Word2vec/svd.png)
 
 
 ## Word2vec
