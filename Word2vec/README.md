@@ -88,7 +88,7 @@ Negative samples are selected proportional to its frequency (`f(w)^3/4`).
 * context (window) size: for skip-gram usually around 10, for CBOW around 5
 
 ### Implementation
-I did a very simple performance comparsion of [gensim](https://radimrehurek.com/gensim/models/word2vec.html) and [fastText](https://github.com/facebookresearch/fastText) based on the same hyper-parameters, the results of gensim seems little better than that of fastText (with no n-gram).
+I did a very simple performance comparsion of [gensim](https://radimrehurek.com/gensim/models/word2vec.html) and [fastText](https://github.com/facebookresearch/fastText) based on the same hyper-parameters, the results of gensim seems little better than that of fastText (without n-gram).
 
 `gensim_Word2vec_cbow_hs_model_test.py`: gensim based on cbow model and hierarchical softmax trick.
 
