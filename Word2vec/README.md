@@ -87,6 +87,19 @@ Negative samples are selected proportional to its frequency (`f(w)^3/4`).
 * dimensionality of the word vectors: usually more is better, but not always
 * context (window) size: for skip-gram usually around 10, for CBOW around 5
 
+### Implementation
+I did a very simple performance comparsion of [gensim](https://radimrehurek.com/gensim/models/word2vec.html) and [fastText](https://github.com/facebookresearch/fastText) based on the same hyper-parameters, the results of gensim seems little better than that of fastText (with no n-gram).
+
+`gensim_Word2vec_cbow_hs_model_test.py`: gensim based on cbow model and hierarchical softmax trick.
+
+`gensim_Word2vec_sg_ns_model_test.py`: gensim based on skipgram model and negative sampling trick.
+
+`fastText_Word2vec_cbow_hs_model_test.bash`: fastText based on cbow model and hierarchical softmax trick.
+
+`fastText_Word2vec_sg_ns_model_test.bash`: fastText based on skipgram and negative sampling trick.
+
+The input of the about sripts is [word_vector_108000.cs](https://pan.baidu.com/s/1i5Jy4lv), which contains 108,000 documents (15,000 training data and 3,000 testing data for each category, and 6 category in total).
+
 ### Visualization tool: https://ronxin.github.io/wevi/
 
 
