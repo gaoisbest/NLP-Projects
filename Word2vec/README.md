@@ -63,7 +63,32 @@ The results of window size **2** and **both** direction:
 
 #### Pros and cons
 * high dimension
-* applying SVD
+* ![applying SVD](https://github.com/gaoisbest/NLP-Projects/blob/master/Word2vec/svd.png)
+
+```
+%matplotlib inline
+import numpy as np
+import matplotlib.pyplot as plt
+
+words = ['I', 'like', 'enjoy', 'deep', 'learning', 'NLP', 'flying', '.']
+
+word_cooccur_matrix = np.array(
+    [[0, 2, 1, 0, 0, 0, 0, 0],
+    [2, 0, 0, 1, 0, 1, 0, 0],
+    [1, 0, 0, 0, 0, 0, 1, 0],
+    [0, 1, 0, 0, 1, 0, 0, 0],
+    [0, 0, 0, 1, 0, 0, 0, 1],
+    [0, 1, 0, 0, 0, 0, 0, 1],
+    [0, 0, 1, 0, 0, 0, 0, 1],
+    [0, 0, 0, 0, 1, 1, 1, 0]])
+
+U, s, V = np.linalg.svd(word_cooccur_matrix)
+
+for i in range(len(words)):
+    plt.xlim((-1, 1))
+    plt.ylim((-1,1))
+    plt.text(U[i, 0], U[i, 1], words[i])
+```
 
 
 ## Word2vec
