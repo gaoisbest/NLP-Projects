@@ -1,3 +1,6 @@
+# Simple word segmentation script based on Viterbi
+To do...
+
 # Available python tools
 
 * [pyltp](https://github.com/HIT-SCIR/pyltp)
