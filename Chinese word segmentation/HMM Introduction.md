@@ -57,7 +57,7 @@ The probabilities are in `log` scale, and the values are from [jieba](https://gi
 |    S     |-0.7211965654669841| -3.14e+100        |      -3.14e+100    |-0.6658631448798212|
 
 ## Observation sequence generation probability matrix `B` of each hidden states (top 3)
-
+The probabilities are in `log` scale, and the values are from [jieba](https://github.com/fxsjy/jieba/blob/master/jieba/finalseg/prob_emit.p).
 
 |          |      一     |      不     |      中     |
 |   :---:  |  :---:      |      :---:  |     :---:   |
