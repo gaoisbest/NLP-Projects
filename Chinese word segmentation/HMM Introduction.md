@@ -11,7 +11,7 @@ Hidden Markov chain generate **hidden states**, and each hidden state generate o
 - Observation sequence generation probability matrix `B`(shape: [N*M]).
 
 # Hypothesis:
-- Hidden state probability distribution at time `t` is only depends on hidden states at time `t-1`. 马尔科夫假设
+- Hidden state probability distribution at time `t` is only depends on hidden states at time `t-1`.
 - Observation at time `t` is only created by hidden states at time `t`.
 
 
