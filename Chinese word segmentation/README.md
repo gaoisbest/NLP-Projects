@@ -1,5 +1,5 @@
-# Simple word segmentation script based on Viterbi
-To do...
+# Simple word segmentor
+* [HMM](https://github.com/gaoisbest/NLP-Projects/blob/master/Chinese%20word%20segmentation/HMM_viterbi_word_segmentor.py)
 
 # Available python tools
 
