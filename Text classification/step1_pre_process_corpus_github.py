@@ -63,7 +63,7 @@ def stopWords(stop_words_path):
 if __name__ == '__main__':
 
     # first convert encoding
-    # cat news_sohusite_xml.dat | iconv -f gbk -t utf-8 -c > news_sohusite_xml.full.txt
+    # cat news_sohusite_xml.dat | iconv -f gbk -t utf-8 -c > news_sohusite_xml.full
 
     data_dir_path = 'E:/2017_Deep_learning/text classification/sougou_corpus'
 
@@ -90,7 +90,7 @@ if __name__ == '__main__':
     category_articles = {}
     cc = 0
 
-    for dirpath, dirnames, filenames in os.walk(os.path.join(data_dir_path, 'news_sohusite_xml.full.txt')):
+    for dirpath, dirnames, filenames in os.walk(os.path.join(data_dir_path, 'news_sohusite_xml.full')):
         for each_file in filenames:
             # naive for loop to parse file
             print os.path.join(dirpath, each_file)
