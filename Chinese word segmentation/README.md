@@ -1,5 +1,5 @@
 # Simple word segmentor
-* [HMM](https://github.com/gaoisbest/NLP-Projects/blob/master/Chinese%20word%20segmentation/HMM%20Introduction.md)
+* [HMM](https://github.com/gaoisbest/NLP-Projects/blob/master/Chinese%20word%20segmentation/HMM_viterbi_word_segmentor.py)
 * CRF (to do...)
 # Available python tools
 
