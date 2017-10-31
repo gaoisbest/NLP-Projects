@@ -17,6 +17,27 @@ The above edited image is from [1] shows the model architecture.
 For embedding layer, **CNN** (to extract morphological information, such as prefix or suffix [3]) or **bi-directional LSTM** [4] can be used to obtain character representation. As to the performance, they have **no significant difference** [1]. See the image from [1] below:  
 ![](https://github.com/gaoisbest/NLP-Projects/blob/master/Sequence%20labeling%20-%20NER/Character_representation.png)
 
+### Model formula
+For an input sequence `X`, which has `n` characters (i.e., ranges from `0` to `n-1`), and it has been padded with the `start` and `end` symbols.  
+$$X = (start, x_{0}, x_{1}, x_{2}, ..., x_{n-1}, end)$$  
+
+For the sequence predictions `y`, which also been padded with the `start_tag` and `end_tag`.  
+$$y = (start_tag, y_{0}, y_{1}, y_{2}, ..., y_{n-1}, end_tag)$$  
+
+Paper [4] define its score to be  
+$$s(X, y) = \sum\limits_{i = -1}^{n} A_{yi, yi+1} + \sum\limits_{i=-1}^{n} P_{i, yi}$$  
+
+`P` (shape of [n+2, k+2], 2 means the padded sequence and tags) is the score matrix output by the bi-directional LSTM. And $P_{i,j}$ is the score of the $j^{th}$ tag of $i^{th}$ character.  
+`A` is the tag transition score matrix. And $A_{i,j}$ means the transition score from the tag $i$ to tag $j$.  
+
+The softmax over all possible tag sequences gives the probability for the sequence $y$:  
+$$p(y|X) = \frac{e^{s(X, y)}}{\sum\limits_{y_{tmp} \in Y_X} e^{s(X, y_{tmp})}}$$  
+
+The goal is maximizing the log-probability of the correct tag sequence:  
+$$\log p(y|X) = s(X,y) - \log\large{(}\sum\limits_{y_{tmp} \in Y_X} e^{s(X, y_{tmp})} \large{)}$$  
+
+This can be solved by Forward-Backward (for computing probability) and Viterbi (for decoding best tags) algorithms.
+
 ### Model parameters
 - Word embeddings
 - Tags transition matrix `A`
