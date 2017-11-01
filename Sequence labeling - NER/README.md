@@ -60,7 +60,7 @@ For example, if the input sentence is 'I bought a Li Ning (李宁) hat yesterday
 
 There are total eight categories here (i.e., shoe, digital, jewelry, bag, facial mask, watch, clothes, wine) and each category contains several brands.  
 
-The initial source codes are from [5], I revised the codes as follows:  
+The initial source codes are from [5], which uses the character embedding and word embedding as model input. I revised the codes as follows:  
 - Add `end_logits` relevant codes in `cost_layer` function in `model.py`, which gives a relative better F1 score. For more details, please see my answer to the [issue](https://github.com/zjy-ucas/ChineseNER/issues/10).
 - Add `softmax` classifier besides `CRF` classifier. Although `CRF` classifier gives better results, I add `softmax` classifier here.
 - Add `tf.summary` and detailed code comments.
