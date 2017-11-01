@@ -55,7 +55,9 @@ However, part of model parameters or hyper-parameters are more important, paper 
 
 # Implementation
 Here, I focus on **brands** NER. For shoes, li Ning (李宁), adidas, nike are brands. For jewelry, ross or 周生生 are brands. So, my goal is finding the brands mentioned in the sentence.  
-For example, if the input sentence is 'I bought a Li Ning (李宁) hat yesterday', then the model will recognize Li Ning (李宁) as the brand.  
+
+For example, if the input sentence is 'I bought a Li Ning (李宁) hat yesterday', then the model will recognize Li Ning (李宁) as the brand.  
+
 There are total eight categories here (i.e., shoe, digital, jewelry, bag, facial mask, watch, clothes, wine) and each category contains several brands.  
 
 The initial source codes are from [5], I revised the codes as follows:  
