@@ -54,11 +54,20 @@ However, part of model parameters or hyper-parameters are more important, paper 
   - Tagging schema: IOBES
 
 # Implementation
-Here, I focus on **brands** NER.  
-For example, if the input sentence is 'I bought a Li Ning hat yesterday', then the model will recognize Li Ning as the brand.
+Here, I focus on **brands** NER. For shoes, li Ning (李宁), adidas, nike are brands. For jewelry, ross or 周生生 are brands. So, my goal is finding the brands mentioned in the sentence.  
+For example, if the input sentence is 'I bought a Li Ning (李宁) hat yesterday', then the model will recognize Li Ning (李宁) as the brand.  
+There are total eight categories here (i.e., shoe, digital, jewelry, bag, facial mask, watch, clothes, wine) and each category contains several brands.  
+
+The initial source codes are from [5], I revised the codes as follows:  
+- Add `end_logits` relevant codes in `cost_layer` function in `model.py`, which gives a relative better F1 score. For more details, please see my answer to the [issue](https://github.com/zjy-ucas/ChineseNER/issues/10).
+- Add `softmax` classifier besides `CRF` classifier. Although `CRF` classifier gives better results, I add `softmax` classifier here.
+- Add `tf.summary` and detailed code comments.
+
+## Example results
 
 # References
 [1] [Optimal Hyperparameters for Deep LSTM-Networks for Sequence Labeling Tasks](https://arxiv.org/pdf/1707.06799.pdf) and [implementation](https://github.com/UKPLab/emnlp2017-bilstm-cnn-crf)  
 [2] https://guillaumegenthial.github.io/sequence-tagging-with-tensorflow.html  
 [3] [End-to-end Sequence Labeling via Bi-directional LSTM-CNNs-CRF](https://arxiv.org/pdf/1603.01354.pdf)  
 [4] [Neural Architectures for Named Entity Recognition](https://arxiv.org/pdf/1603.01360.pdf)
+[5] [ChineseNER](https://github.com/zjy-ucas/ChineseNER)
