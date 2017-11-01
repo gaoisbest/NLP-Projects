@@ -64,12 +64,14 @@ The initial source codes are from [5], I revised the codes as follows:
 - Add `end_logits` relevant codes in `cost_layer` function in `model.py`, which gives a relative better F1 score. For more details, please see my answer to the [issue](https://github.com/zjy-ucas/ChineseNER/issues/10).
 - Add `softmax` classifier besides `CRF` classifier. Although `CRF` classifier gives better results, I add `softmax` classifier here.
 - Add `tf.summary` and detailed code comments.
+### Data
+The brands NER training data are from crawled Weibo. Please see sample training, development and testing data in `data` folder for input format.
 
-## Example results
+### Example results
 
 # References
 [1] [Optimal Hyperparameters for Deep LSTM-Networks for Sequence Labeling Tasks](https://arxiv.org/pdf/1707.06799.pdf) and [implementation](https://github.com/UKPLab/emnlp2017-bilstm-cnn-crf)  
 [2] https://guillaumegenthial.github.io/sequence-tagging-with-tensorflow.html  
 [3] [End-to-end Sequence Labeling via Bi-directional LSTM-CNNs-CRF](https://arxiv.org/pdf/1603.01354.pdf)  
-[4] [Neural Architectures for Named Entity Recognition](https://arxiv.org/pdf/1603.01360.pdf)
+[4] [Neural Architectures for Named Entity Recognition](https://arxiv.org/pdf/1603.01360.pdf)  
 [5] [ChineseNER](https://github.com/zjy-ucas/ChineseNER)
