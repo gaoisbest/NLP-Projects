@@ -3,7 +3,7 @@ import os
 import codecs
 from gensim.models import Word2Vec
 
-class sogou_corpus_file(object):
+class SogouCorpusFile(object):
     """read corpus file
     """
     def __init__(self, fname):
@@ -15,7 +15,7 @@ class sogou_corpus_file(object):
 training_file_path = os.path.join('E:/2017_Deep_learning/word2vec', 'word_vector_108000.cs')
 #training_file_path = os.path.join('.', 'word_vector_108000.cs')
 
-training_file = sogou_corpus_file(training_file_path)
+training_file = SogouCorpusFile(training_file_path)
 
 
 # model = Word2Vec(sentences=training_file, min_count=1)
