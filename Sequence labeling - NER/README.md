@@ -38,6 +38,8 @@ $$\log p(y|X) = s(X,y) - \log\large{(}\sum\limits_{y_{tmp} \in Y_X} e^{s(X, y_{t
 
 This can be solved by Forward-Backward (for computing probability) and Viterbi (for decoding best tags) algorithms.
 
+**For Chinese NER**, paper [5] proposes that character embedding are composed of **pre-trained character embedding** and embedding that learned by bi-directional lstm on radical features (偏旁部首).
+
 ### Model parameters
 - Word embeddings
 - Tags transition matrix `A`
@@ -60,7 +62,7 @@ For example, if the input sentence is 'I bought a Li Ning (李宁) hat yesterday
 
 There are total eight categories here (i.e., shoe, digital, jewelry, bag, facial mask, watch, clothes, wine) and each category contains several brands.  
 
-The initial source codes are from [5], the following shows the key points about the codes:
+The initial source codes are from [6], the following shows the key points about the codes:
 - The model input is the concatenation of character embedding and word segmentation embedding.
 - How to initialize the pre-trained character embedding ? Please see `create_model` method in `train.py`.
   - `old_weights = sess.run(model.char_embeddings.read_value())`
@@ -90,4 +92,5 @@ The brands NER training data are from crawled Weibo. Please see sample training,
 [2] https://guillaumegenthial.github.io/sequence-tagging-with-tensorflow.html  
 [3] [End-to-end Sequence Labeling via Bi-directional LSTM-CNNs-CRF](https://arxiv.org/pdf/1603.01354.pdf)  
 [4] [Neural Architectures for Named Entity Recognition](https://arxiv.org/pdf/1603.01360.pdf)  
-[5] [ChineseNER](https://github.com/zjy-ucas/ChineseNER)
+[5] [Character-Based LSTM-CRF with Radical-Level Features for Chinese Named Entity Recognition](https://link.springer.com/chapter/10.1007/978-3-319-50496-4_20)  
+[6] [ChineseNER](https://github.com/zjy-ucas/ChineseNER)
