@@ -9,8 +9,7 @@ discussed in detail here.
 ![](https://github.com/gaoisbest/NLP-Projects/blob/master/Sequence%20labeling%20-%20NER/Model_architecture.png)
 
 The above edited image is from [1] shows the model architecture.  
-**Embedding layer**: Word embedding (Word emb.) together with character representation (Char rep.) are as inputs to bi-directional LSTM layer.  
-**Dropout layer**: it is added before embeddings are input to next layer.  
+**Embedding layer**: Word embedding (Word emb.) together with character representation (Char rep.) are as inputs to bi-directional LSTM layer.   
 **Bidirectional LSTM layer**: Then the outputs of both forward LSTM and backward LSTM (which encodes the contextual word representation [2]) are concatenated as inputs to the CRF layer.  
 **CRF layer**: And the CRF layer gives the final prediction.  
 
