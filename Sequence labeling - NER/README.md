@@ -62,21 +62,33 @@ For example, if the input sentence is 'I bought a Li Ning (李宁) hat yesterday
 
 There are total eight categories here (i.e., shoe, digital, jewelry, bag, facial mask, watch, clothes, wine) and each category contains several brands.  
 
-The initial source codes are from [6], the following shows the key points about the codes:
-- The model input is the concatenation of character embedding and word segmentation embedding.
-- How to initialize the pre-trained character embedding ? Please see `create_model` method in `train.py`.
+The initial source codes are from [6], the following shows the **key points** about the codes:
+- 1. The model input is the concatenation of character embedding and word segmentation embedding. How to incorporate word segmentation information ?
+  - perform Chinese word segmentation.
+  - encoding rule: BIES format (i.e., B:1, I:2, E:3, S:0).
+  - For example: `u'我买了富士康手机'`-> `u'我 买 了 富士康 手机'` -> `[0, 0, 0, 1, 2, 3, 1, 3]`
+
+- 2. Dropout on character embedding
+  - according to Section 4.3 in paper [4]. 
+  - `rnn_inputs = tf.nn.dropout(x=char_word_embeddings, keep_prob=self.keep_prob, name='lstm_inputs_dropout')`
+
+- 3. How to get actual sequence length in one batch ? 
+  - `seq_lengths = tf.cast(tf.reduce_sum(input_tensor=tf.sign(tf.abs(self.char_inputs)), axis=1), tf.int32)`
+
+- 4. How to initialize the pre-trained character embedding ? Please see `create_model` method in `train.py`.
   - `old_weights = sess.run(model.char_embeddings.read_value())`
   - `new_weights = load_pre_trained_embedding(old_weights)`
   - `sess.run(model.char_embeddings.assign(new_weights))`
-- How to incorporate word segmentation information ?
-  - perform Chinese word segmentation.
-  - encoding rule: BIES format (i.e., B:1, I:2, E:3, S:0).
-  - For example: `u'我买了富士康手机'` -> `[0, 0, 0, 1, 2, 3, 1, 3]`
+  
+- 5. Outputs of bi-directional LSTM are concatenated into prejection layer.
+  - `outputs, output_states = tf.nn.bidirectional_dynamic_rnn(cell_fw=rnn_cells['forward'], cell_bw=rnn_cells['backward'], inputs=rnn_inputs, sequence_length=seq_lengths, dtype=tf.float32)`
+  - `return tf.concat(outputs, axis=-1)`
 - OOV problem
 - How to perpare mini-batch data ?
+  - For minimum padding, the data should be sorted first.
   - see `BatchManager` method in `utils_train.py`
 
-I revised the codes as follows:  
+I **revised** the codes as follows:  
 - Add `end_logits` relevant codes in `cost_layer` function in `model.py`, which gives a relative better F1 score. For more details, please see my answer to the [issue](https://github.com/zjy-ucas/ChineseNER/issues/10).
 - Add `softmax` classifier besides `CRF` classifier. Although `CRF` classifier gives better results, I add `softmax` classifier here.
 - Add `tf.summary` and detailed code comments.
