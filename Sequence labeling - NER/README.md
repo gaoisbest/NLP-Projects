@@ -10,7 +10,7 @@ discussed in detail here.
 
 The above edited image is from [1] shows the model architecture.  
 **Embedding layer**: Word embedding (Word emb.) together with character representation (Char rep.) are as inputs to bi-directional LSTM layer.   
-**Bidirectional LSTM layer**: Then the outputs of both forward LSTM and backward LSTM (which encodes the contextual word representation [2]) are concatenated as inputs to the CRF layer.  
+**Bi-directional LSTM layer**: Then the outputs of both forward LSTM and backward LSTM (which encodes the contextual word representation [2]) are concatenated as inputs to the CRF layer.  
 **CRF layer**: And the CRF layer gives the final prediction.  
 
 For embedding layer, **CNN** (to extract morphological information, such as prefix or suffix [3]) or **bi-directional LSTM** [4] can be used to obtain character representation. As to the performance, they have **no significant difference** [1]. See the image from [1] below:  
@@ -21,7 +21,7 @@ For an input sequence `X`, which has `n` characters (i.e., ranges from `0` to `n
 $$X = (start, x_{0}, x_{1}, x_{2}, ..., x_{n-1}, end)$$  
 
 For the sequence predictions `y`, which also been padded with the `start_tag` and `end_tag`.  
-$$y = (start_tag, y_{0}, y_{1}, y_{2}, ..., y_{n-1}, end_tag)$$  
+$$y = (startTag, y_{0}, y_{1}, y_{2}, ..., y_{n-1}, endTag)$$  
 
 Paper [4] define its score to be  
 $$s(X, y) = \sum\limits_{i = -1}^{n} A_{yi, yi+1} + \sum\limits_{i=-1}^{n} P_{i, yi}$$  
