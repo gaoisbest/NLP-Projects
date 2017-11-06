@@ -17,7 +17,7 @@ For embedding layer, **CNN** (to extract morphological information, such as pref
 ![](https://github.com/gaoisbest/NLP-Projects/blob/master/Sequence%20labeling%20-%20NER/images/Character_representation.png)
 
 ### Model formula
-For an input sequence `X`, which has `n` characters (i.e., ranges from `0` to `n-1`), and it has been padded with the `start` and `end` symbols. For the sequence predictions `y`, which also been padded with the `start_tag` and `end_tag`.  
+For an input sequence `X`, which has `n` characters (i.e., ranges from `0` to `n-1`), and it has been padded with the `start` and `end` symbols. For the sequence predictions `y`, which also been padded with the `startTag` and `endTag`.  
 
 ![](https://github.com/gaoisbest/NLP-Projects/blob/master/Sequence%20labeling%20-%20NER/images/X_y.png)
 
