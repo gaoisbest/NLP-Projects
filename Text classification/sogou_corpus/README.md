@@ -14,4 +14,4 @@ sohu_corpus_12.corpus: yule.sohu.com
 
 Each corpus contains the segmented text performed by jieba with self-defined dictionary.
 
-Since the files are too big, I have shared a [link](http://pan.baidu.com/s/1i53ifGx) to download.
+Since the files are too big, I have shared a [link](https://pan.baidu.com/s/1dESjsR3) to download.
