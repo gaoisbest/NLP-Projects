@@ -1,8 +1,6 @@
--# Introduction
- -**Named entity recognition (NER)**, **Part-of-Speeching tagging (POS)** and **Chinese word segmentation** are tasks of **sequence labeling**.  
- -Without deep learning, statistical **linear-chain conditional random fields (linear-chain CRF)** is the favorable solution. 
- -But it requires hand-crafted features. In deep learning fields, bi-directional LSTM + CRF gives the state-of-the-art performance, which is 
- -discussed in detail here.
+# Introduction
+
+**Named entity recognition (NER)**, **Part-of-Speeching tagging (POS)** and **Chinese word segmentation** are tasks of **sequence labeling**.  Without deep learning, statistical **linear-chain conditional random fields (linear-chain CRF)** is the favorable solution. But it requires hand-crafted features. In deep learning fields, bi-directional LSTM + CRF gives the state-of-the-art performance, which is discussed in detail here.
  -
  -# Model
  -### Model architecture
