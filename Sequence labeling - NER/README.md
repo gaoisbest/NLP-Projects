@@ -102,9 +102,6 @@ The brands NER training data are from crawled Weibo. Please see sample training,
 - `{'entities': [{'word': '特步', 'type': 'SHOE', 'start': 3, 'end': 5}], 'string': '我买了特步鞋'}`  
 - `{'entities': [{'word': '一叶子', 'type': 'FACIAL_MASK', 'start': 0, 'end': 3}], 'string': '一叶子面膜真不错'}`
 
-### To be solved problem
-- Please sovle my [question](https://stackoverflow.com/questions/47129405/how-to-perform-named-entity-disambiguation) if you have the solution, thanks.
-
 # References
 [1] [Optimal Hyperparameters for Deep LSTM-Networks for Sequence Labeling Tasks](https://arxiv.org/pdf/1707.06799.pdf) and [implementation](https://github.com/UKPLab/emnlp2017-bilstm-cnn-crf)  
 [2] https://guillaumegenthial.github.io/sequence-tagging-with-tensorflow.html  
