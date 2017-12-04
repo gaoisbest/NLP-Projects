@@ -149,7 +149,7 @@ http://web.stanford.edu/class/cs224n/lecture_notes/cs224n-2017-notes1.pdf
 
 
 ## GloVe
-Golbal vectors for word representation (GloVe) uses global statistics to predict the probability of word `j` appearing in the context of word `i` with a **least square** objective.  
+Global vectors for word representation (GloVe) uses global statistics to predict the probability of word `j` appearing in the context of word `i` with a **least square** objective.  
 
 ![](https://github.com/gaoisbest/NLP-Projects/blob/master/Word2vec/GolVe.png)  
 where `X` is word-word co-occurrence matrix.
