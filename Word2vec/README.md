@@ -98,7 +98,8 @@ for i in range(len(words)):
 
 
 ## Word2vec
-**The word orders are ignored in each window.**
+- **The word orders are ignored in each window.**
+- Generally, **narrower window size** leads to better performance in **syntactic** tests while **wider window size** leads to better performance in **semantic** tests.
 
 ### Distributional hypothesis
 **Similar words have similar context.**
