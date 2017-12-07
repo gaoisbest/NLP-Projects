@@ -9,6 +9,7 @@ In another view, fastText likes CNN configured with window size = `1` (unigram) 
 
 ### 'Fast' tricks
 - Hierarchical softmax
+    - Huffman tree
     - Reduce computational complexity from `O(k*h)` to `O(log(k)*h)`, where `k` is the number of categories and `h` is the hidden dimension.
 - n-grams with hashing
     - Incorporate **word order** information.
