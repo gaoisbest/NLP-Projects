@@ -14,7 +14,8 @@ In another view, fastText likes CNN configured with window size = `1` (unigram) 
     - At test time, each node has a probability. DFS and track maximum probability give top-1 prediction. With *binary heep*, top-T predictions are calculated at the cost of `O(log(T))`.
 - Accuracy: **n-grams** with *hashing trick*
     - Incorporate **word order** information. Higher order grams (i.e., bigrams, trigrams, n-grams=5) performs better.
-    - 10M bins for bigrams, and 100M for n-grams [1].
+    - 10M bins for bigrams, and 100M for n-grams [1].    
+    - These n-grams in the same bin share the embedding vector [3].
 
 ### Future Direction
 - Incorporate POS information [from Alibaba meeting].
@@ -22,3 +23,4 @@ In another view, fastText likes CNN configured with window size = `1` (unigram) 
 References:  
 [1] [Bag of Tricks for Efficient Text Classification](https://arxiv.org/abs/1607.01759)  
 [2] https://www.zhihu.com/question/48345431  
+[3] http://albertxiebnu.github.io/fasttext/
