@@ -22,5 +22,5 @@ Text classificaton (i.e., fastText and lstm) based on [Sogou](http://www.sogou.c
 
 ### References
 [1] [Bag of Tricks for Efficient Text Classification](https://arxiv.org/abs/1607.01759)  
-[2] https://www.zhihu.com/question/48345431  
+[2] https://www.zhihu.com/question/48345431  
 [3] http://albertxiebnu.github.io/fasttext/
