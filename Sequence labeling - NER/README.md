@@ -1,5 +1,16 @@
 # Introduction
-**Named entity recognition (NER)**, **Part-of-Speeching tagging (POS)** and **Chinese word segmentation** are tasks of **sequence labeling**. Without deep learning, statistical **linear-chain conditional random fields (linear-chain CRF)** is the favorable solution. But it requires hand-crafted features. In deep learning fields, bi-directional LSTM + CRF gives the state-of-the-art performance, which is discussed in detail here.
+**Named entity recognition (NER)**, **Part-of-Speeching tagging (POS)** and **Chinese word segmentation** are tasks of **sequence labeling**.  
+Without deep learning, statistical **linear-chain conditional random fields (linear-chain CRF)** is the favorable solution. But it requires hand-crafted features.  
+In deep learning fields, bi-directional LSTM + CRF gives the state-of-the-art performance, which is discussed in detail here.
+
+NER belongs to the task of **structure learning**, which is a generalization of traditional supervised learning (i.e., **the output y has a structure**). The difference between structure learning and classification or regression is the **target function** and the **cost function**. [7]  
+For classification, the cost function is usually cross-entropy. For regression, the cost function is usually mean suqared error. For structure learning, the target function (`y^* = argmax f(x,y). For y in Y.`) and the cost function are arbitary.  
+Despite the difference, they share the same philosophy that **finding a target function that minimize the cost over the training set**.  
+Examples of structure learning:
+- Text generation
+- POS taggging, NER
+
+
 
 # Model
 ### Model architecture
@@ -87,7 +98,7 @@ The initial source codes are from [6], the following shows the **key points** ab
 
 I **revised** the codes as follows:  
 - Add `end_logits` relevant codes in `cost_layer` function in `model.py`, which gives a relative better F1 score. For more details, please see my answer to the [issue](https://github.com/zjy-ucas/ChineseNER/issues/10).
-- Add `softmax` classifier besides `CRF` classifier. Although `CRF` classifier gives better results, the training speed of `softmax` classifier are faster.
+- Add `softmax` classifier (i.e., **classification problem**) besides `CRF` classifier (i.e., **structure learning**). Although `CRF` classifier gives better results, the training speed of `softmax` classifier are faster.
 - Add `tf.summary` and detailed code comments.
 - Rearrange code files.
 
@@ -108,4 +119,5 @@ The brands NER training data are from crawled Weibo. Please see sample training,
 [3] [End-to-end Sequence Labeling via Bi-directional LSTM-CNNs-CRF](https://arxiv.org/pdf/1603.01354.pdf)  
 [4] [Neural Architectures for Named Entity Recognition](https://arxiv.org/pdf/1603.01360.pdf)  
 [5] [Character-Based LSTM-CRF with Radical-Level Features for Chinese Named Entity Recognition](https://link.springer.com/chapter/10.1007/978-3-319-50496-4_20)  
-[6] [ChineseNER](https://github.com/zjy-ucas/ChineseNER)
+[6] [ChineseNER](https://github.com/zjy-ucas/ChineseNER)  
+[7] https://pystruct.github.io/intro.html
