@@ -42,8 +42,8 @@ Text classificaton (i.e., fastText and lstm) based on [Sogou](http://www.sogou.c
         - Output tensor: `(batch_size, seq_length-filter_size+1 (stride=1), 1, num_filters)`
     - Max-pool `tf.nn.max_pool`
         - ksize: `(1, seq_length-filter_size+1, 1, 1)`
-        - Output tensor: `(batch_size, 1, 1, num_filters)` `tf.reshape` to `(batch_size, num_filters)` 
-- Concat output tensor for each filter_size to `(batch_size, len(filter_sizes)*num_filters)`
+        - Output tensor: `(batch_size, 1, 1, num_filters)` 
+- Concat output tensor for each filter_size to `(batch_size, 1, 1, len(filter_sizes)*num_filters)` and `tf.reshape` to `(batch_size, len(filter_sizes)*num_filters)`
 - FC1 with drop-out
     - `(batch_size, len(filter_sizes)*num_filters)`
 - FC2
