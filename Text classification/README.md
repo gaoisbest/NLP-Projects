@@ -38,7 +38,7 @@ Text classificaton (i.e., fastText and lstm) based on [Sogou](http://www.sogou.c
 - for f in filter_sizes:
     - Convolution `tf.nn.conv2d`
         - **Conv - add bias - ReLU**
-        - Filter: `(filter_height=filter_size, filter_width=embedding_size, in_channels=1, out_channels=num_filters)`
+        - Filter: `(filter_height=f, filter_width=embedding_size, in_channels=1, out_channels=num_filters)`
         - Output tensor: `(batch_size, seq_length-filter_size+1 (stride=1), 1, num_filters)`
     - Max-pool `tf.nn.max_pool`
         - ksize: `(1, seq_length-filter_size+1, 1, 1)`
