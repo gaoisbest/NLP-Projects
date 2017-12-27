@@ -31,9 +31,31 @@ Natural Language Processing related projects, which includes concepts and srcipt
 	- `h_l = a(W[X_1, ..., X_l] + b)`
 	- Application: multi-task learning
 ### 4. Dropout
-  - Batch normalization in CV likes dropout in NLP.
-  - Dropout rate of **0.5** is perferred.
-  - **Recurrent dropout** ([what's the difference between recurrent dropout and traditional dropout ?](https://stackoverflow.com/questions/47415036/tensorflow-how-to-use-variational-recurrent-dropout-correctly)) applies the same dropout mask across timesteps at layer *l*. Implementation: `tf.contrib.rnn.DropoutWrapper(variational_recurrent=True)`
+- Batch normalization in CV likes dropout in NLP.
+- Dropout rate of **0.5** is perferred.
+- **Recurrent dropout** ([what's the difference between recurrent dropout and traditional dropout ?](https://stackoverflow.com/questions/47415036/tensorflow-how-to-use-variational-recurrent-dropout-correctly)) applies the same dropout mask across timesteps at layer *l*. Implementation: `tf.contrib.rnn.DropoutWrapper(variational_recurrent=True)`
+
+### 5. LSTM tricks
+- Treat initial state as variable [2]
+```
+# note: if here is LSTMCell, a bug appear: https://stackoverflow.com/questions/42947351/tensorflow-dynamic-rnn-typeerror-tensor-object-is-not-iterable
+cell = tf.nn.rnn_cell.GRUCell(state_size)
+init_state = tf.get_variable('init_state', [1, state_size], initializer=tf.constant_initializer(0.0))
+# https://stackoverflow.com/questions/44486523/should-the-variables-of-the-initial-state-of-a-dynamic-rnn-among-the-inputs-of
+init_state = tf.tile(init_state, [batch_size, 1])
+```
+- Gradients clipping
+```
+variables = tf.trainable_variables()
+gradients = tf.gradients(ys=cost, xs=variables)
+clipped_gradients, _ = tf.clip_by_global_norm(gradients, clip_norm=self.clip_norm)
+optimizer = tf.train.AdamOptimizer(learning_rate=1e-3)
+optimize = optimizer.apply_gradients(grads_and_vars=zip(clipped_gradients, variables), global_step=self.global_step)
+```
+
+### 6. Attention
+- To do...
 
 Reference:  
-http://ruder.io/deep-learning-nlp-best-practices/
+[1] http://ruder.io/deep-learning-nlp-best-practices/  
+[2] https://r2rt.com/recurrent-neural-networks-in-tensorflow-iii-variable-length-sequences.html
