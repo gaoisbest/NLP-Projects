@@ -14,7 +14,6 @@ is called **partition function** and
 ![](https://github.com/gaoisbest/NLP-Projects/blob/master/CRFs/1_undirected_graphical_model_Psi.png)  
 is a non-negative scalar, called **local function** or **local factor**.  
 - Directed model  
-
 ![](https://github.com/gaoisbest/NLP-Projects/blob/master/CRFs/2_graphical_model.png)  
 where  
 ![](https://github.com/gaoisbest/NLP-Projects/blob/master/CRFs/2_graphical_model_pai_s.png)  
