@@ -1,9 +1,9 @@
-# Concepts [1]
 ## 1. Graphical Model
 ### Definition
 - It represents a complex distribution over many variables as a product of **local factors** on smaller subsets of variables.  
 - The **factorization** of the probability density corresponds to a set of **conditional independence** (i.e., **Markov network**, see below) relationships satisfied by the distribution.
 - **Markov network** are graphs over only **random variables**, rather than factors. It represents conditional independence (e.g., a and b are conditional independent if **p(a,b|c)=p(a|c)p(b|c)** or **p(a|b,c)=p(a|c)** [2]) realtionships in a multivariate distribution.
+- **random field** refers to a particular distribution which defined by an undirected model.
 
 ### Category
 - Undirected model  
@@ -24,12 +24,24 @@ is parents of `Ys`.
 - Markov random fields
 
 ## 2. Generative model vs discriminative model
-- Generative model: **p(y, x)**, **y generates x**.
-  - Naive Bayes
-  - HMM
-- Discriminative model: **p(y|x)**.
+- Generative model: label **y** probabilistically **'generate'** feature **x**. **p(y, x) = p(y) * p(x|y)**.
+  - Naive Bayes: features are independent.  
+  ![](https://github.com/gaoisbest/NLP-Projects/blob/master/CRFs/3_Naive_bayes_formula.png)  
+  ![](https://github.com/gaoisbest/NLP-Projects/blob/master/CRFs/3_Naive_bayes_directed_model.png)
+  - HMM  
+  ![](https://github.com/gaoisbest/NLP-Projects/blob/master/CRFs/4_HMM_formula.png)
+    - Application: [Chinese word segmentation](https://github.com/gaoisbest/NLP-Projects/blob/master/Chinese%20word%20segmentation/HMM_viterbi_word_segmentor.py), for more details, see [Chinese notes](http://url.cn/5TFdvty).  
+  - How to incorporate **interdependent** features into generative model ? 
+    - Simplify independent output assumption.  ![](https://github.com/gaoisbest/NLP-Projects/blob/master/CRFs/4_HMM_interdependent_feature.png) 
+- Discriminative model: from feature **x** to predict label **y**. **p(y|x)**. Make conditional independence assumption among **y**, but **not** among **x**.
   - Logistic regression
   - CRFs
+
+- Both models are avoid modeling **p(x)**, which is difficulty that **x** often contains highly dependent feautres.  
+
+![](https://github.com/gaoisbest/NLP-Projects/blob/master/CRFs/5_NB_LR_HMM_CRF.png)
+
+## 3. Linear-chain CRFs
 
 ## References
 [1] An introduction to Conditional Random Fields  
