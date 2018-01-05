@@ -29,8 +29,12 @@ is parents of `Ys`.
   ![](https://github.com/gaoisbest/NLP-Projects/blob/master/CRFs/3_Naive_bayes_formula.png)  
   ![](https://github.com/gaoisbest/NLP-Projects/blob/master/CRFs/3_Naive_bayes_directed_model.png)
   - HMM  
-  ![](https://github.com/gaoisbest/NLP-Projects/blob/master/CRFs/4_HMM_formula.png)
-    - Application: [Chinese word segmentation](https://github.com/gaoisbest/NLP-Projects/blob/master/Chinese%20word%20segmentation/HMM_viterbi_word_segmentor.py), for more details, see [Chinese notes](http://url.cn/5TFdvty).  
+  ![](https://github.com/gaoisbest/NLP-Projects/blob/master/CRFs/4_HMM_formula.png)  
+  which can be rewritten as  
+  ![](https://github.com/gaoisbest/NLP-Projects/blob/master/CRFs/4_HMM_formula_another_way.png)  
+  where  
+  ![](https://github.com/gaoisbest/NLP-Projects/blob/master/CRFs/4_HMM_formula_another_way_parameter.png)  
+    - Application: [Chinese word segmentation](https://github.com/gaoisbest/NLP-Projects/blob/master/Chinese%20word%20segmentation/HMM_viterbi_word_segmentor.py), for more details, see [Chinese notes](http://url.cn/5TFdvty).
   - How to incorporate **interdependent** features into generative model ? 
     - Simplify independent output assumption.  ![](https://github.com/gaoisbest/NLP-Projects/blob/master/CRFs/4_HMM_interdependent_feature.png) 
 - Discriminative model: from feature **x** to predict label **y**. **p(y|x)**. Make conditional independence assumption among **y**, but **not** among **x**.
@@ -42,6 +46,13 @@ is parents of `Ys`.
 ![](https://github.com/gaoisbest/NLP-Projects/blob/master/CRFs/5_NB_LR_HMM_CRF.png)
 
 ## 3. Linear-chain CRFs
+- Definition  
+![](https://github.com/gaoisbest/NLP-Projects/blob/master/CRFs/6_linear_chain_CRFs.png)  
+where  
+![](https://github.com/gaoisbest/NLP-Projects/blob/master/CRFs/6_linear_chain_CRFs_Z.png)  
+- Categories  
+![](https://github.com/gaoisbest/NLP-Projects/blob/master/CRFs/6_linear_chain_CRFs_category_1.png)  
+![](https://github.com/gaoisbest/NLP-Projects/blob/master/CRFs/6_linear_chain_CRFs_category_2_3.png)
 
 ## References
 [1] An introduction to Conditional Random Fields  
