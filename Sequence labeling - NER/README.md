@@ -84,14 +84,8 @@ The initial source codes are from [6], the following shows the **key points** ab
   old_weights = sess.run(model.char_embeddings.read_value())  
   new_weights = load_pre_trained_embedding(old_weights)  
   sess.run(model.char_embeddings.assign(new_weights))
-  ```  
-  
-- Outputs of bi-directional LSTM are concatenated into prejection layer.  
-  -    
   ```
-  outputs, output_states = tf.nn.bidirectional_dynamic_rnn(cell_fw=rnn_cells['forward'], cell_bw=rnn_cells['backward'], inputs=rnn_inputs, sequence_length=seq_lengths, dtype=tf.float32)  
-  return tf.concat(outputs, axis=-1)
-  ```
+
 - OOV problem
   - If the test character is not in `char_to_id` dictionary, then convert it to `<UNK>` symbol.  
   - `[char_to_id[char] if char in char_to_id else char_to_id['<UNK>'] for char in line]`
