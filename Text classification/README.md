@@ -8,7 +8,7 @@ Text classificaton (i.e., fastText and lstm) based on [Sogou](http://www.sogou.c
 - In another view, fastText likes CNN configured with window size = `1` (unigram) or `n` (n-grams) and average pooling [2]. 
 
 ### Tricks
-- Fast: **hierarchical softmax**
+- Fast: [**hierarchical softmax**](https://becominghuman.ai/hierarchical-softmax-as-output-activation-function-in-neural-network-1d19089c4f49)
     - Huffman tree. 
     - Reduce computational complexity from `O(k*h)` to `O(log(k)*h)`, where `k` is the number of categories and `h` is the hidden dimension.
     - At test time, each node has a probability. DFS and track maximum probability give top-1 prediction. With *binary heep*, top-T predictions are calculated at the cost of `O(log(T))`.
