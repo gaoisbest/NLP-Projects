@@ -1,7 +1,6 @@
 Text classificaton (i.e., fastText and lstm) based on [Sogou](http://www.sogou.com/labs/resource/cs.php) corpus.
 
 ## fastText
-
 ### Principle
 - Averaged word (with n-grams) vectors + softmax [1].   
 - Just like Continuous BOW model, where the **center word** is replaced by the **label** now.   
@@ -26,7 +25,11 @@ Text classificaton (i.e., fastText and lstm) based on [Sogou](http://www.sogou.c
 [3] http://albertxiebnu.github.io/fasttext/
 
 
-## Convolutional Neural Networks for text classification
+## LSTM
+- `LSTM_text_classification_version_1.ipynb`. See [Chinese notes](http://url.cn/5cLDOQI), [中文解读](http://url.cn/5cLDOQI).
+- `LSTM_text_classification_version_2.ipynb`. See [Chinese notes](http://url.cn/5w5VbaI), [中文解读](http://url.cn/5w5VbaI).
+
+## CNN
 ### Principle
 - Converting the sentence to a tensor of shape [height=seq_len, width=embedding_size, channels=1] with word embedding. 
 - Convolution and max-pooling on the tensor.
@@ -48,6 +51,8 @@ Text classificaton (i.e., fastText and lstm) based on [Sogou](http://www.sogou.c
     - `(batch_size, len(filter_sizes)*num_filters)`
 - FC2
     - `(batch_size, num_classes)`
+### Implementation
+- `CNN_text_classification.ipynb`. See [Chinese notes](http://url.cn/5kW61T4), [中文解读](http://url.cn/5kW61T4).
 
 ### References
 [1] http://www.wildml.com/2015/12/implementing-a-cnn-for-text-classification-in-tensorflow/  
