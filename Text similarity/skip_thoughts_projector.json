@@ -1,7 +1,7 @@
 {
   "embeddings": [
     {
-      "tensorName": Skip-thoughts tensor",
+      "tensorName": "Skip-thoughts tensor",
       "tensorShape": [
         21,
         2400
