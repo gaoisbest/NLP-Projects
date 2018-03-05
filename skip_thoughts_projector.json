@@ -1,0 +1,13 @@
+{
+  "embeddings": [
+    {
+      "tensorName": "Skip-thoughts tensor",
+      "tensorShape": [
+        21,
+        2400
+      ],
+      "tensorPath": "https://gist.githubusercontent.com/gaoisbest/b6e5c377d30696f94a72670d1ef0de5f/raw/testing_file_embeddings.tsv",
+      "metadataPath": "https://gist.githubusercontent.com/gaoisbest/b6e5c377d30696f94a72670d1ef0de5f/raw/zh_wiki_00_testing_data_min_5_labels.tsv"
+    }
+  ]
+}
