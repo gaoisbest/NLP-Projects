@@ -138,8 +138,6 @@ I also implemented the [Word2vec in tensorflow](https://github.com/gaoisbest/NLP
 
 ![ ](https://github.com/gaoisbest/NLP-Projects/blob/master/Word2vec/tf_word2vec.png)
 
-#### Visualization tool: https://ronxin.github.io/wevi/
-
 ### Discussion
 - **The word orders are ignored in each window.**
 - Generally, **narrower window size** leads to better performance in **syntactic** tests while **wider window size** leads to better performance in **semantic** tests.
@@ -161,3 +159,12 @@ The skip-gram tries to capture the words co-occurence **one window at a time**. 
 Reference:  
 http://web.stanford.edu/class/cs224n/lecture_notes/cs224n-2017-notes2.pdf
 
+
+## 5. Conclusion
+### Why called embeddings ?
+Let the word embedding dimension is 100, each word **gets embedded to a point** in 100 dimensional space.
+
+### Transfer learning of word embeddings
+- Learn word embeddings from a large corpus
+- Transfer word embeddings to new task.
+- Whether or not fine-tune the embeddings depends on the corpus size of new task. For [NER](https://github.com/gaoisbest/NLP-Projects/blob/master/Sequence%20labeling%20-%20NER/README.md), pretrained word embeddings are prerequisites for better accuracy.  
