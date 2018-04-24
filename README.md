@@ -1,4 +1,4 @@
-# NLP-Projects
+## NLP-Projects
 Natural Language Processing related projects, which includes concepts and srcipts about:
 - Word2vec: `gensim`, `fastText` and `tensorflow` implementations. See [Chinese notes](http://url.cn/5PKmy7W), [中文解读](http://url.cn/5PKmy7W).
 - Text similarity: `gensim doc2vec` and `gensim word2vec averaging` implementations. 
@@ -59,3 +59,13 @@ optimize = optimizer.apply_gradients(grads_and_vars=zip(clipped_gradients, varia
 Reference:  
 [1] http://ruder.io/deep-learning-nlp-best-practices/  
 [2] https://r2rt.com/recurrent-neural-networks-in-tensorflow-iii-variable-length-sequences.html
+
+
+## Awesome packages
+### Chinese
+#### 1. [pyltp](http://pyltp.readthedocs.io/zh_CN/develop/api.html)
+#### 2. [HanLP](http://hanlp.linrunsoft.com/index.html)
+
+### English
+#### 1. [Spacy](https://spacy.io)
+#### 2. [gensim](https://radimrehurek.com/gensim/)
