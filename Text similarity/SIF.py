@@ -22,6 +22,7 @@ def SIF_embedding(self, x, w):
     svd.fit(emb)
     pc = svd.components_
     
+    # see https://stats.stackexchange.com/questions/229092/how-to-reverse-pca-and-reconstruct-original-variables-from-several-principal-com
     # pc.shape: self.SIF_npc * embedding_size
     # pc.transpose().shape : embedding_size * self.SIF_npc
     # emb.dot(pc.transpose()).shape: num_sample * self.SIF_npc
