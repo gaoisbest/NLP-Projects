@@ -1,3 +1,10 @@
+# Similarity models
+- [SIF](https://github.com/gaoisbest/NLP-Projects/blob/master/Text%20similarity/SIF.py)
+- [Mean word vectors](https://github.com/gaoisbest/NLP-Projects/blob/master/Text%20similarity/Word2vec_mean.py)
+- [Doc2vec](https://github.com/gaoisbest/NLP-Projects/blob/master/Text%20similarity/Doc2vec_model.py)
+- [LDA](https://github.com/gaoisbest/NLP-Projects/blob/master/Text%20similarity/LDA_model.py)
+- [LSI](https://github.com/gaoisbest/NLP-Projects/blob/master/Text%20similarity/LSI_model.py)
+
 
 # Notes of paper: Distributed Representations of Sentences and Documents
 * Two models are proposed: **PV-DM (Paragraph Vector-Distributed Memory) and PV-DBOW (Paragraph Vector-Distributed Bag of Words). PV-DM just likes CBOW in Word2vec and PV-DBOW just likes Skip-gram in Word2vec**. PV-DM is consistently better than PV-DBOW. 
