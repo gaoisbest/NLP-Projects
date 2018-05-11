@@ -1,4 +1,7 @@
 # Similarity models
+- [Word mover's distance]: [paper](http://proceedings.mlr.press/v37/kusnerb15.pdf), [gensim api](https://markroxor.github.io/gensim/static/notebooks/WMD_tutorial.html)
+- [Extension of BOW based on word2vec](https://www.zhihu.com/question/29978268/answer/55338644): The sentence vector contains top 10 word vector similarity between each word of the sentence and the vocabulary.
+- [LSTM + AutoEncoder](https://www.zhihu.com/question/29978268/answer/114093723)
 - [SIF](https://github.com/gaoisbest/NLP-Projects/blob/master/Text%20similarity/SIF.py)
 - [Mean word vectors](https://github.com/gaoisbest/NLP-Projects/blob/master/Text%20similarity/Word2vec_mean.py)
 - [Doc2vec](https://github.com/gaoisbest/NLP-Projects/blob/master/Text%20similarity/Doc2vec_model.py)
