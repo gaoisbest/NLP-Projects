@@ -1,6 +1,6 @@
-Text classificaton (i.e., fastText and lstm) based on [Sogou](http://www.sogou.com/labs/resource/cs.php) corpus.
+Text classificaton (i.e., fastText, lstm, CNNs) based on [Sogou](http://www.sogou.com/labs/resource/cs.php) corpus.
 
-## fastText
+## 1. fastText
 ### Principle
 - Averaged word (with n-grams) vectors + softmax [1].   
 - Just like Continuous BOW model, where the **center word** is replaced by the **label** now.   
@@ -25,11 +25,16 @@ Text classificaton (i.e., fastText and lstm) based on [Sogou](http://www.sogou.c
 [3] http://albertxiebnu.github.io/fasttext/
 
 
-## LSTM
+## 2.1 LSTM
 - `LSTM_text_classification_version_1.ipynb`. See [Chinese notes](http://url.cn/5cLDOQI), [中文解读](http://url.cn/5cLDOQI).
 - `LSTM_text_classification_version_2.ipynb`. See [Chinese notes](http://url.cn/5w5VbaI), [中文解读](http://url.cn/5w5VbaI).
+- To be done: **LSTM + Attention, Bidirectional LSTM + Attention**
 
-## CNN
+## 2.2 Multiplicative LSTM
+[Openai's](https://blog.openai.com/unsupervised-sentiment-neuron/) work that finds a **sentiment neuron**. The model consists of unsupervised language model + Logistic regression with L1 regularization.  
+
+
+## 3.1 Plain CNNs
 ### Principle
 - Converting the sentence to a tensor of shape [height=seq_len, width=embedding_size, channels=1] with word embedding. 
 - Convolution and max-pooling on the tensor.
@@ -57,3 +62,15 @@ Text classificaton (i.e., fastText and lstm) based on [Sogou](http://www.sogou.c
 ### References
 [1] http://www.wildml.com/2015/12/implementing-a-cnn-for-text-classification-in-tensorflow/  
 [2] https://github.com/gaussic/text-classification-cnn-rnn
+
+## 3.2 Dynamic CNNs
+To be done...
+
+## 4. Discussion
+- For long sentence, CNNs is better than RNNs. [2]
+- [Recursive NNs](https://nlp.stanford.edu/~socherr/EMNLP2013_RNTN.pdf) incorporate **syntax** information.
+- Tricks
+    - Normalization
+    - Dynamic max-pooling
+### References
+[1] https://www.zhihu.com/question/41625896
