@@ -67,7 +67,7 @@ Text classificaton (i.e., fastText, lstm, CNNs) based on [Sogou](http://www.sogo
 To be done...
 
 ## 4. Discussion
-- For long sentence, CNNs is better than RNNs. [2]
+- For long sentence, CNNs is better than RNNs. [1]
 - [Recursive NNs](https://nlp.stanford.edu/~socherr/EMNLP2013_RNTN.pdf) incorporate **syntax** information.
 - Tricks
     - Normalization
