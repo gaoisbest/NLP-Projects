@@ -7,8 +7,8 @@
 
 def SIF_embedding(self, x, w):
     """
-    x: word ids of each sample, shape of [n_sample, vocab_size]
-    w: weights of each word ids, shape of [n_sample, vocab_size]
+    x: word ids of each sample, shape of [n_sample, max_seq_length]
+    w: weights of each word ids, shape of [n_sample, max_seq_length]
     """
     
     # step 1: weighted averages
