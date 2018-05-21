@@ -9,8 +9,9 @@ Document 2: They like drinking coffee.
 ```
 
 ## 1. One-hot vector
-Represent every word as `|V|*1` vector, with one denotes the word index, and others are all 0.
+Represent every word as `|V|*1` vector, with one denotes the word index, and others are all 0.  
 
+**Bag of words = sum of one-hot vectors**
 #### Pros and cons
 - Dot product of any two word vectors is zero, therefore, one-hot vector can not tell the words similarity.
 
