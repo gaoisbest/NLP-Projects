@@ -2,6 +2,12 @@
 Open domain, closed domain [1]
 
 # Categories
+## Task-oriented
+- Reinforcement learning
+  - Entity: **agent** and **environment** 
+  - Rule: agent takes **action** and environment gives **reward** and **state**
+  - **Policy**: a rule that the agent should follow to select actions given the current state
+
 ## Retrieval
 Given pre-defined responses, retrieval based model predict one response given current input context [2].  
 
