@@ -28,7 +28,15 @@ Text classificaton (i.e., fastText, lstm, CNNs) based on [Sogou](http://www.sogo
 ## 2.1 LSTM
 - `LSTM_text_classification_version_1.ipynb`. See [Chinese notes](http://url.cn/5cLDOQI), [中文解读](http://url.cn/5cLDOQI).
 - `LSTM_text_classification_version_2.ipynb`. See [Chinese notes](http://url.cn/5w5VbaI), [中文解读](http://url.cn/5w5VbaI).
+- Concatenate **character** features and **word** features together to feed to FC.
 - To be done: **LSTM + Attention, Bidirectional LSTM + Attention**
+
+### References
+[1] https://richliao.github.io/supervised/classification/2016/12/26/textclassifier-HATN/  
+[2] http://tobiaslee.top/2017/08/29/Attention-based-LSTM-for-Text-Classification/  
+[3] https://www.cloudsek.com/announcements/blog/hierarchical-attention-text-classification/  
+
+
 
 ## 2.2 Multiplicative LSTM
 [Openai's](https://blog.openai.com/unsupervised-sentiment-neuron/) work that finds a **sentiment neuron**. The model consists of unsupervised language model + Logistic regression with L1 regularization.  
@@ -63,7 +71,7 @@ Text classificaton (i.e., fastText, lstm, CNNs) based on [Sogou](http://www.sogo
 [1] http://www.wildml.com/2015/12/implementing-a-cnn-for-text-classification-in-tensorflow/  
 [2] https://github.com/gaussic/text-classification-cnn-rnn
 
-## 3.2 Dynamic CNNs
+## 3.2 CNNs with pos embedding
 To be done...
 
 ## 4. Discussion
