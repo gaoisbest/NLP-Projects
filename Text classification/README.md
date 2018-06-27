@@ -71,8 +71,11 @@ Text classificaton (i.e., fastText, lstm, CNNs) based on [Sogou](http://www.sogo
 [1] http://www.wildml.com/2015/12/implementing-a-cnn-for-text-classification-in-tensorflow/  
 [2] https://github.com/gaussic/text-classification-cnn-rnn
 
-## 3.2 CNNs with pos embedding
-To be done...
+## 3.2 RCNN
+- Word: word itself + its context (bi-rnn)
+
+### References
+[1] https://www.aaai.org/ocs/index.php/AAAI/AAAI15/paper/view/9745 
 
 ## 4. Discussion
 - For long sentence, CNNs is better than RNNs. [1]
