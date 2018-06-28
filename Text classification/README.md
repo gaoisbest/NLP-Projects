@@ -83,5 +83,6 @@ Text classificaton (i.e., fastText, lstm, CNNs) based on [Sogou](http://www.sogo
 - Tricks
     - Normalization
     - Dynamic max-pooling
+- We can calling free api (i.e., ai.baidu.com) to build trainging data, see an [example](https://github.com/gaoisbest/NLP-Projects/blob/master/Text%20classification/Create_training_data_by_calling_free_baidu_api.py)
 ### References
 [1] https://www.zhihu.com/question/41625896
