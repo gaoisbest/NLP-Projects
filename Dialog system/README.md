@@ -1,5 +1,25 @@
-# Introduction
-- Task-oriented (in closed domain) vs non-task-oriented (i.e., chat bots, in open domain)
+# Dialog system categories
+- Question answering
+- Task-oriented (in closed domain)
+- Non-task-oriented (i.e., chat bots, in open domain)
+
+# Question answering
+## Classification based
+- In first step, classify query into big categories.
+
+## Retrieval and reranking based
+- Process query: word segmentation, stop-words removal, **expansion of synonym**.
+- Retrieval
+  - TFIDF
+  - BM2.5
+- Rerank
+  - [SIF](https://github.com/gaoisbest/NLP-Projects/blob/master/Text%20similarity/SIF.py)
+  - Word Mover's Distance
+  - [Learning to Rank Short Text Pairs with Convolutional Deep Neural Networks, 2015](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.723.6492&rep=rep1&type=pdf)
+  - [Supervised Learning of Universal Sentence Representations from Natural Language Inference Data, 2017](https://arxiv.org/pdf/1705.02364.pdf)
+  - ...
+## Direct sentence vector matching
+  - **Sentence vector quick search tool**: [Faiss](https://github.com/facebookresearch/faiss)
 
 # Task-oriented
 - Pipeline
