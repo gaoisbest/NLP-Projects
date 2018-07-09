@@ -9,6 +9,8 @@
 - [LDA](https://github.com/gaoisbest/NLP-Projects/blob/master/Text%20similarity/LDA_model.py)
 - [LSI](https://github.com/gaoisbest/NLP-Projects/blob/master/Text%20similarity/LSI_model.py)
 
+# Sentence encoder
+- https://hanxiao.github.io/2018/06/25/4-Encoding-Blocks-You-Need-to-Know-Besides-LSTM-RNN-in-Tensorflow/?from=timeline&isappinstalled=0
 
 # Notes of paper: Distributed Representations of Sentences and Documents
 * Two models are proposed: **PV-DM (Paragraph Vector-Distributed Memory) and PV-DBOW (Paragraph Vector-Distributed Bag of Words). PV-DM just likes CBOW in Word2vec and PV-DBOW just likes Skip-gram in Word2vec**. PV-DM is consistently better than PV-DBOW. 
