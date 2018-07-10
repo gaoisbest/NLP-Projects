@@ -78,11 +78,14 @@ Text classificaton (i.e., fastText, lstm, CNNs) based on [Sogou](http://www.sogo
 [1] https://www.aaai.org/ocs/index.php/AAAI/AAAI15/paper/view/9745 
 
 ## 4. Discussion
-- For long sentence, CNNs is better than RNNs. [1]
+- For long sentence, CNNs is better than RNNs [1].
+- **Long-term dependency** is **not significant** for text classification problem [2].
 - [Recursive NNs](https://nlp.stanford.edu/~socherr/EMNLP2013_RNTN.pdf) incorporate **syntax** information.
 - Tricks
     - Normalization
     - Dynamic max-pooling
 - We can calling free api (i.e., ai.baidu.com) to build trainging data, see an [example](https://github.com/gaoisbest/NLP-Projects/blob/master/Text%20classification/Create_training_data_by_calling_free_baidu_api.py)
 ### References
-[1] https://www.zhihu.com/question/41625896
+[1] https://www.zhihu.com/question/41625896  
+[2] https://hanxiao.github.io/2018/06/25/4-Encoding-Blocks-You-Need-to-Know-Besides-LSTM-RNN-in-Tensorflow/?from=timeline&isappinstalled=0  
+
