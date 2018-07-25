@@ -34,6 +34,9 @@
 - Pipeline
   - NLU -> Dialog state tracking -> Policy learning -> NLG
   - NLU: maps the utterance into semantic slots
+    - Domain: text classification
+    - Intent: text classification
+    - Slot: sequence labeling
   - DST: estimates the goal at every turn
   - PL: generates next action, can be done by supervised learning or reinforcement learning
   - NLG: convert action to utterance
