@@ -19,8 +19,18 @@
     - E.g., natural language, images, video
 - 2. Knowledge extraction
   - 2.1 Entity extraction
-    - Co-reference Resolution (CR) 共指消解
+    - Entity recognition
+      - Value/number detection and recognition
+      - [Running example](https://github.com/gaoisbest/NLP-Projects/blob/master/Sequence%20labeling%20-%20NER/README.md)
+      - Entity linking
+        - Definition: Find the entity (i.e., **entity mention** 实体指称项) in text and linking it to existing knowledge graph
+        - Entity Disambiguation 实体消歧
+        - Co-reference Resolution (CR) 共指消解
   - 2.2 Relation extraction
+      - Pattern / rule matching
+        - Trigger word pattern
+        - Dependency parsing pattern, verb is trigger word
+      - Supervised method
   - 2.3 Event extraction (i.e., 多元关系抽取)
     - Trigger word 触发词
     - Time 时间
