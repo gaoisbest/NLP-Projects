@@ -10,27 +10,33 @@
 - Compared with deep learning, knowledge graph provides **interpretable**.
 
 # Principle
-- 1. Data
+- **1. Data**
   - 1.1 Structured data
     - E.g., relational database (i.e., Database2Rdf), open kg (i.e., linked data, graph mapping 图映射)
   - 1.2 Semi-structured data (wrapper)
     - E.g., table, Wikipedia infobox 
   - 1.3 Unstructured data (information extraction, often in closed domin)
     - E.g., natural language, images, video
-- 2. Knowledge extraction
-  - 2.1 Entity extraction
-    - Entity recognition
-      - Value/number detection and recognition
-      - [Running example](https://github.com/gaoisbest/NLP-Projects/blob/master/Sequence%20labeling%20-%20NER/README.md)
-      - Entity linking
-        - Definition: Find the entity (i.e., **entity mention** 实体指称项) in text and linking it to existing knowledge graph
-        - Entity Disambiguation 实体消歧
-        - Co-reference Resolution (CR) 共指消解
-  - 2.2 Relation extraction
-      - Pattern / rule matching
-        - Trigger word pattern
-        - Dependency parsing pattern, verb is trigger word
-      - Supervised method
+- **2. Knowledge extraction**
+  - **2.1 Entity extraction**
+    - Value/number detection and recognition
+    - [Running example](https://github.com/gaoisbest/NLP-Projects/blob/master/Sequence%20labeling%20-%20NER/README.md)
+    - Entity linking
+      - Definition: Find the entity (i.e., **entity mention** 实体指称项) in text and linking it to existing knowledge graph
+      - Entity Disambiguation 实体消歧
+      - Co-reference Resolution (CR) 共指消解
+  - **2.2 Relation extraction**
+      - **Input**: unstructured text, a group of entities. **Output**: a group of triplets, e.g., (First Entity, Second Entity, Relation Type)
+      - Methods
+        - **Pattern / rule matching**
+          - Trigger word pattern
+          - Dependency parsing pattern, verb is trigger word
+        - **Supervised method**
+          - [Running example](https://www.microsoft.com/developerblog/2016/09/13/training-a-classifier-for-relation-extraction-from-medical-literature/)
+        - **Semi-supervised method**
+          - **Distant supervision**
+            - **Input**: unstructured text, database contains known entity relations. **Output**; a set of labeled data
+
   - 2.3 Event extraction (i.e., 多元关系抽取)
     - Trigger word 触发词
     - Time 时间
@@ -42,6 +48,7 @@
     - Similar neighbor entities
 # Tools
 - [Protege](https://protege.stanford.edu): edit ontology by hand, visualization, and reasoning
+- [DeepDive](http://deepdive.stanford.edu/)
  
 # Application
 - Question answering
