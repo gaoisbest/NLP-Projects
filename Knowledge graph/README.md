@@ -30,7 +30,7 @@
       - Methods
         - **Pattern / rule matching**
           - Trigger word pattern
-          - Dependency parsing pattern, verb is trigger word
+          - Dependency parsing pattern, verb is trigger word. [Running example](https://mp.weixin.qq.com/s/Q-WMYSTjGGxIMGNq-wfpRg)
         - **Supervised method**
           - [Running example](https://www.microsoft.com/developerblog/2016/09/13/training-a-classifier-for-relation-extraction-from-medical-literature/)
         - **Semi-supervised method**
@@ -66,5 +66,7 @@
 - [OpenKG.CN](http://openkg.cn/) publishes most recent report.
 - [CN-DBPedia](http://kw.fudan.edu.cn/apis/intro/) extract structured information from Baidu Baike.
 - [Zhishi.me](http://zhishi.me/) ensembles Baidu Baike, Hudong Baike and Chinese Wikipedia. [Dump data](http://openkg.cn/dataset/zhishi-me-dump)
+- [Agriculture Knowledge Graph](https://github.com/qq547276542/Agriculture_KnowledgeGraph)
+- [Knowledge graph demo](https://github.com/Shuang0420/knowledge_graph_demo)
 
 
