@@ -49,9 +49,19 @@
     - Similar description
     - Similar attribute - value
     - Similar neighbor entities
+- Knowledge representation learning
+  - Convert entity and relationship into vectors
+  - Application: link prediction (given S and P, predict O) or relation prediction, knowledge reasoning
+  - Translation based Methods
+    - **TransE**: head + relation = tail
+      - Drawbacks
+        - cannot process one-vs-multiple (一对多), multiple-vs-one (多对一) or multiple-vs-multiple (多对多) relationship
+        - cannot process symmetric relationship
+    - **TransH**
+    - **TransR**
 # Tools
 - [Protege](https://protege.stanford.edu): edit ontology by hand, visualization, and reasoning
-- [DeepDive](http://deepdive.stanford.edu/)
+- [DeepDive](http://deepdive.stanford.edu/): relation extraction, [tutorial](http://www.openkg.cn/tool/cn-deepdive)
  
 # Application
 - Question answering
