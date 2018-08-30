@@ -4,12 +4,15 @@
 - Non-task-oriented (i.e., chat bots, in open domain)
 
 # 1. Question answering [7]
-## 1.1 Classification based
+## 1.1 Knowledge Based Question Answering (KBQA)
+
+## 1.2 Retrieval Based FAQ
+### 1.2.1 Classification based
 - Fist build a knowledge base, which includes several big categories, each category contain same questions and a answer
 - Classify query into big categories, and we can return the answer of this category
 - Drawbacks: must train a new classifier when adding a new category
 
-## 1.2 Retrieval and reranking based
+### 1.2.2 Retrieval and reranking based
 - 1.2.1 Process query: word segmentation, stop-words removal, **expansion of synonym**.
 - 1.2.2 Retrieval
   - TFIDF
@@ -24,11 +27,13 @@
   - Pairwise
   - Listwise
   
-## 1.3 Direct sentence vector matching
+### 1.2.3 Direct sentence vector matching
 - Matching on all questions, do not have recall problem in 1.2
 - [Learning to Rank Short Text Pairs with Convolutional Deep Neural Networks, 2015](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.723.6492&rep=rep1&type=pdf)
 - [Supervised Learning of Universal Sentence Representations from Natural Language Inference Data, 2017](https://arxiv.org/pdf/1705.02364.pdf)
 - **Sentence vector quick search tool**: [Faiss](https://github.com/facebookresearch/faiss)
+
+## 1.3 Machine Reading Comprehension
 
 # 2. Task-oriented
 ## 2.1 Pipeline
