@@ -59,6 +59,10 @@
     - reranking and give best by incorporing context
 - Generative  
   - Generative new responses from scratch [2].
+# Leading Researchers
+- [Minlie Huang](http://coai.cs.tsinghua.edu.cn/hml/dataset/)
+- [Rui Yan](http://www.ruiyan.me/)
+- [Nan Duan](https://www.microsoft.com/en-us/research/people/nanduan/)
 
 # Implementation
 - [ChatterBot](https://github.com/gunthercox/ChatterBot) supplies a framework for building chatbot, and [Awesome-Chatbot](https://github.com/fendouai/Awesome-Chatbot) gives a list of public repositories about chatbot.
