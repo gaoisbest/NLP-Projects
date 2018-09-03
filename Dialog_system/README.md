@@ -37,13 +37,14 @@
 
 # 2. Task-oriented
 ## 2.1 Pipeline
-  - NLU -> Dialog state tracking -> Policy learning -> NLG
+  - ASR -> NLU -> DM -> NLG
   - NLU: maps the utterance into semantic slots
-    - Domain: text classification
-    - Intent: text classification (We can incorporate preceding text information during perform classification, see [8])
-    - Slot: sequence labeling
-  - DST: estimates the goal at every turn
-  - PL: generates next action, can be done by supervised learning or reinforcement learning
+    - Domain identification: text classification
+    - User intent detection: text classification (We can incorporate preceding text information during perform classification, see [8])
+    - Slot filling: sequence labeling
+  - DM: Dialogue Management
+    - Dialogue State Tracking: estimates the goal at every turn
+    - Policy Learning: generates next action, can be done by supervised learning or reinforcement learning
   - NLG: convert action to utterance
 ## 2.2 End-to-end
   - ...
