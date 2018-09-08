@@ -1,6 +1,6 @@
 # Introduction
 Reference 1 [1] gives detailed explanation about machine reading comprehension.  
-Senior DS from Tencent AILab Dr. Xiao give his recent research in reference 2 [2].
+Senior DS from Tencent AILab Dr. Xiao give his recent research in reference 4 [4].
 
 # Dataset
 - [SQuAD](https://rajpurkar.github.io/SQuAD-explorer/)
