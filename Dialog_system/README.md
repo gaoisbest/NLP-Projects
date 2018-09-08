@@ -1,6 +1,6 @@
 # Dialog system categories
-- Task-oriented (in closed domain)
-- Non-task-oriented (i.e., chat bots, in open domain)
+- **Task-oriented** (in closed domain) vs **Non-task-oriented** (i.e., chat bots, in open domain) [1]
+- **Generative** vs **retrieval-based**
 
 # 1. Task-oriented
 ## 1.1 Pipeline
@@ -15,16 +15,18 @@
   - NLG: convert action to utterance
 ## 1.2 End-to-end
   - ...
+  
 ## Reinforcement learning
   - Entity: **agent** and **environment** 
   - Rule: agent takes **action** and environment gives **reward** and **state**
   - **Policy**: a rule that the agent should follow to select actions given the current state
+
 # 2. Non-task-oriented
-- 2.1 Retrieval  
+- 2.1 Retrieval-based 
   - Given pre-defined responses, retrieval based model predict one response given current input context [2].
   - Two steps [3]:  
     - retrieval top-k response candidates by directly matching
-    - reranking and give best by incorporing context
+    - reranking and give best candidate by incorporing context
 - 2.2 Generative  
   - Generative new responses from scratch [2].
 
@@ -32,6 +34,13 @@
 - [Minlie Huang](http://coai.cs.tsinghua.edu.cn/hml/dataset/)
 - [Rui Yan](http://www.ruiyan.me/)
 - [Nan Duan](https://www.microsoft.com/en-us/research/people/nanduan/)
+
+# Dataset
+- [Ubuntu Dialogue Corpus v2.0](https://github.com/rkadlec/ubuntu-ranking-dataset-creator)
+- [A New Multi-Turn, Multi-Domain, Task-Oriented Dialogue Dataset](https://nlp.stanford.edu/blog/a-new-multi-turn-multi-domain-task-oriented-dialogue-dataset/)
+- [Dialog State Tracking Challenge 2 & 3](http://camdial.org/~mh521/dstc/)
+- [Douban Conversation Corpus](https://github.com/MarkWuNLP/MultiTurnResponseSelection#douban-conversation-corpus)
+
 
 # Implementation
 - [ChatterBot](https://github.com/gunthercox/ChatterBot) supplies a framework for building chatbot, and [Awesome-Chatbot](https://github.com/fendouai/Awesome-Chatbot) gives a list of public repositories about chatbot.
