@@ -4,13 +4,14 @@
 
 # 1. Task-oriented
 ## 1.1 Pipeline
-  - NLU -> Dialog state tracking -> Policy learning -> NLG
+  - ASR -> NLU -> DM -> NLG
   - NLU: maps the utterance into semantic slots
-    - Domain: text classification
-    - Intent: text classification (We can incorporate preceding text information during perform classification, see [8])
-    - Slot: sequence labeling
-  - DST: estimates the goal at every turn
-  - PL: generates next action, can be done by supervised learning or reinforcement learning
+    - Domain identification: text classification
+    - User intent detection: text classification (We can incorporate preceding text information during perform classification, see [7])
+    - Slot filling: sequence labeling
+  - DM: Dialogue Management
+    - Dialogue State Tracking: estimates the goal at every turn
+    - Policy Learning: generates next action, can be done by supervised learning or reinforcement learning
   - NLG: convert action to utterance
 ## 1.2 End-to-end
   - ...
@@ -43,6 +44,6 @@
 [4] [A Network-based End-to-End Trainable Task-oriented Dialogue System](http://mi.eng.cam.ac.uk/~sjy/papers/wgmv17.pdf), and [implementation](https://github.com/shawnwun/NNDIAL), Ali Xiaomi  
 [5] [End-to-end LSTM-based dialog control optimized with supervised and reinforcement learning](https://arxiv.org/pdf/1606.01269.pdf), [Hybrid Code Networks: practical and efficient end-to-end dialog control with supervised and reinforcement learning](https://arxiv.org/pdf/1702.03274.pdf), and [implementation](https://github.com/voicy-ai/DialogStateTracking)  
 [6] [Learning End-to-End Goal-Oriented Dialog](https://arxiv.org/pdf/1605.07683.pdf) from Facebook, and [implementation](https://github.com/vyraun/chatbot-MemN2N-tensorflow)  
-[8] [Sequential Short-Text Classification with
+[7] [Sequential Short-Text Classification with
 Recurrent and Convolutional Neural Networks](https://arxiv.org/pdf/1603.03827.pdf)
 
