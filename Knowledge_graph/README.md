@@ -27,19 +27,22 @@
       - Co-reference Resolution (CR) 共指消解
   - **2.2 Relation extraction**
       - **Input**: unstructured text, a group of entities. **Output**: a group of triplets, e.g., (First Entity, Second Entity, Relation Type)
-      - Methods
+      - Methods [1]
         - **Pattern / rule matching**
           - Trigger word pattern
           - Dependency parsing pattern, verb is trigger word. [Running example](https://mp.weixin.qq.com/s/Q-WMYSTjGGxIMGNq-wfpRg)
         - **Supervised method**
           - [Running example](https://www.microsoft.com/developerblog/2016/09/13/training-a-classifier-for-relation-extraction-from-medical-literature/)
+          - Two classifier
+            - **Yes or no** classifier determine if there is a relation
+            - **Relation** classifier determine the exact relation
         - **Semi-supervised method**
+          - **Bootstrapping**
+            - Example [1].
           - **Distant supervision**
             - **Input**: unstructured text, database contains known entity relations. **Output**; a set of labeled data
-            - Cannot find **new** relationship
+            - Combination of **bootstrapping** and **supervised**. Cannot find **new** relationship. Example [1].
             - Deep model: PCNN
-          - **Bootstrapping**
-  - **2.3 Event extraction** (i.e., 多元关系抽取)
     - Trigger word 触发词
     - Time 时间
     - Location 地点
@@ -79,4 +82,6 @@
 - [Agriculture Knowledge Graph](https://github.com/qq547276542/Agriculture_KnowledgeGraph)
 - [Knowledge graph demo](https://github.com/Shuang0420/knowledge_graph_demo)
 
+# Reference
+[1] [NLP笔记-Relation Extraction](http://www.shuang0420.com/2017/04/10/NLP%E7%AC%94%E8%AE%B0%20-%20Relation%20Extraction/)
 
