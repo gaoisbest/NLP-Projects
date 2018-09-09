@@ -43,6 +43,7 @@
             - **Input**: unstructured text, database contains known entity relations. **Output**; a set of labeled data
             - Combination of **bootstrapping** and **supervised**. Cannot find **new** relationship. Example [1].
             - Deep model: PCNN
+  - **2.3 Event extraction**
     - Trigger word 触发词
     - Time 时间
     - Location 地点
