@@ -23,13 +23,14 @@
 
 # 2. Non-task-oriented
 - 2.1 Retrieval-based 
-  - Given pre-defined responses, retrieval based model predict one response given current input context [2].
+  - Given pre-defined responses, retrieval based model predict one response given current input context [2]
   - Two steps [3]:  
     - retrieval top-k response candidates by directly matching
     - reranking and give best candidate by incorporing context
+  - [Sequential matching network](https://arxiv.org/abs/1612.01627)
 - 2.2 Generative  
-  - Generative new responses from scratch [2].
-  - Hierarchical model to incorporate **context** [8].
+  - Generative new responses from scratch [2]
+  - Hierarchical model to incorporate **context** [8]
 - 2.3 Hybrid 
   - [Alime](http://www.aclweb.org/anthology/P/P17/P17-2079.pdf)
 
