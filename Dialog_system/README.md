@@ -19,7 +19,7 @@
         - **Policy**: a rule that the agent should follow to select actions given the current state
   - NLG: convert action to utterance
 ## 1.2 End-to-end
-  - see report of Dr.Che [https://github.com/gaoisbest/NLP-Projects/blob/master/Dialog_system/NLPCC2018_Day3_Tencent_workshop_chewangxiang.pdf]
+  - see report of (Dr.Che)[https://github.com/gaoisbest/NLP-Projects/blob/master/Dialog_system/NLPCC2018_Day3_Tencent_workshop_chewangxiang.pdf]
 
 # 2. Non-task-oriented
 - 2.1 Retrieval-based 
