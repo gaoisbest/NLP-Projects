@@ -6,20 +6,20 @@
 ## 1.1 Pipeline
   - ASR -> NLU -> DM -> NLG
   - NLU: maps the utterance into semantic slots
-    - Domain identification: text classification
-    - User intent detection: text classification (We can incorporate preceding text information during perform classification, see [7])
-    - Slot filling: sequence labeling
+    - **Domain identification**: text classification
+    - **User intent detection**: text classification (We can incorporate preceding text information during perform classification, see [7])
+    - **Slot filling**: sequence labeling
   - DM: Dialogue Management
-    - Dialogue State Tracking: estimates the goal at every turn
-    - Policy Learning: generates next action, can be done by supervised learning or reinforcement learning
+    - **Dialogue State Tracking**: estimates the goal at every turn. A probability distribution over each slot for each turn.
+    - **Policy Learning**: generates next action
+      - Supervised learning
+      - Reinforcement learning
+        - Entity: **agent** and **environment** 
+        - Rule: agent takes **action** and environment gives **reward** and **state**
+        - **Policy**: a rule that the agent should follow to select actions given the current state
   - NLG: convert action to utterance
 ## 1.2 End-to-end
-  - ...
-  
-## Reinforcement learning
-  - Entity: **agent** and **environment** 
-  - Rule: agent takes **action** and environment gives **reward** and **state**
-  - **Policy**: a rule that the agent should follow to select actions given the current state
+  - see report of Dr.Che [https://github.com/gaoisbest/NLP-Projects/blob/master/Dialog_system/NLPCC2018_Day3_Tencent_workshop_chewangxiang.pdf]
 
 # 2. Non-task-oriented
 - 2.1 Retrieval-based 
