@@ -24,6 +24,7 @@
 # 2. Non-task-oriented
 - 2.1 Retrieval-based 
   - Given pre-defined responses, retrieval based model predict one response given current input context [2]
+  - Single/Multi turn response matching
   - Two steps [3]:  
     - retrieval top-k response candidates by directly matching
     - reranking and give best candidate by incorporing context
