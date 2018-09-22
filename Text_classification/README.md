@@ -1,3 +1,4 @@
+# Text Classification
 Text classificaton (i.e., fastText, lstm, CNNs) based on [Sogou](http://www.sogou.com/labs/resource/cs.php) corpus.
 
 ## 1. fastText
@@ -89,3 +90,6 @@ Text classificaton (i.e., fastText, lstm, CNNs) based on [Sogou](http://www.sogo
 [1] https://www.zhihu.com/question/41625896  
 [2] https://hanxiao.github.io/2018/06/25/4-Encoding-Blocks-You-Need-to-Know-Besides-LSTM-RNN-in-Tensorflow/?from=timeline&isappinstalled=0  
 
+# Sentiment analysis
+## Tools
+- [Baidu Senta](https://github.com/baidu/Senta)
