@@ -27,7 +27,7 @@
       - Co-reference Resolution (CR) 共指消解
   - **2.2 Relation extraction**
       - **Input**: unstructured text, a group of entities. **Output**: a group of triplets, e.g., (First Entity, Second Entity, Relation Type)
-      - Methods [1]
+      - Methods [1, 2]
         - **Pattern / rule matching**
           - Trigger word pattern
           - Dependency parsing pattern, verb is trigger word. [Running example](https://mp.weixin.qq.com/s/Q-WMYSTjGGxIMGNq-wfpRg)
@@ -84,5 +84,6 @@
 - [Knowledge graph demo](https://github.com/Shuang0420/knowledge_graph_demo)
 
 # Reference
-[1] [NLP笔记-Relation Extraction](http://www.shuang0420.com/2017/04/10/NLP%E7%AC%94%E8%AE%B0%20-%20Relation%20Extraction/)
+[1] [NLP笔记-Relation Extraction](http://www.shuang0420.com/2017/04/10/NLP%E7%AC%94%E8%AE%B0%20-%20Relation%20Extraction/)  
+[2] [知识抽取-实体及关系抽取](http://www.shuang0420.com/2018/09/15/%E7%9F%A5%E8%AF%86%E6%8A%BD%E5%8F%96-%E5%AE%9E%E4%BD%93%E5%8F%8A%E5%85%B3%E7%B3%BB%E6%8A%BD%E5%8F%96/)
 
