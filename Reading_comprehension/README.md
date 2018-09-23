@@ -3,6 +3,7 @@ Reference 1 [1] gives detailed explanation about machine reading comprehension.
 
 # Models
 - [QANet](https://arxiv.org/pdf/1804.09541.pdf)
+- [S-Net](https://arxiv.org/pdf/1706.04815.pdf)
 - [Dual Ask-Answer Network](https://arxiv.org/abs/1809.01997)
 
 # Dataset
