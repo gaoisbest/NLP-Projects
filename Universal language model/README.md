@@ -12,6 +12,18 @@
 ## ULMFIT [2]
 ## OpenAI transformer
 ### Transformer [3]
+- Belongs to **Encoder-Decoder** framework
+- Encoder block
+    - Multi-head self-attention
+        - A layer that helps the encoder look at other words in the input sentence as it encodes a specific word
+    - Position-wise feed-forward
+        - The exact same feed-forward network is independently applied to each position
+- Decoder block
+    - Multi-head self-attention
+    - Encoder-Decoder attention
+        - Helps the decoder focus on relevant parts of the input sentence
+    - Position-wise feed-forward
+
 
 Implementation: [pytorch](https://github.com/jadore801120/attention-is-all-you-need-pytorch), [tensorflow](https://github.com/Kyubyong/transformer)  
 [self attention](https://www.paperweekly.site/papers/notes/339) 
@@ -22,3 +34,4 @@ Implementation: [pytorch](https://github.com/jadore801120/attention-is-all-you-n
 - [2] [blog](http://nlp.fast.ai/classification/2018/05/15/introducting-ulmfit.html)
 - [3] [Transformer illustration](https://jalammar.github.io/illustrated-transformer/), [2.1](https://www.jiqizhixin.com/articles/2018-01-10-20), [2.2]()
 - [4] https://towardsdatascience.com/deep-learning-for-specific-information-extraction-from-unstructured-texts-12c5b9dceada
+
