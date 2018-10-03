@@ -1,10 +1,11 @@
 # Introduction
-Reference 1 [1] gives detailed explanation about machine reading comprehension. 
+[Tencent AI part 1](https://hanxiao.github.io/2018/04/21/Teach-Machine-to-Comprehend-Text-and-Answer-Question-with-Tensorflow/) [1] gives detailed explanation about machine reading comprehension. 
 
 # Models
 - [QANet](https://arxiv.org/pdf/1804.09541.pdf)
 - [R-Net](https://www.microsoft.com/en-us/research/wp-content/uploads/2017/05/r-net.pdf)
 - [S-Net](https://arxiv.org/pdf/1706.04815.pdf)
+- [Multi-Passage Machine Reading Comprehension with Cross-Passage Answer Verification](https://arxiv.org/pdf/1805.02220.pdf)
 - [Dual Ask-Answer Network](https://arxiv.org/abs/1809.01997)
 
 # Dataset
@@ -17,8 +18,8 @@ Reference 1 [1] gives detailed explanation about machine reading comprehension.
 
 
 # References:  
-- [1] [Part 1](https://hanxiao.github.io/2018/04/21/Teach-Machine-to-Comprehend-Text-and-Answer-Question-with-Tensorflow/), [Part 2](https://hanxiao.github.io/2018/09/09/Dual-Ask-Answer-Network-for-Machine-Reading-Comprehension/?from=timeline&isappinstalled=0)
-- [2] review [part 1](https://mp.weixin.qq.com/s/V2HcHgmW-SfJDwzqydadoA) and [part 2](https://mp.weixin.qq.com/s/IahvlkiACOAjicX68teA0A)
+- [1] Tencent AI [Part 1](https://hanxiao.github.io/2018/04/21/Teach-Machine-to-Comprehend-Text-and-Answer-Question-with-Tensorflow/), [Part 2](https://hanxiao.github.io/2018/09/09/Dual-Ask-Answer-Network-for-Machine-Reading-Comprehension/?from=timeline&isappinstalled=0)
+- [2] Model review [part 1](https://mp.weixin.qq.com/s/V2HcHgmW-SfJDwzqydadoA) and [part 2](https://mp.weixin.qq.com/s/IahvlkiACOAjicX68teA0A)
 - [3] [video](https://mp.weixin.qq.com/s/6nAm1sJrAj3qqUAagwWutg) introduction by Dr. Lin
 - [4] [
 S-Net: From Answer Extraction to Answer Generation for Machine Reading Comprehension](https://arxiv.org/pdf/1706.04815.pdf)
