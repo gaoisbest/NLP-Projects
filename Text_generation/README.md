@@ -9,7 +9,7 @@
 
 # Evaluation metrics
 - [**ROUGE**, Recall-Oriented Understudy for Gisting Evaluation](http://www.aclweb.org/anthology/W04-1013), first proposed for text summarization
-- [**BLEU**, Bilingual Evaluation Understudy](https://www.aclweb.org/anthology/P02-1040.pdf), first proposed for machine translation, [implementation example](https://machinelearningmastery.com/calculate-bleu-score-for-text-python/), 
+- [**BLEU**, Bilingual Evaluation Understudy](https://www.aclweb.org/anthology/P02-1040.pdf), first proposed for machine translation, [implementation example](https://machinelearningmastery.com/calculate-bleu-score-for-text-python/), [difference between ROUGE and BLEU](https://stackoverflow.com/questions/38045290/text-summarization-evaluation-bleu-vs-rouge) 
 - [**Meteor**](https://www.cs.cmu.edu/~alavie/METEOR/pdf/meteor-1.5.pdf)
 
 
