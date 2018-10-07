@@ -28,7 +28,7 @@
   - Two steps [3]:  
     - retrieval top-k response candidates by directly matching
     - reranking and give best candidate by incorporing context
-  - [Sequential matching network](https://arxiv.org/abs/1612.01627)
+  - [Sequential matching network](https://arxiv.org/abs/1612.01627), and other [state-of-the-art models](https://mp.weixin.qq.com/s/yC8uYwti9Meyt83xkmbmcg)
 - 2.2 Generative  
   - Generative new responses from scratch [2]
   - Hierarchical model to incorporate **context** [8]
