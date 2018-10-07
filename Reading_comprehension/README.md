@@ -15,7 +15,7 @@
     - SQuAD constrains the answer to be an exact sub-span in the passage, while the answer in MS-MARCO may covers several passages.
     - SQuAD only has one passage for a question, while MS-MARCO contains multiple passages.
 - [DuReader](http://ai.baidu.com/broad/subordinate?dataset=dureader)
-
+- [HotpotQA](https://hotpotqa.github.io/)
 
 # References:  
 - [1] Tencent AI [Part 1](https://hanxiao.github.io/2018/04/21/Teach-Machine-to-Comprehend-Text-and-Answer-Question-with-Tensorflow/), [Part 2](https://hanxiao.github.io/2018/09/09/Dual-Ask-Answer-Network-for-Machine-Reading-Comprehension/?from=timeline&isappinstalled=0)
