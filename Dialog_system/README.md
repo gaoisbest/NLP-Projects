@@ -22,18 +22,20 @@
   - see report of (Dr.Che)[https://github.com/gaoisbest/NLP-Projects/blob/master/Dialog_system/NLPCC2018_Day3_Tencent_workshop_chewangxiang.pdf]
 
 # 2. Non-task-oriented
-- 2.1 Retrieval-based 
+## 2.1 Retrieval-based 
   - Given pre-defined responses, retrieval based model predict one response given current input context [2]
   - Single/Multi turn response matching
   - Two steps [3]:  
     - retrieval top-k response candidates by directly matching
     - reranking and give best candidate by incorporing context
   - [Sequential matching network](https://arxiv.org/abs/1612.01627), and other [state-of-the-art models](https://mp.weixin.qq.com/s/yC8uYwti9Meyt83xkmbmcg)
-- 2.2 Generative  
+## 2.2 Generative  
   - Generative new responses from scratch [2]
   - Hierarchical model to incorporate **context** [8]
-- 2.3 Hybrid 
+## 2.3 Hybrid 
   - [Alime](http://www.aclweb.org/anthology/P/P17/P17-2079.pdf)
+## Video open courses
+- [How to use question to increase Chatbot's interactivity ?](https://mp.weixin.qq.com/s/5yEcgzhEVx0mlBFerZNTgQ)
 
 
 # Leading Researchers
