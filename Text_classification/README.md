@@ -1,5 +1,12 @@
-# Text Classification
-Text classificaton (i.e., fastText, lstm, CNNs) based on [Sogou](http://www.sogou.com/labs/resource/cs.php) corpus.
+# Outline
+- Text classification models
+    - [Sogou corpus](http://www.sogou.com/labs/resource/cs.php)
+    - fastText
+    - RNNs
+    - CNNs
+    - HAN
+    - Discussion
+- Sentiment analysis
 
 ## 1. fastText
 ### Principle
@@ -26,11 +33,14 @@ Text classificaton (i.e., fastText, lstm, CNNs) based on [Sogou](http://www.sogo
 [3] http://albertxiebnu.github.io/fasttext/
 
 
-## 2.1 LSTM
+## 2. RNNs
 - `LSTM_text_classification_version_1.ipynb`. See [Chinese notes](http://url.cn/5cLDOQI), [中文解读](http://url.cn/5cLDOQI).
 - `LSTM_text_classification_version_2.ipynb`. See [Chinese notes](http://url.cn/5w5VbaI), [中文解读](http://url.cn/5w5VbaI).
 - Concatenate **character** features and **word** features together to feed to FC.
 - To be done: **LSTM + Attention, Bidirectional LSTM + Attention**
+
+### 2.1 Multiplicative LSTM
+[Openai's](https://blog.openai.com/unsupervised-sentiment-neuron/) work that finds a **sentiment neuron**. The model consists of unsupervised language model + Logistic regression with L1 regularization.  
 
 ### References
 [1] https://richliao.github.io/supervised/classification/2016/12/26/textclassifier-HATN/  
@@ -38,19 +48,15 @@ Text classificaton (i.e., fastText, lstm, CNNs) based on [Sogou](http://www.sogo
 [3] https://www.cloudsek.com/announcements/blog/hierarchical-attention-text-classification/  
 
 
-
-## 2.2 Multiplicative LSTM
-[Openai's](https://blog.openai.com/unsupervised-sentiment-neuron/) work that finds a **sentiment neuron**. The model consists of unsupervised language model + Logistic regression with L1 regularization.  
-
-
-## 3.1 Plain CNNs
-### Principle
+## 3. CNNs
+### 3.1 Plain CNNs
+#### Principle
 - Converting the sentence to a tensor of shape [height=seq_len, width=embedding_size, channels=1] with word embedding. 
 - Convolution and max-pooling on the tensor.
 - Fully-connected with softmax.
 
-### Model
-#### Structure and Dimensions
+#### Model
+##### Structure and Dimensions
 - Input: `(batch_size, height=seq_length, width=embedding_size, channels=1)`. `tf.nn.embedding_lookup`, `tf.expand_dims`
 - for f in filter_sizes:
     - Convolution `tf.nn.conv2d`
@@ -65,20 +71,23 @@ Text classificaton (i.e., fastText, lstm, CNNs) based on [Sogou](http://www.sogo
     - `(batch_size, len(filter_sizes)*num_filters)`
 - FC2
     - `(batch_size, num_classes)`
-### Implementation
+#### Implementation
 - `CNN_text_classification.ipynb`. See [Chinese notes](http://url.cn/5kW61T4), [中文解读](http://url.cn/5kW61T4).
 
-### References
+#### References
 [1] http://www.wildml.com/2015/12/implementing-a-cnn-for-text-classification-in-tensorflow/  
 [2] https://github.com/gaussic/text-classification-cnn-rnn
 
-## 3.2 RCNN
-- Word: word itself + its context (bi-rnn)
+### 3.2 CNNs with k-max pooling
+- To do
+### 3.3 DPCNN
+- To do
 
-### References
-[1] https://www.aaai.org/ocs/index.php/AAAI/AAAI15/paper/view/9745 
+## 4. HAN
+#### References
+[1] [Data grand]()
 
-## 4. Discussion
+## 5. Discussion
 - For long sentence, CNNs is better than RNNs [1].
 - **Long-term dependency** is **not significant** for text classification problem [2].
 - [Recursive NNs](https://nlp.stanford.edu/~socherr/EMNLP2013_RNTN.pdf) incorporate **syntax** information.
