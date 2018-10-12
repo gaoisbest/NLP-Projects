@@ -118,3 +118,9 @@ The brands NER training data are from crawled Weibo. Please see sample training,
 [5] [Character-Based LSTM-CRF with Radical-Level Features for Chinese Named Entity Recognition](https://link.springer.com/chapter/10.1007/978-3-319-50496-4_20)  
 [6] [ChineseNER](https://github.com/zjy-ucas/ChineseNER)  
 [7] https://pystruct.github.io/intro.html
+
+
+# Other tools
+- [StanfordCoreNLP](https://stanfordnlp.github.io/CoreNLP/human-languages.html)
+- [pyltp](https://github.com/HIT-SCIR/pyltp)
+- [spacy](https://spacy.io/)
