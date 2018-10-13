@@ -10,6 +10,7 @@
 # Examples
 ## BERT
 ## ELMo
+- [How to train own ELMo](https://github.com/allenai/bilm-tf)? 
 ## ULMFIT [2]
 ## OpenAI transformer
 ### Transformer
