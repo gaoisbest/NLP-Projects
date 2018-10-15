@@ -1,5 +1,12 @@
 # Introduction
-[Tencent AI part 1](https://hanxiao.github.io/2018/04/21/Teach-Machine-to-Comprehend-Text-and-Answer-Question-with-Tensorflow/) [1] gives detailed explanation about machine reading comprehension. 
+Human reading comprehension belongs to cognitive psychology field. xx gives the first study about machine reading comprehension. babi datasets from Facebook proposes the AI complete concept.
+- Different **comprehension types**
+    - Literal 
+    - Inference
+    - Critical 
+feature engineering based symbolic models and deep learning models
+- [Tencent AI part 1](https://hanxiao.github.io/2018/04/21/Teach-Machine-to-Comprehend-Text-and-Answer-Question-with-Tensorflow/) gives detailed explanation about machine reading comprehension. 
+
 
 # Models
 - [QANet](https://arxiv.org/pdf/1804.09541.pdf)
