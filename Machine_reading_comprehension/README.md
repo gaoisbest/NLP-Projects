@@ -1,7 +1,7 @@
 # Introduction
 Human reading comprehension belongs to cognitive psychology field. Roughly, there are three different **comprehension types**, i.e., literal comprehension (字面理解), inference comprehension (推断理解) and critical comprehension (评价理解).  
 
-For machine reading comprehension (mrc), [Deep read: A reading comprehension system](http://www.aclweb.org/anthology/P99-1042) in ACL 1999 gives the first study. EMNLP 2014 best paper [Modeling Biological Processes for Reading Comprehension](http://www.aclweb.org/anthology/D14-1159) proposes **feature engineering based symbolic models**. After that, lots of **deep learning models** appear. [Tencent AI part 1](https://hanxiao.github.io/2018/04/21/Teach-Machine-to-Comprehend-Text-and-Answer-Question-with-Tensorflow/) illustrates building blocks of mrc deep learning models. [Tencent AI  Part 2](https://hanxiao.github.io/2018/09/09/Dual-Ask-Answer-Network-for-Machine-Reading-Comprehension/?from=timeline&isappinstalled=0) proposes their new [Dual Ask-Answer Network](https://arxiv.org/abs/1809.01997). [bAbI](https://research.fb.com/downloads/babi/) datasets from Facebook gives the ai-complete concept. 
+For machine reading comprehension (mrc), [Deep read: A reading comprehension system](http://www.aclweb.org/anthology/P99-1042) in ACL 1999 gives the first study. [Towards the Machine Comprehension of Text: An Essay](https://pdfs.semanticscholar.org/a4dd/e51a7f3f0f731d2c27d64948706604792efa.pdf) by Microsoft gives a review. EMNLP 2014 best paper [Modeling Biological Processes for Reading Comprehension](http://www.aclweb.org/anthology/D14-1159) proposes **feature engineering based symbolic models**. After that, lots of **deep learning models** appear. [Tencent AI part 1](https://hanxiao.github.io/2018/04/21/Teach-Machine-to-Comprehend-Text-and-Answer-Question-with-Tensorflow/) illustrates building blocks of mrc deep learning models. [Tencent AI  Part 2](https://hanxiao.github.io/2018/09/09/Dual-Ask-Answer-Network-for-Machine-Reading-Comprehension/?from=timeline&isappinstalled=0) proposes their new [Dual Ask-Answer Network](https://arxiv.org/abs/1809.01997). [bAbI](https://research.fb.com/downloads/babi/) datasets from Facebook gives the ai-complete concept. 
 
 
 # Deep learning Models
@@ -11,6 +11,10 @@ For machine reading comprehension (mrc), [Deep read: A reading comprehension sys
 - [Multi-Passage Machine Reading Comprehension with Cross-Passage Answer Verification](https://arxiv.org/pdf/1805.02220.pdf)
 - [Dual Ask-Answer Network](https://arxiv.org/abs/1809.01997)
 - [FastQA](http://www.aclweb.org/anthology/K17-1028), [comment](http://www.shuang0420.com/2018/05/13/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0%20-%20Making%20Neural%20QA%20as%20Simple%20as%20Possible%20but%20not%20Simpler/)
+- Match-LSTM
+- BiDAF
+- FusionNet
+- Reinforced M-Reader
 - Model reviews [part 1](https://mp.weixin.qq.com/s/V2HcHgmW-SfJDwzqydadoA) and [part 2](https://mp.weixin.qq.com/s/IahvlkiACOAjicX68teA0A)
 
 # Dataset
@@ -23,6 +27,7 @@ For machine reading comprehension (mrc), [Deep read: A reading comprehension sys
 - [HotpotQA](https://hotpotqa.github.io/)
 - [TriviaQA](http://nlp.cs.washington.edu/triviaqa/)
 - [CoQA](https://stanfordnlp.github.io/coqa/): A Conversational Question Answering Challenge
+- [QuAC](http://quac.ai./): Question Answering in Context
 
 # Materials
 - [Dr. Lin from Naturali](https://mp.weixin.qq.com/s/6nAm1sJrAj3qqUAagwWutg)
