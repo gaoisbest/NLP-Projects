@@ -6,23 +6,25 @@ For machine reading comprehension (mrc), [Deep read: A reading comprehension sys
 
 # Deep learning Models
 - [QANet](https://arxiv.org/pdf/1804.09541.pdf)
-- [R-Net](https://www.microsoft.com/en-us/research/wp-content/uploads/2017/05/r-net.pdf)
-- [S-Net](https://arxiv.org/pdf/1706.04815.pdf)
-- [Multi-Passage Machine Reading Comprehension with Cross-Passage Answer Verification](https://arxiv.org/pdf/1805.02220.pdf)
+- [S-Net](https://arxiv.org/pdf/1706.04815.pdf) from MSR for MS-MARCO
+- [R-Net](https://www.microsoft.com/en-us/research/wp-content/uploads/2017/05/r-net.pdf) from MSR for MS-MARCO
+- [V-Net](https://arxiv.org/abs/1805.02220) from Baidu NLP for MS-MARCO
 - [Dual Ask-Answer Network](https://arxiv.org/abs/1809.01997)
 - [FastQA](http://www.aclweb.org/anthology/K17-1028), [comment](http://www.shuang0420.com/2018/05/13/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0%20-%20Making%20Neural%20QA%20as%20Simple%20as%20Possible%20but%20not%20Simpler/)
 - Match-LSTM
-- BiDAF
+- [BiDAF](https://arxiv.org/pdf/1611.01603.pdf) from AllenNLP **baseline for MS-MARCO**
+- [Simple and Effective Multi-Paragraph Reading Comprehension](https://arxiv.org/pdf/1710.10723.pdf) **baseline for HotpotQA**, [official code](https://github.com/allenai/document-qa) and [code by HotpotQA](https://github.com/hotpotqa/hotpot/blob/master/model.py)
+
 - FusionNet
 - Reinforced M-Reader
 - Model reviews [part 1](https://mp.weixin.qq.com/s/V2HcHgmW-SfJDwzqydadoA) and [part 2](https://mp.weixin.qq.com/s/IahvlkiACOAjicX68teA0A)
 
 # Dataset
-- [SQuAD](https://rajpurkar.github.io/SQuAD-explorer/)
-- [MS-MARCO](http://www.msmarco.org/)
+- [SQuAD](https://rajpurkar.github.io/SQuAD-explorer/), extractive dataset
+- [MS-MARCO](http://www.msmarco.org/), generative dataset
   - Differences from SQuAD
-    - SQuAD constrains the answer to be an exact sub-span in the passage, while the answer in MS-MARCO may covers several passages.
-    - SQuAD only has one passage for a question, while MS-MARCO contains multiple passages.
+    - SQuAD constrains the answer to be an exact sub-span in the passage, while the answer in MS-MARCO may covers several passages
+    - SQuAD only has one passage for a question, while MS-MARCO contains multiple passages
 - [DuReader](http://ai.baidu.com/broad/subordinate?dataset=dureader)
 - [HotpotQA](https://hotpotqa.github.io/)
 - [TriviaQA](http://nlp.cs.washington.edu/triviaqa/)
