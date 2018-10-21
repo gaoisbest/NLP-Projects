@@ -71,5 +71,6 @@ Reference:
 ### 2. [gensim](https://radimrehurek.com/gensim/)
 
 # Awesome public apis
-- [Baidu AI](https://ai.baidu.com/)
+- [Baidu AI Open Platform](https://ai.baidu.com/)
+- [Tencent AI Open Platform](https://ai.qq.com/)
 - [Tencent NLP](http://nlp.qq.com/)
