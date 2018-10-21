@@ -8,6 +8,7 @@
 - [Doc2vec](https://github.com/gaoisbest/NLP-Projects/blob/master/Text%20similarity/Doc2vec_model.py)
 - [LDA](https://github.com/gaoisbest/NLP-Projects/blob/master/Text%20similarity/LDA_model.py)
 - [LSI](https://github.com/gaoisbest/NLP-Projects/blob/master/Text%20similarity/LSI_model.py)
+- [Sent2vec](https://github.com/epfml/sent2vec)
 
 # Sentence encoder
 - https://hanxiao.github.io/2018/06/25/4-Encoding-Blocks-You-Need-to-Know-Besides-LSTM-RNN-in-Tensorflow/?from=timeline&isappinstalled=0
