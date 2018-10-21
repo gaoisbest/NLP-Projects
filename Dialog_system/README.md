@@ -32,6 +32,8 @@
 ## 2.2 Generative  
   - Generative new responses from scratch [2]
   - Hierarchical model to incorporate **context** [8]
+  - [HRED](https://arxiv.org/pdf/1507.02221.pdf) transfered from [**query suggestion**](https://arxiv.org/pdf/1507.02221.pdf), see [industrail application](https://mp.weixin.qq.com/s/6dKticG2I2zqlxnZ3W0ZgQ)
+  
 ## 2.3 Hybrid 
   - [Alime](http://www.aclweb.org/anthology/P/P17/P17-2079.pdf)
 ## Video open courses
