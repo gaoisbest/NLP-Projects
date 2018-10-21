@@ -31,8 +31,9 @@
   - [Sequential matching network](https://arxiv.org/abs/1612.01627), and other [state-of-the-art models](https://mp.weixin.qq.com/s/yC8uYwti9Meyt83xkmbmcg)
 ## 2.2 Generative  
   - Generative new responses from scratch [2]
-  - Hierarchical model to incorporate **context** [8]
   - [HRED](https://arxiv.org/pdf/1507.02221.pdf) transfered from [**query suggestion**](https://arxiv.org/pdf/1507.02221.pdf), see [industrail application](https://mp.weixin.qq.com/s/6dKticG2I2zqlxnZ3W0ZgQ)
+  - [VHRED](https://arxiv.org/abs/1605.06069)
+  
   
 ## 2.3 Hybrid 
   - [Alime](http://www.aclweb.org/anthology/P/P17/P17-2079.pdf)
@@ -64,6 +65,5 @@
 [5] [End-to-end LSTM-based dialog control optimized with supervised and reinforcement learning](https://arxiv.org/pdf/1606.01269.pdf), [Hybrid Code Networks: practical and efficient end-to-end dialog control with supervised and reinforcement learning](https://arxiv.org/pdf/1702.03274.pdf), and [implementation](https://github.com/voicy-ai/DialogStateTracking)  
 [6] [Learning End-to-End Goal-Oriented Dialog](https://arxiv.org/pdf/1605.07683.pdf) from Facebook, and [implementation](https://github.com/vyraun/chatbot-MemN2N-tensorflow)  
 [7] [Sequential Short-Text Classification with
-Recurrent and Convolutional Neural Networks](https://arxiv.org/pdf/1603.03827.pdf)  
-[8] [A Hierarchical Latent Variable Encoder-Decoder Model for Generating Dialogues](https://arxiv.org/abs/1605.06069)
+Recurrent and Convolutional Neural Networks](https://arxiv.org/pdf/1603.03827.pdf)
 
