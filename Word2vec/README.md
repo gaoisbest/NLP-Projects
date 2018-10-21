@@ -1,4 +1,4 @@
-# Example of word representations
+## Example of word representations
 
 ```
 Supposed corpus:
@@ -169,3 +169,6 @@ Let the word embedding dimension is 100, each word **gets embedded to a point** 
 - Learn word embeddings from a large corpus
 - Transfer word embeddings to new task.
 - Whether or not fine-tune the embeddings depends on the corpus size of new task. For [NER](https://github.com/gaoisbest/NLP-Projects/blob/master/Sequence%20labeling%20-%20NER/README.md), pretrained word embeddings are prerequisites for better accuracy.  
+
+## 6. Pre-trained word embedding
+- [Tencent 200d Chinese embedding](https://ai.tencent.com/ailab/nlp/embedding.html)
