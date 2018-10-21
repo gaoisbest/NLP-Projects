@@ -1,5 +1,4 @@
-# Similarity models
-- [Deep semantic similarity model (DSSM)](http://www.microsoft.com/en-us/research/project/dssm/)
+# Unsupervised sentence embedding models
 - Word mover's distance: [paper](http://proceedings.mlr.press/v37/kusnerb15.pdf), [gensim example](https://markroxor.github.io/gensim/static/notebooks/WMD_tutorial.html)
 - [Extension of BOW based on word2vec](https://www.zhihu.com/question/29978268/answer/55338644): The sentence vector contains top 10 word vector similarity between each word of the sentence and the vocabulary.
 - [LSTM + AutoEncoder](https://www.zhihu.com/question/29978268/answer/114093723)
@@ -10,7 +9,7 @@
 - [LSI](https://github.com/gaoisbest/NLP-Projects/blob/master/Text%20similarity/LSI_model.py)
 - [Sent2vec](https://github.com/epfml/sent2vec)
 
-# Sentence encoder
+# Sentence encoder example
 - https://hanxiao.github.io/2018/06/25/4-Encoding-Blocks-You-Need-to-Know-Besides-LSTM-RNN-in-Tensorflow/?from=timeline&isappinstalled=0
 
 # Notes of paper: Distributed Representations of Sentences and Documents
