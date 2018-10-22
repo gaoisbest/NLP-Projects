@@ -10,7 +10,15 @@
 # Examples
 ## BERT
 ## ELMo
-- [How to train own ELMo](https://github.com/allenai/bilm-tf)? 
+[AllenNLP ELMo page](https://allennlp.org/elmo) gives a detailed explanation about ELMo. And [AllenNLp github page](https://github.com/allenai/allennlp/blob/master/tutorials/how_to/elmo.md) describes how to use ELMo:
+- Get contextual representations uses trained model
+- Train a new model based on ELMo. Class `allennlp.modules.elmo.Elmo` calculates weighted representation
+- Interactively. Class `allennlp.commands.elmo.ElmoEmbedder` return lstm hidden states for each word
+- With existing allennlp model
+    - Edit `bidaf.jsonnet` from [`/training_config/`](https://github.com/allenai/allennlp/tree/master/training_config)
+    - Run `allennlp train training_config/bidaf.jsonnet -s output_model_file_path`
+    - See [BiDAF](https://github.com/gaoisbest/NLP-Projects/blob/master/Pretraining_LM/bidaf.jsonnet) example
+
 ## ULMFIT [2]
 ## OpenAI transformer
 ### Transformer
