@@ -1,5 +1,5 @@
 # Introduction [1]
-- [BERT](https://arxiv.org/pdf/1810.04805.pdf), [ELMo](https://arxiv.org/abs/1802.05365), [ULMFiT](https://arxiv.org/abs/1801.06146) and [OpenAI transformer](https://s3-us-west-2.amazonaws.com/openai-assets/research-covers/language-unsupervised/language_understanding_paper.pdf) shows that **pretrained language models** can achieve state-of-the-art results on a wide range of NLP tasks.
+- [BERT](https://arxiv.org/pdf/1810.04805.pdf), [ELMo](https://arxiv.org/abs/1802.05365), [ULMFiT](https://arxiv.org/abs/1801.06146) and [OpenAI GPT](https://s3-us-west-2.amazonaws.com/openai-assets/research-covers/language-unsupervised/language_understanding_paper.pdf) shows that **pretrained language models** can achieve state-of-the-art results on a wide range of NLP tasks. Refer to review [1](https://mp.weixin.qq.com/s/A-PKyZcXwOz-2lL-hBmjsA) and [2](https://mp.weixin.qq.com/s/-mdHtQ55C05eSRZZP7DlOg) see their difference.
 - Word vectors built by Word2vec or GloVe can only be used as initialization of **first layer** of deep networks.
 - Gain **primal “knowledge” of the language structures** before a more specific supervised training step [4].
 
@@ -20,7 +20,7 @@
     - See [BiDAF](https://github.com/gaoisbest/NLP-Projects/blob/master/Pretraining_LM/bidaf.jsonnet) example
 
 ## ULMFIT [2]
-## OpenAI transformer
+## OpenAI GPT
 ### Transformer
 - Principle: belongs to **Encoder-Decoder** framework [3]
 - Blocks
