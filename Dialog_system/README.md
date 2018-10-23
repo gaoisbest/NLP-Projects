@@ -33,6 +33,7 @@
   - Generative new responses from scratch [2]
   - [HRED](https://arxiv.org/pdf/1507.02221.pdf) transfered from [**query suggestion**](https://arxiv.org/pdf/1507.02221.pdf), see [industrail application](https://mp.weixin.qq.com/s/6dKticG2I2zqlxnZ3W0ZgQ)
   - [VHRED](https://arxiv.org/abs/1605.06069)
+  - [Context-sensitive ACL 2018](http://aclweb.org/anthology/C18-1206)
   
   
 ## 2.3 Hybrid 
