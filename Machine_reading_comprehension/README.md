@@ -31,21 +31,27 @@ For machine reading comprehension (mrc), [Deep read: A reading comprehension sys
 
 # Dataset
 - English
-    - [SQuAD](https://rajpurkar.github.io/SQuAD-explorer/), extractive dataset
-        - For unanswerable questions
-            - [SQUADRUN Dataset](http://aclweb.org/anthology/P18-2124)
-            - [U-Net](https://arxiv.org/pdf/1810.06638.pdf)
-            - [Read + Verify](https://arxiv.org/pdf/1808.05759.pdf)
-            - [Answer Verifier](https://link.springer.com/chapter/10.1007/978-3-319-99495-6_8)
-    - [MS-MARCO](http://www.msmarco.org/), generative dataset
-        - Differences from SQuAD
-            - SQuAD constrains the answer to be an exact sub-span in the passage, while the answer in MS-MARCO may covers several passages
-            - SQuAD only has one passage for a question, while MS-MARCO contains multiple passages
-    - [TriviaQA](http://nlp.cs.washington.edu/triviaqa/)
-    - [HotpotQA](https://hotpotqa.github.io/): A Dataset for Diverse, Explainable Multi-hop Question Answering
-    - [CoQA](https://stanfordnlp.github.io/coqa/): A Conversational Question Answering Challenge
-    - [QuAC](http://quac.ai./): Question Answering in Context
-    - [AI2 Reasoning Challenge](http://data.allenai.org/arc/)
+    - Extractive
+        - Single-hop (i.e., single document) reasoning
+            - [SQuAD](https://rajpurkar.github.io/SQuAD-explorer/), extractive dataset
+                - For **unanswerable** questions
+                    - [SQUADRUN Dataset](http://aclweb.org/anthology/P18-2124)
+                    - [U-Net](https://arxiv.org/pdf/1810.06638.pdf)
+                    - [Read + Verify](https://arxiv.org/pdf/1808.05759.pdf)
+                    - [Answer Verifier](https://link.springer.com/chapter/10.1007/978-3-319-99495-6_8)
+        - Multi-hop reasoning
+            - [HotpotQA](https://hotpotqa.github.io/): A Dataset for Diverse, Explainable Multi-hop Question Answering
+                - Data source: English Wikipedia dump
+                - Provides **supporting facts** to support **explainable** reasoning
+                - Novel question type: **comparison question**, which contains **yes/no question**
+            - [TriviaQA](http://nlp.cs.washington.edu/triviaqa/)
+            - [SearchQA](https://arxiv.org/abs/1704.05179)
+            - [CoQA](https://stanfordnlp.github.io/coqa/): A Conversational Question Answering Challenge
+            - [QuAC](http://quac.ai./): Question Answering in Context
+            - [AI2 Reasoning Challenge](http://data.allenai.org/arc/)
+    - Generative
+        - Multi-hop reasoning
+            - [MS-MARCO](http://www.msmarco.org/)
 - Chinese
     - [DuReader](http://ai.baidu.com/broad/subordinate?dataset=dureader)
     - [CMRC 2018](https://hfl-rc.github.io/cmrc2018/)
