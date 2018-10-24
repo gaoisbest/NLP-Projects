@@ -23,8 +23,7 @@ For machine reading comprehension (mrc), [Deep read: A reading comprehension sys
 - [FastQA](http://www.aclweb.org/anthology/K17-1028), [comment](http://www.shuang0420.com/2018/05/13/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0%20-%20Making%20Neural%20QA%20as%20Simple%20as%20Possible%20but%20not%20Simpler/)
 - Match-LSTM
 - [BiDAF](https://arxiv.org/pdf/1611.01603.pdf) from AllenNLP **baseline for MS-MARCO**
-- [Simple and Effective Multi-Paragraph Reading Comprehension](https://arxiv.org/pdf/1710.10723.pdf) **baseline for HotpotQA**, [official code](https://github.com/allenai/document-qa) and [code by HotpotQA](https://github.com/hotpotqa/hotpot/blob/master/model.py)
-
+- [Documentqa](https://github.com/allenai/document-qa)
 - FusionNet
 - Reinforced M-Reader
 - Model reviews [part 1](https://mp.weixin.qq.com/s/V2HcHgmW-SfJDwzqydadoA) and [part 2](https://mp.weixin.qq.com/s/IahvlkiACOAjicX68teA0A)
@@ -44,6 +43,7 @@ For machine reading comprehension (mrc), [Deep read: A reading comprehension sys
                 - Data source: English Wikipedia dump
                 - Provides **supporting facts** to support **explainable** reasoning
                 - Novel question type: **comparison question**, which contains **yes/no question**
+                - Baseline model: [Simple and Effective Multi-Paragraph Reading Comprehension](https://arxiv.org/pdf/1710.10723.pdf), [official code](https://github.com/allenai/document-qa) and [code by HotpotQA](https://github.com/hotpotqa/hotpot/blob/master/model.py)
             - [TriviaQA](http://nlp.cs.washington.edu/triviaqa/)
             - [SearchQA](https://arxiv.org/abs/1704.05179)
             - [CoQA](https://stanfordnlp.github.io/coqa/): A Conversational Question Answering Challenge
@@ -54,6 +54,7 @@ For machine reading comprehension (mrc), [Deep read: A reading comprehension sys
             - [MS-MARCO](http://www.msmarco.org/)
 - Chinese
     - [DuReader](http://ai.baidu.com/broad/subordinate?dataset=dureader)
+        - Model: [V-Net](https://yizhong-wang.com/papers/acl2018-reading-slides.pdf)
     - [CMRC 2018](https://hfl-rc.github.io/cmrc2018/)
 
 # Materials
