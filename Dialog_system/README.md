@@ -1,5 +1,5 @@
 # Dialog system categories
-- **Task-oriented** (in closed domain) vs **Non-task-oriented** (i.e., chat bots, in open domain) [1]
+- **Task-oriented** (in closed domain) vs **Non-task-oriented** (i.e., chat bots [8], in open domain) [1]
 - **Generative** vs **retrieval-based**
 
 # 1. Task-oriented
@@ -66,5 +66,6 @@
 [5] [End-to-end LSTM-based dialog control optimized with supervised and reinforcement learning](https://arxiv.org/pdf/1606.01269.pdf), [Hybrid Code Networks: practical and efficient end-to-end dialog control with supervised and reinforcement learning](https://arxiv.org/pdf/1702.03274.pdf), and [implementation](https://github.com/voicy-ai/DialogStateTracking)  
 [6] [Learning End-to-End Goal-Oriented Dialog](https://arxiv.org/pdf/1605.07683.pdf) from Facebook, and [implementation](https://github.com/vyraun/chatbot-MemN2N-tensorflow)  
 [7] [Sequential Short-Text Classification with
-Recurrent and Convolutional Neural Networks](https://arxiv.org/pdf/1603.03827.pdf)
+Recurrent and Convolutional Neural Networks](https://arxiv.org/pdf/1603.03827.pdf)  
+[8] [“Chitty-Chitty-Chat Bot”: Deep Learning for Conversational AI](https://www.ijcai.org/proceedings/2018/0778.pdf)
 
