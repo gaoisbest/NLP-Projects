@@ -9,6 +9,7 @@
 
 # Examples
 ## BERT
+[Official page](https://github.com/google-research/bert) gives pretrained models about BERT
 ## ELMo
 [AllenNLP ELMo page](https://allennlp.org/elmo) gives a detailed explanation about ELMo. And [AllenNLp github page](https://github.com/allenai/allennlp/blob/master/tutorials/how_to/elmo.md) describes how to use ELMo:
 - Get contextual representations uses trained model
