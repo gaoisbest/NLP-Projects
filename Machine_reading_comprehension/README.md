@@ -29,7 +29,7 @@ For machine reading comprehension (mrc), [Deep read: A reading comprehension sys
     - [R-Net](https://www.microsoft.com/en-us/research/wp-content/uploads/2017/05/r-net.pdf) from MSR for MS-MARCO
 
     - [FastQA](http://www.aclweb.org/anthology/K17-1028), [comment](http://www.shuang0420.com/2018/05/13/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0%20-%20Making%20Neural%20QA%20as%20Simple%20as%20Possible%20but%20not%20Simpler/)
-    - Match-LSTM
+    - [Match-LSTM](https://arxiv.org/pdf/1608.07905.pdf)
     - [BiDAF](https://arxiv.org/pdf/1611.01603.pdf) from AllenNLP **baseline for MS-MARCO**
     - [Documentqa](https://github.com/allenai/document-qa)
     - FusionNet
@@ -69,6 +69,7 @@ For machine reading comprehension (mrc), [Deep read: A reading comprehension sys
         - Generative
             - Multi-hop reasoning
                 - [MS-MARCO](http://www.msmarco.org/)
+                    - Give passage candidates, and annotate which passage is correct
     - Chinese
         - [DuReader](http://ai.baidu.com/broad/subordinate?dataset=dureader)
             - Model: [V-Net](https://yizhong-wang.com/papers/acl2018-reading-slides.pdf)
