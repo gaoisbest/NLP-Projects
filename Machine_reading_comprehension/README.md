@@ -4,7 +4,7 @@ Human reading comprehension belongs to cognitive psychology field. Roughly, ther
 For machine reading comprehension (mrc), [Deep read: A reading comprehension system](http://www.aclweb.org/anthology/P99-1042) in ACL 1999 gives the first study. [Towards the Machine Comprehension of Text: An Essay](https://pdfs.semanticscholar.org/a4dd/e51a7f3f0f731d2c27d64948706604792efa.pdf) by Microsoft gives a review. EMNLP 2014 best paper [Modeling Biological Processes for Reading Comprehension](http://www.aclweb.org/anthology/D14-1159) proposes **feature engineering based symbolic models**. After that, lots of **deep learning models** appear. [Tencent AI part 1](https://hanxiao.github.io/2018/04/21/Teach-Machine-to-Comprehend-Text-and-Answer-Question-with-Tensorflow/) illustrates building blocks of mrc deep learning models. [Tencent AI  Part 2](https://hanxiao.github.io/2018/09/09/Dual-Ask-Answer-Network-for-Machine-Reading-Comprehension/?from=timeline&isappinstalled=0) proposes their new [Dual Ask-Answer Network](https://arxiv.org/abs/1809.01997). [bAbI](https://research.fb.com/downloads/babi/) datasets from Facebook gives the ai-complete concept.  
 
 [**MRC components**](https://github.com/gaoisbest/NLP-Projects/blob/master/Machine_reading_comprehension/materials_CCL2018/CCL2018_MRC.pdf):
-- Document
+- Passage
     - Single or multiple
 - Question
     - Cloze or query
@@ -15,10 +15,16 @@ For machine reading comprehension (mrc), [Deep read: A reading comprehension sys
 
 
 # Deep learning Models
-- [QANet](https://arxiv.org/pdf/1804.09541.pdf)
-- [S-Net](https://arxiv.org/pdf/1706.04815.pdf) from MSR for MS-MARCO
+- Extraction based (i.e., predicting the start and end positions)
+    - [QANet](https://arxiv.org/pdf/1804.09541.pdf)
+    
+- Extraction-then-synthesis based
+    - [S-Net](https://arxiv.org/pdf/1706.04815.pdf) from MSR for MS-MARCO
+        - **Principle**: first **extracts evidence snippets** by matching question and passage via pointer network, then generate the answer by **synthesizing the passage, question adn evidence snippets** via seq2seq. Add **passage ranking** as an additional task to conduct multi-task learning.
+    - [V-Net](https://arxiv.org/abs/1805.02220) from Baidu NLP for MS-MARCO
+    
 - [R-Net](https://www.microsoft.com/en-us/research/wp-content/uploads/2017/05/r-net.pdf) from MSR for MS-MARCO
-- [V-Net](https://arxiv.org/abs/1805.02220) from Baidu NLP for MS-MARCO
+
 - [Dual Ask-Answer Network](https://arxiv.org/abs/1809.01997)
 - [FastQA](http://www.aclweb.org/anthology/K17-1028), [comment](http://www.shuang0420.com/2018/05/13/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0%20-%20Making%20Neural%20QA%20as%20Simple%20as%20Possible%20but%20not%20Simpler/)
 - Match-LSTM
@@ -29,33 +35,42 @@ For machine reading comprehension (mrc), [Deep read: A reading comprehension sys
 - Model reviews [part 1](https://mp.weixin.qq.com/s/V2HcHgmW-SfJDwzqydadoA) and [part 2](https://mp.weixin.qq.com/s/IahvlkiACOAjicX68teA0A)
 
 # Dataset
-- English
-    - Extractive
-        - Single-hop (i.e., single document) reasoning
-            - [SQuAD](https://rajpurkar.github.io/SQuAD-explorer/), extractive dataset
-                - For **unanswerable** questions
-                    - [SQUADRUN Dataset](http://aclweb.org/anthology/P18-2124)
-                    - [U-Net](https://arxiv.org/pdf/1810.06638.pdf)
-                    - [Read + Verify](https://arxiv.org/pdf/1808.05759.pdf)
-                    - [Answer Verifier](https://link.springer.com/chapter/10.1007/978-3-319-99495-6_8)
-        - Multi-hop reasoning
-            - [HotpotQA](https://hotpotqa.github.io/): A Dataset for Diverse, Explainable Multi-hop Question Answering
-                - Data source: English Wikipedia dump
-                - Provides **supporting facts** to support **explainable** reasoning
-                - Novel question type: **comparison question**, which contains **yes/no question**
-                - Baseline model: [Simple and Effective Multi-Paragraph Reading Comprehension](https://arxiv.org/pdf/1710.10723.pdf), [official code](https://github.com/allenai/document-qa) and [code by HotpotQA](https://github.com/hotpotqa/hotpot/blob/master/model.py)
-            - [TriviaQA](http://nlp.cs.washington.edu/triviaqa/)
-            - [SearchQA](https://arxiv.org/abs/1704.05179)
-            - [CoQA](https://stanfordnlp.github.io/coqa/): A Conversational Question Answering Challenge
-            - [QuAC](http://quac.ai./): Question Answering in Context
-            - [AI2 Reasoning Challenge](http://data.allenai.org/arc/)
-    - Generative
-        - Multi-hop reasoning
-            - [MS-MARCO](http://www.msmarco.org/)
-- Chinese
-    - [DuReader](http://ai.baidu.com/broad/subordinate?dataset=dureader)
-        - Model: [V-Net](https://yizhong-wang.com/papers/acl2018-reading-slides.pdf)
-    - [CMRC 2018](https://hfl-rc.github.io/cmrc2018/)
+- Multiple option
+    - [MCTest](https://www.microsoft.com/en-us/research/publication/mctest-challenge-dataset-open-domain-machine-comprehension-text/)
+- Cloze
+    - English
+        - [CNN/Daily-Mail](https://arxiv.org/pdf/1506.03340.pdf)
+        - [CBT](https://arxiv.org/pdf/1511.02301.pdf)
+    - Chinese
+        - [PeopleDaily/CFT](https://arxiv.org/pdf/1607.02250.pdf)
+- Question answering
+    - English
+        - Extractive
+            - Single-hop (i.e., single document) reasoning
+                - [SQuAD](https://rajpurkar.github.io/SQuAD-explorer/), extractive dataset
+                    - For **unanswerable** questions
+                        - [SQUADRUN Dataset](http://aclweb.org/anthology/P18-2124)
+                        - [U-Net](https://arxiv.org/pdf/1810.06638.pdf)
+                        - [Read + Verify](https://arxiv.org/pdf/1808.05759.pdf)
+                        - [Answer Verifier](https://link.springer.com/chapter/10.1007/978-3-319-99495-6_8)
+            - Multi-hop reasoning
+                - [HotpotQA](https://hotpotqa.github.io/): A Dataset for Diverse, Explainable Multi-hop Question Answering
+                    - Data source: English Wikipedia dump
+                    - Provides **supporting facts** to support **explainable** reasoning
+                    - Novel question type: **comparison question**, which contains **yes/no question**
+                    - Baseline model: [Simple and Effective Multi-Paragraph Reading Comprehension](https://arxiv.org/pdf/1710.10723.pdf), [official code](https://github.com/allenai/document-qa) and [code by HotpotQA](https://github.com/hotpotqa/hotpot/blob/master/model.py)
+                - [TriviaQA](http://nlp.cs.washington.edu/triviaqa/)
+                - [SearchQA](https://arxiv.org/abs/1704.05179)
+                - [CoQA](https://stanfordnlp.github.io/coqa/): A Conversational Question Answering Challenge
+                - [QuAC](http://quac.ai./): Question Answering in Context
+                - [AI2 Reasoning Challenge](http://data.allenai.org/arc/)
+        - Generative
+            - Multi-hop reasoning
+                - [MS-MARCO](http://www.msmarco.org/)
+    - Chinese
+        - [DuReader](http://ai.baidu.com/broad/subordinate?dataset=dureader)
+            - Model: [V-Net](https://yizhong-wang.com/papers/acl2018-reading-slides.pdf)
+        - [CMRC 2018](https://hfl-rc.github.io/cmrc2018/)
 
 # Materials
 - [Dr. Lin from Naturali](https://mp.weixin.qq.com/s/6nAm1sJrAj3qqUAagwWutg)
