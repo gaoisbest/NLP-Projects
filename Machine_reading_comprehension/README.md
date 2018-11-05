@@ -69,7 +69,10 @@ For machine reading comprehension (mrc), [Deep read: A reading comprehension sys
         - Generative
             - Multi-hop reasoning
                 - [MS-MARCO](http://www.msmarco.org/)
+                    - Data source: Bing queries. 10 passages per query. [Download link for v1 and v2](https://github.com/zlsh80826/MSMARCO/blob/master/data/download.py)
+                    - Answers are human-generated
                     - Give passage candidates, and annotate which passage is correct
+                    - Baseline model: [BiDAF](https://github.com/dfcf93/MSMARCOV2/tree/master/Q%2BA/BidafBaseline)
     - Chinese
         - [DuReader](http://ai.baidu.com/broad/subordinate?dataset=dureader)
             - Model: [V-Net](https://yizhong-wang.com/papers/acl2018-reading-slides.pdf)
