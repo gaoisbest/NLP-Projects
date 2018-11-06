@@ -18,18 +18,20 @@ For machine reading comprehension (mrc), [Deep read: A reading comprehension sys
 - Extraction based (i.e., predicting the start and end positions)
     - [QANet](https://arxiv.org/pdf/1804.09541.pdf)
     - [Dual Ask-Answer Network](https://arxiv.org/abs/1809.01997)
+    - [R-Net](https://www.microsoft.com/en-us/research/wp-content/uploads/2017/05/r-net.pdf) from MSR for MS-MARCO
+    - [Match-LSTM](https://arxiv.org/pdf/1608.07905.pdf)
+    
 - Extraction-then-synthesis based
-    - [S-Net](https://arxiv.org/pdf/1706.04815.pdf) from MSR for MS-MARCO
+    - [S-Net](https://github.com/gaoisbest/NLP-Projects/blob/master/Machine_reading_comprehension/materials_papers/%20S-Net%20-%20From%20Answer%20Extraction%20to%20Answer%20Generation%20for%20Machine%20Reading%20Comprehension.pdf) from MSR for MS-MARCO
         - Step 1: **extracts evidence snippets** by matching question and passage via pointer network. Add **passage ranking** as an additional task to conduct multi-task learning.
-        - Step 2: generate the answer by **synthesizing the passage, question adn evidence snippets** via seq2seq. Evidence snippets are labeled as features.
+        - Step 2: generate the answer by **synthesizing the passage, question and evidence snippets** via seq2seq. Evidence snippets are labeled as features.
         
     - [V-Net](https://arxiv.org/abs/1805.02220) from Baidu NLP for MS-MARCO
     
 - To be classified...
-    - [R-Net](https://www.microsoft.com/en-us/research/wp-content/uploads/2017/05/r-net.pdf) from MSR for MS-MARCO
-
+  
     - [FastQA](http://www.aclweb.org/anthology/K17-1028), [comment](http://www.shuang0420.com/2018/05/13/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0%20-%20Making%20Neural%20QA%20as%20Simple%20as%20Possible%20but%20not%20Simpler/)
-    - [Match-LSTM](https://arxiv.org/pdf/1608.07905.pdf)
+    
     - [BiDAF](https://arxiv.org/pdf/1611.01603.pdf) from AllenNLP **baseline for MS-MARCO**
     - [Documentqa](https://github.com/allenai/document-qa)
     - FusionNet
