@@ -77,12 +77,14 @@ For machine reading comprehension (mrc), [Deep read: A reading comprehension sys
                     - Baseline model: [BiDAF](https://github.com/dfcf93/MSMARCOV2/tree/master/Q%2BA/BidafBaseline)
     - Chinese
         - [DuReader](http://ai.baidu.com/broad/subordinate?dataset=dureader)
-            - Model: [V-Net](https://yizhong-wang.com/papers/acl2018-reading-slides.pdf)
+            - Data source: real anonymized user queries, contains more than 300K questions, 1.4M evident documents and **human generated answers**.
+            - Baseline model: [BiDAF and Match-LSTM](https://github.com/baidu/DuReader)
+            - Advanced model: [V-Net](https://yizhong-wang.com/papers/acl2018-reading-slides.pdf)
         - [CMRC 2018](https://hfl-rc.github.io/cmrc2018/)
 
 # Materials
-- [Dr. Lin from Naturali](https://mp.weixin.qq.com/s/6nAm1sJrAj3qqUAagwWutg)
-- [paperweekly seminar](https://www.bilibili.com/video/av33802404/)
+- [Naturali video version](https://mp.weixin.qq.com/s/6nAm1sJrAj3qqUAagwWutg), [text version](http://tech.163.com/18/0729/10/DNSH3QU600098IEO.html)
+- [Paperweekly seminar](https://www.bilibili.com/video/av33802404/)
 
 # Leading companies
 - [Zhuiyi](https://zhuiyi.ai/)
