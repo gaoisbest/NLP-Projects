@@ -20,6 +20,7 @@ For machine reading comprehension (mrc), [Deep read: A reading comprehension sys
     - [Dual Ask-Answer Network](https://arxiv.org/abs/1809.01997)
     - [R-Net](https://www.microsoft.com/en-us/research/wp-content/uploads/2017/05/r-net.pdf) from MSR for MS-MARCO
     - [Match-LSTM](https://arxiv.org/pdf/1608.07905.pdf)
+    - [Gated Self-Matching Networks](http://www.aclweb.org/anthology/P17-1018)
     
 - Extraction-then-synthesis based
     - [S-Net](https://github.com/gaoisbest/NLP-Projects/blob/master/Machine_reading_comprehension/materials_papers/%20S-Net%20-%20From%20Answer%20Extraction%20to%20Answer%20Generation%20for%20Machine%20Reading%20Comprehension.pdf) from MSR for MS-MARCO
