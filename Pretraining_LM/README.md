@@ -1,4 +1,6 @@
 # Introduction [1]
+- Transfer learning from computer vision shows that **low-level features can be shared and high-level features are task-dependent**, therefore we can use our own data to fine-tune the pre-trained model with **same model strcuture**.
+- [History](https://zhuanlan.zhihu.com/p/49271699?utm_medium=social&utm_source=wechat_session&wechatShare=2&from=timeline&isappinstalled=0): NNLM -> Word2vec (cannot handle polysemy) -> ELMo (dynamic word embedding) -> 
 - [BERT](https://arxiv.org/pdf/1810.04805.pdf), [ELMo](https://arxiv.org/abs/1802.05365), [ULMFiT](https://arxiv.org/abs/1801.06146) and [OpenAI GPT](https://s3-us-west-2.amazonaws.com/openai-assets/research-covers/language-unsupervised/language_understanding_paper.pdf) shows that **pretrained language models** can achieve state-of-the-art results on a wide range of NLP tasks. Refer to review [1](https://mp.weixin.qq.com/s/A-PKyZcXwOz-2lL-hBmjsA) and [2](https://mp.weixin.qq.com/s/-mdHtQ55C05eSRZZP7DlOg) see their difference.
 - Word vectors built by Word2vec or GloVe can only be used as initialization of **first layer** of deep networks.
 - Gain **primal “knowledge” of the language structures** before a more specific supervised training step [4].
@@ -8,9 +10,12 @@
 - **Fine-tune the entire language model**, as done by ULMFiT. Fine-tuning approach is what is typically done in CV where either the top-most or several of the top layers are fine-tuned. 
 
 # Examples
-## BERT
-[Official page](https://github.com/google-research/bert) gives pretrained models about BERT
 ## ELMo
+### Principle
+- Bidirectional language model
+- Lower biLSTM layer catches syntax, and higher biLSTM layer catches semantic.
+
+### Implementation
 [AllenNLP ELMo page](https://allennlp.org/elmo) gives a detailed explanation about ELMo. And [AllenNLp github page](https://github.com/allenai/allennlp/blob/master/tutorials/how_to/elmo.md) describes how to use ELMo:
 - Get contextual representations uses trained model
 - Train a new model based on ELMo. Class `allennlp.modules.elmo.Elmo` calculates weighted representation
@@ -19,6 +24,10 @@
     - Edit `bidaf.jsonnet` from [`/training_config/`](https://github.com/allenai/allennlp/tree/master/training_config)
     - Run `allennlp train training_config/bidaf.jsonnet -s output_model_file_path`
     - See [BiDAF](https://github.com/gaoisbest/NLP-Projects/blob/master/Pretraining_LM/bidaf.jsonnet) example
+
+
+## BERT
+[Official page](https://github.com/google-research/bert) gives pretrained models about BERT
 
 ## ULMFIT [2]
 ## OpenAI GPT
