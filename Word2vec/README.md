@@ -142,7 +142,7 @@ I also implemented the [Word2vec in tensorflow](https://github.com/gaoisbest/NLP
 ### Discussion
 - **The word orders are ignored in each window.**
 - Generally, **narrower window size** leads to better performance in **syntactic** tests while **wider window size** leads to better performance in **semantic** tests.
-
+- Key drawbacks: **cannot handle Polysemy**, different meanings of the word has same embeddings.
 
 Reference:  
 http://web.stanford.edu/class/cs224n/lecture_notes/cs224n-2017-notes1.pdf
