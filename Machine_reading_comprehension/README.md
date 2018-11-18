@@ -21,6 +21,7 @@ For machine reading comprehension (mrc), [Deep read: A reading comprehension sys
 - [R-Net](https://www.microsoft.com/en-us/research/wp-content/uploads/2017/05/r-net.pdf) for MS-MARCO
     - Core layer 1: gated (applied to passage word and attention-pooling of question) attention-based recurrent network matches passage and question to obtain question-aware passage representation
     - Core layer 2: self-matching layer to aggregate the passage information
+    - Implementation: [pytorch](https://github.com/HKUST-KnowComp/MnemonicReader/blob/master/r_net.py), [tensorflow](https://github.com/HKUST-KnowComp/R-Net)
 - [S-Net](https://github.com/gaoisbest/NLP-Projects/blob/master/Machine_reading_comprehension/materials_papers/S-Net.pdf) for MS-MARCO
     - Step 1: **extracts evidence snippets** by matching question and passage via pointer network. Add **passage ranking** as an additional task to conduct multi-task learning.
     - Step 2: generate the answer by **synthesizing the passage, question and evidence snippets** via seq2seq. Evidence snippets are labeled as features.
