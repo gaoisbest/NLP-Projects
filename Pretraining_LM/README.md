@@ -10,10 +10,11 @@
 - **Fine-tune the entire language model**, as done by ULMFiT. Fine-tuning approach is what is typically done in CV where either the top-most or several of the top layers are fine-tuned. 
 
 # Examples
-## ELMo
+## ELMo (Embeddings from Language Models)
 ### Principle
 - Bidirectional language model
 - Lower biLSTM layer catches syntax, and higher biLSTM layer catches semantic.
+- **Feature-based pretraining**.
 
 ### Implementation
 [AllenNLP ELMo page](https://allennlp.org/elmo) gives a detailed explanation about ELMo. And [AllenNLp github page](https://github.com/allenai/allennlp/blob/master/tutorials/how_to/elmo.md) describes how to use ELMo:
@@ -26,8 +27,40 @@
     - See [BiDAF](https://github.com/gaoisbest/NLP-Projects/blob/master/Pretraining_LM/bidaf.jsonnet) example
 
 
-## BERT
-[Official page](https://github.com/google-research/bert) gives pretrained models about BERT
+## BERT (Bidirectional Encoder Representations from Transformers).  
+### Principle
+- Two strategies
+    - Masked LM
+    - Next Sentence Prediction
+    - They are trained together, with the goal of minimizing the combined loss function of them [5]. 
+- Bidirectional Transformer to language modeling
+
+- BERT’s goal is to generate a language model, only the encoder mechanism is necessary. 
+- the Transformer encoder reads the entire sequence of words at once. Therefore it is considered bidirectional, though it would be more accurate to say that it’s non-directional. 
+- As opposed to directional models, which read the text input sequentially (left-to-right or right-to-left), the Transformer encoder reads the entire sequence of words at once. Therefore it is considered bidirectional, though it would be more accurate to say that it’s non-directional. This characteristic allows the model to learn the context of a word based on all of its surroundings (left and right of the word).
+- When training language models, there is a challenge of defining a prediction goal. Many models predict the next word in a sequence (e.g. “The child came home from ___”), a directional approach which inherently limits context learning. To overcome this challenge, BERT uses two training strategies:
+Masked LM (MLM)
+Before feeding word sequences into BERT, 15% of the words in each sequence are replaced with a `[MASK]` token. The model then attempts to predict the original value of the masked words, based on the context provided by the other, non-masked, words in the sequence. In technical terms, the prediction of the output words requires:
+
+Adding a classification layer on top of the encoder output.
+Multiplying the output vectors by the embedding matrix, transforming them into the vocabulary dimension.
+Calculating the probability of each word in the vocabulary with softmax.
+Next Sentence Prediction (NSP)
+- the model receives pairs of sentences as input and learns to predict if the second sentence in the pair is the subsequent sentence in the original document. 
+
+To help the model distinguish between the two sentences in training, the input is processed in the following way before entering the model:
+
+A `[CLS]` token is inserted at the beginning of the first sentence and a `[SEP]` token is inserted at the end of each sentence.
+A sentence embedding indicating Sentence A or Sentence B is added to each token. Sentence embeddings are similar in concept to token embeddings with a vocabulary of 2.
+A positional embedding is added to each token to indicate its position in the sequence. The concept and implementation of positional embedding are presented in the Transformer paper.
+
+When training the BERT model, [5]
+
+
+- - **Model-based pretraining**.
+### Implementation
+[Official page](https://github.com/google-research/bert) gives pretrained models about BERT 
+
 
 ## ULMFIT [2]
 ## OpenAI GPT
@@ -62,4 +95,4 @@
 - [2] [blog](http://nlp.fast.ai/classification/2018/05/15/introducting-ulmfit.html)
 - [3] [Transformer illustration](https://jalammar.github.io/illustrated-transformer/), [Transformer interpretation](https://www.jiqizhixin.com/articles/2018-01-10-20), [self attention](https://www.paperweekly.site/papers/notes/339) 
 - [4] https://towardsdatascience.com/deep-learning-for-specific-information-extraction-from-unstructured-texts-12c5b9dceada
-
+- [5] https://www.lyrn.ai/2018/11/07/explained-bert-state-of-the-art-language-model-for-nlp/
