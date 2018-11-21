@@ -10,6 +10,33 @@
 - **Fine-tune the entire language model**, as done by ULMFiT. Fine-tuning approach is what is typically done in CV where either the top-most or several of the top layers are fine-tuned. 
 
 # Examples
+## Transformer
+- Principle: belongs to **Encoder-Decoder** framework [3]
+- Blocks
+    - **Encoder block**
+        - Multi-head self-attention
+            - A layer that helps the encoder look at other words in the input sentence as it encodes a specific word
+            - Embedding with time singal = Embeddings + Positional Encoding
+        - Position-wise feed-forward
+            - The exact same feed-forward network is independently applied to each position
+        - Residuals
+            - Add & Layer Normalization
+    - **Decoder block**
+        - Multi-head self-attention
+            - It is only allowed to attend to earlier positions in the output sequence (This is done by masking future positions (setting them to -inf) before the softmax step in the self-attention calculation) .
+        - Encoder-Decoder attention
+            - Helps the decoder focus on relevant parts of the input sentence
+            - The layer works just like multiheaded self-attention, except it creates its Queries matrix from the layer below it, and takes the Keys and Values matrix from the output of the encoder stack
+        - Position-wise feed-forward
+    - **Linear and softmax layer**
+        - Linear projects the decoder output to the logits of vocabulary size
+        - Softmax the logits and choose the index with largest probability
+
+- Implementation
+    - [The annotated transformer](http://nlp.seas.harvard.edu/2018/04/01/attention.html)
+    - [pytorch](https://github.com/jadore801120/attention-is-all-you-need-pytorch)
+    - [tensorflow](https://github.com/tensorflow/tensor2tensor)  
+
 ## ELMo (Embeddings from Language Models)
 ### Principle
 - Bidirectional language model
@@ -64,31 +91,6 @@ When training the BERT model, [5]
 
 ## ULMFIT [2]
 ## OpenAI GPT
-### Transformer
-- Principle: belongs to **Encoder-Decoder** framework [3]
-- Blocks
-    - **Encoder block**
-        - Multi-head self-attention
-            - A layer that helps the encoder look at other words in the input sentence as it encodes a specific word
-            - Embedding with time singal = Embeddings + Positional Encoding
-        - Position-wise feed-forward
-            - The exact same feed-forward network is independently applied to each position
-        - Residuals
-            - Add & Layer Normalization
-    - **Decoder block**
-        - Multi-head self-attention
-            - It is only allowed to attend to earlier positions in the output sequence (This is done by masking future positions (setting them to -inf) before the softmax step in the self-attention calculation) .
-        - Encoder-Decoder attention
-            - Helps the decoder focus on relevant parts of the input sentence
-            - The layer works just like multiheaded self-attention, except it creates its Queries matrix from the layer below it, and takes the Keys and Values matrix from the output of the encoder stack
-        - Position-wise feed-forward
-    - **Linear and softmax layer**
-        - Linear projects the decoder output to the logits of vocabulary size
-        - Softmax the logits and choose the index with largest probability
-
-- Implementation
-    - [pytorch](https://github.com/jadore801120/attention-is-all-you-need-pytorch)
-    - [tensorflow](https://github.com/tensorflow/tensor2tensor)  
 
 # References
 - [1] [NLP's ImageNet moment has arrived](https://thegradient.pub/nlp-imagenet/)
