@@ -34,6 +34,7 @@
 
 - Implementation
     - [The annotated transformer](http://nlp.seas.harvard.edu/2018/04/01/attention.html)
+    - [Illustrated transformer](https://jalammar.github.io/illustrated-transformer/)
     - [pytorch](https://github.com/jadore801120/attention-is-all-you-need-pytorch)
     - [tensorflow](https://github.com/tensorflow/tensor2tensor)  
 
