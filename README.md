@@ -1,11 +1,12 @@
 # NLP-Projects
 Natural Language Processing related projects, which includes concepts and srcipts about:
 - Word2vec: `gensim`, `fastText` and `tensorflow` implementations. See [Chinese notes](http://url.cn/5PKmy7W), [中文解读](http://url.cn/5PKmy7W).
-- Text similarity: `gensim doc2vec` and `gensim word2vec averaging` implementations. 
-- Text classification: `tensorflow LSTM` (See [Chinese notes 1](http://url.cn/5cLDOQI), [中文解读 1](http://url.cn/5cLDOQI) and [Chinese notes 2](http://url.cn/5w5VbaI), [中文解读 2](http://url.cn/5w5VbaI)) and `fastText` implementations. 
-- Chinese word segmentation: `HMM Viterbi` implementations. See [Chinese notes](http://url.cn/5x4KR8u), [中文解读](http://url.cn/5x4KR8u).
-- Sequence labeling - NER: brands NER via bi-directional LSTM + CRF, `tensorflow` implementation. See [Chinese notes](http://url.cn/5fcC754), [中文解读](http://url.cn/5fcC754).
-- ..
+- Sentence2vec: `doc2vec`, `word2vec averaging` and `Smooth Inverse Frequency` implementations. See 
+- Text_classification: `tensorflow LSTM` (See [Chinese notes 1](http://url.cn/5cLDOQI), [中文解读 1](http://url.cn/5cLDOQI) and [Chinese notes 2](http://url.cn/5w5VbaI), [中文解读 2](http://url.cn/5w5VbaI)) and `fastText` implementations. 
+- Chinese_word_segmentation: `HMM Viterbi` implementations. See [Chinese notes](http://url.cn/5x4KR8u), [中文解读](http://url.cn/5x4KR8u).
+- Sequence_labeling-NER: brands NER via bi-directional LSTM + CRF, `tensorflow` implementation. See [Chinese notes](http://url.cn/5fcC754), [中文解读](http://url.cn/5fcC754).
+- Machine_reading_comprehension: [introduction](https://github.com/gaoisbest/NLP-Projects/blob/master/Machine_reading_comprehension/README.md), `BiDAF+ELMo` implementation.
+- Knowledge_graph: [introduction](https://github.com/gaoisbest/NLP-Projects/blob/master/Knowledge_graph/README.md)
 
 # DL best practices in NLP
 ## 1. Word embeddings
@@ -54,12 +55,15 @@ optimize = optimizer.apply_gradients(grads_and_vars=zip(clipped_gradients, varia
 ```
 
 ## 6. Attention
-- To do...
+The [attention review](https://lilianweng.github.io/lil-log/2018/06/24/attention-attention.html#snail) summarize attention mechanism into several types:
+- Additive vs Multiplicative attention
+- Self attention
+- Soft vs Hard attention
+- Global vs Local attention
 
 Reference:  
 [1] http://ruder.io/deep-learning-nlp-best-practices/  
-[2] https://r2rt.com/recurrent-neural-networks-in-tensorflow-iii-variable-length-sequences.html
-
+[2] https://r2rt.com/recurrent-neural-networks-in-tensorflow-iii-variable-length-sequences.html  
 
 # Awesome packages
 ## Chinese
