@@ -85,9 +85,10 @@ A positional embedding is added to each token to indicate its position in the se
 When training the BERT model, [5]
 
 
-- - **Model-based pretraining**.
+- **Model-based pretraining**.
 ### Implementation
-[Official page](https://github.com/google-research/bert) gives pretrained models about BERT 
+- [Official page](https://github.com/google-research/bert) gives pretrained models about BERT
+- [Naturali](https://www.jianshu.com/p/aa2eff7ec5c1) gives details about BERT fine-tune
 
 
 ## ULMFIT [2]
