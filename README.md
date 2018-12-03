@@ -55,13 +55,13 @@ optimize = optimizer.apply_gradients(grads_and_vars=zip(clipped_gradients, varia
 ```
 
 ## 6. Attention
-The [attention review](https://lilianweng.github.io/lil-log/2018/06/24/attention-attention.html#snail) summarize attention mechanism into several types:
+The attention [review 1](https://lilianweng.github.io/lil-log/2018/06/24/attention-attention.html) and [review 2](https://zhuanlan.zhihu.com/p/31547842) summarize attention mechanism into several types:
 - Additive vs Multiplicative attention
 - Self attention
 - Soft vs Hard attention
 - Global vs Local attention
 
-Reference:  
+## Reference
 [1] http://ruder.io/deep-learning-nlp-best-practices/  
 [2] https://r2rt.com/recurrent-neural-networks-in-tensorflow-iii-variable-length-sequences.html  
 
