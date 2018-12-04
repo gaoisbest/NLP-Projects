@@ -104,7 +104,7 @@ For machine reading comprehension (mrc), [Deep read: A reading comprehension sys
 # Materials
 - [Naturali video version](https://mp.weixin.qq.com/s/6nAm1sJrAj3qqUAagwWutg), [text version](http://tech.163.com/18/0729/10/DNSH3QU600098IEO.html)
 - [Paperweekly seminar](https://www.bilibili.com/video/av33802404/)
-- [Zhuiyi video](http://www.mooc.ai/course/596/learn?lessonid=2928)
+- [Zhuiyi video](http://www.mooc.ai/course/596/learn?lessonid=2928), and [text](https://mp.weixin.qq.com/s/EQsxkCwQW_gzlB3Ozd5_ZQ)
 
 # Leading companies
 - [Zhuiyi](https://zhuiyi.ai/)
