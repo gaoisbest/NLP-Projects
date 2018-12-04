@@ -17,7 +17,12 @@ For machine reading comprehension (mrc), [Deep read: A reading comprehension sys
 # Deep learning Models
 ## Model list
 - [Match-LSTM](https://arxiv.org/pdf/1608.07905.pdf)
-- [BiDAF](https://arxiv.org/pdf/1611.01603.pdf) from AllenNLP **baseline for MS-MARCO**, [official implementation](https://allenai.github.io/bi-att-flow/)
+- [BiDAF](https://arxiv.org/pdf/1611.01603.pdf) from AllenNLP, baseline for MS-MARCO
+    - Attention flow layer: **context to query attention** and **query to context attention**, based on similarity matrix
+    - Similarity function
+    ![](https://github.com/gaoisbest/NLP-Projects/blob/master/Machine_reading_comprehension/materials_papers/BiDAF_similarity_function.png)
+    - [Official implementation](https://allenai.github.io/bi-att-flow/)
+    
 - [R-Net](https://www.microsoft.com/en-us/research/wp-content/uploads/2017/05/r-net.pdf) for MS-MARCO
     - Core layer 1: gated (applied to passage word and attention-pooling of question) attention-based recurrent network matches passage and question to obtain question-aware passage representation
     - Core layer 2: self-matching layer to aggregate the passage information
