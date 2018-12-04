@@ -18,9 +18,11 @@ For machine reading comprehension (mrc), [Deep read: A reading comprehension sys
 ## Model list
 - [Match-LSTM](https://arxiv.org/pdf/1608.07905.pdf)
 - [BiDAF](https://github.com/gaoisbest/NLP-Projects/blob/master/Machine_reading_comprehension/materials_papers/BiDAF.pdf) from AllenNLP, baseline for MS-MARCO
-    - Attention flow layer: **context to query attention** and **query to context attention**, based on similarity matrix
+    - Attention flow layer: **context-to-query attention** (i.e., which query words are most relevant to each context word, `softmax(row)`) and **query-to-context attention** (i.e., which context words have the closest similarity to one of the query word, `softmax(max(column))`), based on **similarity matrix**
     - Similarity function
     ![](https://github.com/gaoisbest/NLP-Projects/blob/master/Machine_reading_comprehension/materials_papers/BiDAF_similarity_function.png)
+    - Model structure
+    ![](https://github.com/gaoisbest/NLP-Projects/blob/master/Machine_reading_comprehension/materials_papers/BiDAF_model.png)
     - [Official implementation](https://allenai.github.io/bi-att-flow/)
     
 - [R-Net](https://www.microsoft.com/en-us/research/wp-content/uploads/2017/05/r-net.pdf) for MS-MARCO
