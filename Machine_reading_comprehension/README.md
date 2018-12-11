@@ -104,7 +104,7 @@ For machine reading comprehension (mrc), [Deep read: A reading comprehension sys
 # Materials
 - [Naturali video version](https://mp.weixin.qq.com/s/6nAm1sJrAj3qqUAagwWutg), [text version](http://tech.163.com/18/0729/10/DNSH3QU600098IEO.html)
 - [Paperweekly seminar](https://www.bilibili.com/video/av33802404/)
-- [Zhuiyi video](http://www.mooc.ai/course/596/learn?lessonid=2928), and [text](https://mp.weixin.qq.com/s/EQsxkCwQW_gzlB3Ozd5_ZQ)
+- [Zhuiyi video](http://www.mooc.ai/course/596/learn?lessonid=2928), [text 1](https://mp.weixin.qq.com/s/EQsxkCwQW_gzlB3Ozd5_ZQ) and [text 2](https://mp.weixin.qq.com/s/GrEfupJdAUFSp2l-myA1Ig)
 
 # Leading companies
 - [Zhuiyi](https://zhuiyi.ai/)
@@ -116,7 +116,8 @@ For machine reading comprehension (mrc), [Deep read: A reading comprehension sys
     - [DrQA](https://arxiv.org/pdf/1704.00051.pdf)
     - [DS-QA](http://aclweb.org/anthology/P18-1161)
     - [R^3](https://arxiv.org/pdf/1709.00023.pdf)
-
+- [Search](https://mp.weixin.qq.com/s/GrEfupJdAUFSp2l-myA1Ig)
+    - Summarization -> KBQA -> MRC
 # Take-home messages
 - **Context**
     - [Minimal context in ACL 2018](https://arxiv.org/pdf/1805.08092.pdf)
