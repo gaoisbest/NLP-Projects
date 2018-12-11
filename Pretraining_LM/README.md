@@ -90,6 +90,7 @@ When training the BERT model, [5]
 ### Implementation
 - [Official page](https://github.com/google-research/bert) gives pretrained models about BERT
 - [Naturali](https://www.jianshu.com/p/aa2eff7ec5c1) gives details about BERT fine-tune
+- [bert-as-service](https://github.com/hanxiao/bert-as-service)
 
 
 ## ULMFIT [2]
