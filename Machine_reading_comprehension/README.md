@@ -24,6 +24,7 @@ For machine reading comprehension (mrc), [Deep read: A reading comprehension sys
     - Model structure
     ![](https://github.com/gaoisbest/NLP-Projects/blob/master/Machine_reading_comprehension/materials_papers/BiDAF_model.png)
     - [Official implementation](https://allenai.github.io/bi-att-flow/)
+    - [BiDAF + Self attention + ELMo](https://arxiv.org/pdf/1710.10723.pdf)
     
 - [R-Net](https://www.microsoft.com/en-us/research/wp-content/uploads/2017/05/r-net.pdf) for MS-MARCO
     - Core layer 1: gated (applied to passage word and attention-pooling of question) attention-based recurrent network matches passage and question to obtain question-aware passage representation
@@ -33,6 +34,9 @@ For machine reading comprehension (mrc), [Deep read: A reading comprehension sys
     - Step 1: **extracts evidence snippets** by matching question and passage via pointer network. Add **passage ranking** as an additional task to conduct multi-task learning.
     - Step 2: generate the answer by **synthesizing the passage, question and evidence snippets** via seq2seq. Evidence snippets are labeled as features.
 - [QANet](https://arxiv.org/pdf/1804.09541.pdf)
+- [U-Net](https://arxiv.org/pdf/1810.06638.pdf)
+    - [Illustration](https://mp.weixin.qq.com/s/VmmWEJJXXGLaE5-mLMZbpQ)
+    
 - [Dual Ask-Answer Network](https://arxiv.org/abs/1809.01997)
 - [Gated Self-Matching Networks](http://www.aclweb.org/anthology/P17-1018)
 - [V-Net](https://arxiv.org/abs/1805.02220) from Baidu NLP for MS-MARCO
@@ -71,7 +75,7 @@ For machine reading comprehension (mrc), [Deep read: A reading comprehension sys
         - Extractive
             - Single-hop (i.e., single document) reasoning
                 - [SQuAD](https://rajpurkar.github.io/SQuAD-explorer/), extractive dataset
-                    - For **unanswerable** questions
+                    - For **unanswerable** questions, [SQuAD 2.0](https://arxiv.org/pdf/1806.03822.pdf)
                         - [SQUADRUN Dataset](http://aclweb.org/anthology/P18-2124)
                         - [U-Net](https://arxiv.org/pdf/1810.06638.pdf)
                         - [Read + Verify](https://arxiv.org/pdf/1808.05759.pdf)
