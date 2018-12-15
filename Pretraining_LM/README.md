@@ -1,16 +1,18 @@
 # Introduction
-- Principle: **Pre-training** on large corpus, then **feature-based** (e.g., ELMo, BERT) or **fine-tuning** (e.g., GPT, BERT) to downstream tasks. **Feature-based** strategy uses task-specific architecture that includes the pre-trained representations as additional features. **Fine-tuning** stragety introduces minimal task-specific parameters and is trained on downstream tasks by fine-tuning the pretrained parameters.
+- Two stages: unsupervised **pre-training** on large corpus, then supervised **feature-based** (e.g., ELMo, BERT) or **fine-tuning** (e.g., GPT, BERT) to downstream tasks. 
+    - **Feature-based** strategy uses task-specific architecture that includes the pre-trained representations as additional features. 
+    - **Fine-tuning** stragety introduces minimal task-specific parameters and is trained on downstream tasks by fine-tuning the pretrained parameters.
 
 - Transfer learning from computer vision shows that **low-level features can be shared and high-level features are task-dependent**, therefore we can use our own data to fine-tune the pre-trained model with **same model strcuture**.
 - [History](https://zhuanlan.zhihu.com/p/49271699?utm_medium=social&utm_source=wechat_session&wechatShare=2&from=timeline&isappinstalled=0): NNLM -> Word2vec (cannot handle polysemy) -> ELMo (dynamic word embedding, biLM + biLSTM) -> ULMFiT (three steps) -> GPT (start fine-tune schema, uniLM + Transformer) -> BERT (biLM + Transformer)
-- [BERT](https://arxiv.org/pdf/1810.04805.pdf), [ELMo](https://arxiv.org/abs/1802.05365), [ULMFiT](https://arxiv.org/abs/1801.06146) and [OpenAI GPT](https://s3-us-west-2.amazonaws.com/openai-assets/research-covers/language-unsupervised/language_understanding_paper.pdf) shows that **pretrained language models** can achieve state-of-the-art results on a wide range of NLP tasks. Refer to review [1](https://mp.weixin.qq.com/s/A-PKyZcXwOz-2lL-hBmjsA), [2](https://zhuanlan.zhihu.com/p/49271699?utm_medium=social&utm_source=wechat_session&wechatShare=2&from=timeline&isappinstalled=0) and [3](https://mp.weixin.qq.com/s/-mdHtQ55C05eSRZZP7DlOg) see their difference.
+- [BERT](https://github.com/gaoisbest/NLP-Projects/blob/master/Pretraining_LM/materials_papers/BERT.pdf), [ELMo](https://arxiv.org/abs/1802.05365), [ULMFiT](https://arxiv.org/abs/1801.06146) and [OpenAI GPT](https://s3-us-west-2.amazonaws.com/openai-assets/research-covers/language-unsupervised/language_understanding_paper.pdf) shows that **pretrained language models** can achieve state-of-the-art results on a wide range of NLP tasks. Refer to review [1](https://mp.weixin.qq.com/s/A-PKyZcXwOz-2lL-hBmjsA), [2](https://zhuanlan.zhihu.com/p/49271699?utm_medium=social&utm_source=wechat_session&wechatShare=2&from=timeline&isappinstalled=0) and [3](https://mp.weixin.qq.com/s/-mdHtQ55C05eSRZZP7DlOg) see their difference.
 - Word vectors built by Word2vec or GloVe can only be used as initialization of **first layer** of deep networks.
 - Gain **primal “knowledge” of the language structures** before a more specific supervised training step [4].
 
 # Models
 ## Transformer
 ### Principle
-- Principle: belongs to **Encoder-Decoder** framework [3]
+- Principle: multi-headed self-attention operation over the input context tokens followed by position-wise feedforward layers , belongs to **Encoder-Decoder** framework [3]
 - Blocks
     - **Encoder block**
         - Multi-head self-attention
@@ -39,11 +41,15 @@
 
 ## ELMo (Embeddings from Language Models)
 ### Principle
-- Model:
-- Pre-training objective: concatenation of independently trained left- to-right and right-to-left LMs
-- Bidirectional language model
-- Lower biLSTM layer catches syntax, and higher biLSTM layer catches semantic.
-- **Feature-based pretraining**.
+- **Model**: 2 biLSTM
+- **Pre-training objective**: bidirectional LM (i.e., concatenation of independently trained left-to-right and right-to-left LMs)
+- **Features**: linear combination of all hidden states of biLM
+- ELMo is **deep contextualized** word representation, overcome the **polysemy** problem that word2vec (always fixed vectors given different context) has
+- Lower biLSTM layer catches syntax (e.x., POS tagging), and higher biLSTM layer catches semantic (e.g., word sense disambiguation).
+- **Extension of word2vec **
+- Feature-based usage
+First, fine-tuning biLM on domain specific data. Second, 
+We simply run the biLM and record all of the layer representations for each word. Then, we let the end task model learn a linear combination of these representations
 
 ### Implementation
 [AllenNLP ELMo page](https://allennlp.org/elmo) gives a detailed explanation about ELMo. And [AllenNLp github page](https://github.com/allenai/allennlp/blob/master/tutorials/how_to/elmo.md) describes how to use ELMo:
@@ -62,17 +68,17 @@
 - ...
 
 
-## GPT
+## GPT (Generative Pre-training)
 ### Principle
-- Model: left-to-right (left-context-only) Transformer decoder
-- Pre-training objective: 
-- GPT uses a sentence separator ([SEP]) and classifier token ([CLS]) which are only in- troduced at fine-tuning time; 
+- **Model**: multi-layer left-to-right (left-context-only) Transformer decoder
+- **Pre-training objective**: LM
+
 ### Implementation
 - ...
 
 ## BERT (Bidirectional Encoder Representations from Transformers)
 ### Principle
-- **Model**: **multi-layer bidirectional Transformer encoder**
+- **Model**: multi-layer bidirectional Transformer encoder
 - **Pre-training objective**
     - Masked language model (MLM, inspired by the Cloze task, prevent each token 'see itself' in multi-layer bidirectional context), for **one** sentence
     - Next sentence prediction (NSP), for **two** sentences
@@ -102,13 +108,14 @@
         - Input: final hidden state of Transformer encoder about all tokens
         - New parameter: `start vector` and `end vector`
         - Predicted span is `[max(softmax(dot product(token i hidden state, start vector))), max(softmax(dot product(token i hidden state, end vector)))`
+![](https://github.com/gaoisbest/NLP-Projects/blob/master/Pretraining_LM/materials_papers/BERT_fine_tuning.png)
 ### Implementation
 - [Official page](https://github.com/google-research/bert) gives pretrained models about BERT
 - [Naturali](https://www.jianshu.com/p/aa2eff7ec5c1) gives details about BERT fine-tune
 - [bert-as-service](https://github.com/hanxiao/bert-as-service)
 
-
-
+# BERT, GPT, ELMo comparison
+![](https://github.com/gaoisbest/NLP-Projects/blob/master/Pretraining_LM/materials_papers/BERT_GPT_ELMo_comparison.png)
 
 # References
 - [1] [NLP's ImageNet moment has arrived](https://thegradient.pub/nlp-imagenet/)
