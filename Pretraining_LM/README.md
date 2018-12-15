@@ -1,17 +1,15 @@
-# Introduction [1]
-- Step 1: pre-training, step 2: fine-tuning
+# Introduction
+- Principle: **Pre-training** on large corpus, then **feature-based** (e.g., ELMo, BERT) or **fine-tuning** (e.g., GPT, BERT) to downstream tasks. **Feature-based** strategy uses task-specific architecture that includes the pre-trained representations as additional features. **Fine-tuning** stragety introduces minimal task-specific parameters and is trained on downstream tasks by fine-tuning the pretrained parameters.
+
 - Transfer learning from computer vision shows that **low-level features can be shared and high-level features are task-dependent**, therefore we can use our own data to fine-tune the pre-trained model with **same model strcuture**.
 - [History](https://zhuanlan.zhihu.com/p/49271699?utm_medium=social&utm_source=wechat_session&wechatShare=2&from=timeline&isappinstalled=0): NNLM -> Word2vec (cannot handle polysemy) -> ELMo (dynamic word embedding, biLM + biLSTM) -> ULMFiT (three steps) -> GPT (start fine-tune schema, uniLM + Transformer) -> BERT (biLM + Transformer)
 - [BERT](https://arxiv.org/pdf/1810.04805.pdf), [ELMo](https://arxiv.org/abs/1802.05365), [ULMFiT](https://arxiv.org/abs/1801.06146) and [OpenAI GPT](https://s3-us-west-2.amazonaws.com/openai-assets/research-covers/language-unsupervised/language_understanding_paper.pdf) shows that **pretrained language models** can achieve state-of-the-art results on a wide range of NLP tasks. Refer to review [1](https://mp.weixin.qq.com/s/A-PKyZcXwOz-2lL-hBmjsA), [2](https://zhuanlan.zhihu.com/p/49271699?utm_medium=social&utm_source=wechat_session&wechatShare=2&from=timeline&isappinstalled=0) and [3](https://mp.weixin.qq.com/s/-mdHtQ55C05eSRZZP7DlOg) see their difference.
 - Word vectors built by Word2vec or GloVe can only be used as initialization of **first layer** of deep networks.
 - Gain **primal “knowledge” of the language structures** before a more specific supervised training step [4].
 
-# How to use pretrained language models [1]
-- Use the pre-trained language model as a **fixed feature extractor** and incorporate its representation as features into a randomly initialized model, as used in ELMo
-- **Fine-tune the entire language model**, as done by ULMFiT. Fine-tuning approach is what is typically done in CV where either the top-most or several of the top layers are fine-tuned. 
-
-# Examples
+# Models
 ## Transformer
+### Principle
 - Principle: belongs to **Encoder-Decoder** framework [3]
 - Blocks
     - **Encoder block**
@@ -33,7 +31,7 @@
         - Linear projects the decoder output to the logits of vocabulary size
         - Softmax the logits and choose the index with largest probability
 
-- Implementation
+### Implementation
     - [The annotated transformer](http://nlp.seas.harvard.edu/2018/04/01/attention.html)
     - [Illustrated transformer](https://jalammar.github.io/illustrated-transformer/)
     - [pytorch](https://github.com/jadore801120/attention-is-all-you-need-pytorch)
@@ -41,6 +39,8 @@
 
 ## ELMo (Embeddings from Language Models)
 ### Principle
+- Model:
+- Pre-training objective: concatenation of independently trained left- to-right and right-to-left LMs
 - Bidirectional language model
 - Lower biLSTM layer catches syntax, and higher biLSTM layer catches semantic.
 - **Feature-based pretraining**.
@@ -55,46 +55,60 @@
     - Run `allennlp train training_config/bidaf.jsonnet -s output_model_file_path`
     - See [BiDAF](https://github.com/gaoisbest/NLP-Projects/blob/master/Pretraining_LM/bidaf.jsonnet) example
 
-
-## BERT (Bidirectional Encoder Representations from Transformers).  
+## ULMFIT [2]
 ### Principle
-- Two strategies
-    - Masked LM
-    - Next Sentence Prediction
-    - They are trained together, with the goal of minimizing the combined loss function of them [5]. 
-- Bidirectional Transformer to language modeling
-- BERT is basically a trained Transformer Encoder stack. **BERT base** has 12 encoding layers, 768 hidden units in feedforward-networks and 12 attention heads. **BERT large** has 24 encoding layers, 1024 hidden units in feedforward-networks and 16 attention heads.
-- BERT’s goal is to generate a language model, only the encoder mechanism is necessary. 
-- the Transformer encoder reads the entire sequence of words at once. Therefore it is considered bidirectional, though it would be more accurate to say that it’s non-directional. 
-- As opposed to directional models, which read the text input sequentially (left-to-right or right-to-left), the Transformer encoder reads the entire sequence of words at once. Therefore it is considered bidirectional, though it would be more accurate to say that it’s non-directional. This characteristic allows the model to learn the context of a word based on all of its surroundings (left and right of the word).
-- When training language models, there is a challenge of defining a prediction goal. Many models predict the next word in a sequence (e.g. “The child came home from ___”), a directional approach which inherently limits context learning. To overcome this challenge, BERT uses two training strategies:
-Masked LM (MLM)
-Before feeding word sequences into BERT, 15% of the words in each sequence are replaced with a `[MASK]` token. The model then attempts to predict the original value of the masked words, based on the context provided by the other, non-masked, words in the sequence. In technical terms, the prediction of the output words requires:
-
-Adding a classification layer on top of the encoder output.
-Multiplying the output vectors by the embedding matrix, transforming them into the vocabulary dimension.
-Calculating the probability of each word in the vocabulary with softmax.
-Next Sentence Prediction (NSP)
-- the model receives pairs of sentences as input and learns to predict if the second sentence in the pair is the subsequent sentence in the original document. 
-
-To help the model distinguish between the two sentences in training, the input is processed in the following way before entering the model:
-
-A `[CLS]` token is inserted at the beginning of the first sentence and a `[SEP]` token is inserted at the end of each sentence.
-A sentence embedding indicating Sentence A or Sentence B is added to each token. Sentence embeddings are similar in concept to token embeddings with a vocabulary of 2.
-A positional embedding is added to each token to indicate its position in the sequence. The concept and implementation of positional embedding are presented in the Transformer paper.
-
-When training the BERT model, [5]
+- ...
+### Implementation
+- ...
 
 
-- **Model-based pretraining**.
+## GPT
+### Principle
+- Model: left-to-right (left-context-only) Transformer decoder
+- Pre-training objective: 
+- GPT uses a sentence separator ([SEP]) and classifier token ([CLS]) which are only in- troduced at fine-tuning time; 
+### Implementation
+- ...
+
+## BERT (Bidirectional Encoder Representations from Transformers)
+### Principle
+- **Model**: **multi-layer bidirectional Transformer encoder**
+- **Pre-training objective**
+    - Masked language model (MLM, inspired by the Cloze task, prevent each token 'see itself' in multi-layer bidirectional context), for **one** sentence
+    - Next sentence prediction (NSP), for **two** sentences
+- **Input**: token embeddings + segment embeddings + position embeddings. First token is `[CLS]`, sentence pairs between sentences is `[SEP]`
+- MLM
+    - Disadvantages
+        - Since no `[MASK]` in fine-tuning, there is a mismatch between pre-training and fine-tuning
+        - Since only 15% token is sampled, the converge rate is slow
+    - An example (15% token of whole training data is sampled)
+        - `my dog is hairy` -> **80%** replace `hairy` with `[MASK]`, e.g., `my dog is hairy -> my dog is [MASK]`
+        - `my dog is hairy` -> **10%** replace `hairy` with a random word, e.g., `my dog is hairy -> my dog is apple`
+        - `my dog is hairy` -> **10%** keep unchanged, e.g., `my dog is hairy -> my dog is hairy`
+- NSP
+    - Reveal the relationship between two sentences is not directly captured by language model
+    - 50% B is next of A, 50% B is a random sentence
+    - An example
+        - Input = `[CLS] the man went to [MASK] store [SEP] he bought a gallon [MASK] milk [SEP]`
+        - Label = `IsNext`
+        - Input = `[CLS] the man [MASK] to the store [SEP] penguin [MASK] are flight ##less birds [SEP]`
+        - Label = `NotNext`
+- Fine-tuning
+    - Single sentence / sentence pair classification task
+        - Input: final hidden state of Transformer encoder about `[CLS]`
+        - New parameter: `W`
+        - All of the parameters of BERT and `W` are fine-tuned jointly
+    - Question answering
+        - Input: final hidden state of Transformer encoder about all tokens
+        - New parameter: `start vector` and `end vector`
+        - Predicted span is `[max(softmax(dot product(token i hidden state, start vector))), max(softmax(dot product(token i hidden state, end vector)))`
 ### Implementation
 - [Official page](https://github.com/google-research/bert) gives pretrained models about BERT
 - [Naturali](https://www.jianshu.com/p/aa2eff7ec5c1) gives details about BERT fine-tune
 - [bert-as-service](https://github.com/hanxiao/bert-as-service)
 
 
-## ULMFIT [2]
-## OpenAI GPT
+
 
 # References
 - [1] [NLP's ImageNet moment has arrived](https://thegradient.pub/nlp-imagenet/)
