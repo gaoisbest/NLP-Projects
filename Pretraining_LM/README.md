@@ -1,5 +1,7 @@
 # Introduction
-- Principle: **Pre-training** on large corpus, then **feature-based** (e.g., ELMo, BERT) or **fine-tuning** (e.g., GPT, BERT) to downstream tasks. **Feature-based** strategy uses task-specific architecture that includes the pre-trained representations as additional features. **Fine-tuning** stragety introduces minimal task-specific parameters and is trained on downstream tasks by fine-tuning the pretrained parameters.
+- Two stages: unsupervised **pre-training** on large corpus, then supervised **feature-based** (e.g., ELMo, BERT) or **fine-tuning** (e.g., GPT, BERT) to downstream tasks. 
+    - **Feature-based** strategy uses task-specific architecture that includes the pre-trained representations as additional features. 
+    - **Fine-tuning** stragety introduces minimal task-specific parameters and is trained on downstream tasks by fine-tuning the pretrained parameters.
 
 - Transfer learning from computer vision shows that **low-level features can be shared and high-level features are task-dependent**, therefore we can use our own data to fine-tune the pre-trained model with **same model strcuture**.
 - [History](https://zhuanlan.zhihu.com/p/49271699?utm_medium=social&utm_source=wechat_session&wechatShare=2&from=timeline&isappinstalled=0): NNLM -> Word2vec (cannot handle polysemy) -> ELMo (dynamic word embedding, biLM + biLSTM) -> ULMFiT (three steps) -> GPT (start fine-tune schema, uniLM + Transformer) -> BERT (biLM + Transformer)
@@ -10,7 +12,7 @@
 # Models
 ## Transformer
 ### Principle
-- Principle: belongs to **Encoder-Decoder** framework [3]
+- Principle: multi-headed self-attention operation over the input context tokens followed by position-wise feedforward layers , belongs to **Encoder-Decoder** framework [3]
 - Blocks
     - **Encoder block**
         - Multi-head self-attention
@@ -39,11 +41,15 @@
 
 ## ELMo (Embeddings from Language Models)
 ### Principle
-- Model:
-- Pre-training objective: concatenation of independently trained left- to-right and right-to-left LMs
-- Bidirectional language model
-- Lower biLSTM layer catches syntax, and higher biLSTM layer catches semantic.
-- **Feature-based pretraining**.
+- **Model**: 2 biLSTM
+- **Pre-training objective**: bidirectional LM (i.e., concatenation of independently trained left-to-right and right-to-left LMs)
+- **Features**: linear combination of all hidden states of biLM
+- ELMo is **deep contextualized** word representation, overcome the **polysemy** problem that word2vec (always fixed vectors given different context) has
+- Lower biLSTM layer catches syntax (e.x., POS tagging), and higher biLSTM layer catches semantic (e.g., word sense disambiguation).
+- **Extension of word2vec **
+- Feature-based usage
+First, fine-tuning biLM on domain specific data. Second, 
+We simply run the biLM and record all of the layer representations for each word. Then, we let the end task model learn a linear combination of these representations
 
 ### Implementation
 [AllenNLP ELMo page](https://allennlp.org/elmo) gives a detailed explanation about ELMo. And [AllenNLp github page](https://github.com/allenai/allennlp/blob/master/tutorials/how_to/elmo.md) describes how to use ELMo:
@@ -62,17 +68,17 @@
 - ...
 
 
-## GPT
+## GPT (Generative Pre-training)
 ### Principle
-- Model: left-to-right (left-context-only) Transformer decoder
-- Pre-training objective: 
-- GPT uses a sentence separator ([SEP]) and classifier token ([CLS]) which are only in- troduced at fine-tuning time; 
+- **Model**: multi-layer left-to-right (left-context-only) Transformer decoder
+- **Pre-training objective**: LM
+
 ### Implementation
 - ...
 
 ## BERT (Bidirectional Encoder Representations from Transformers)
 ### Principle
-- **Model**: **multi-layer bidirectional Transformer encoder**
+- **Model**: multi-layer bidirectional Transformer encoder
 - **Pre-training objective**
     - Masked language model (MLM, inspired by the Cloze task, prevent each token 'see itself' in multi-layer bidirectional context), for **one** sentence
     - Next sentence prediction (NSP), for **two** sentences
