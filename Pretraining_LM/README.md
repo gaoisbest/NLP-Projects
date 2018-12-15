@@ -5,7 +5,7 @@
 
 - Transfer learning from computer vision shows that **low-level features can be shared and high-level features are task-dependent**, therefore we can use our own data to fine-tune the pre-trained model with **same model strcuture**.
 - [History](https://zhuanlan.zhihu.com/p/49271699?utm_medium=social&utm_source=wechat_session&wechatShare=2&from=timeline&isappinstalled=0): NNLM -> Word2vec (cannot handle polysemy) -> ELMo (dynamic word embedding, biLM + biLSTM) -> ULMFiT (three steps) -> GPT (start fine-tune schema, uniLM + Transformer) -> BERT (biLM + Transformer)
-- [BERT](https://github.com/gaoisbest/NLP-Projects/blob/master/Pretraining_LM/materials_papers/BERT.pdf), [ELMo](https://arxiv.org/abs/1802.05365), [ULMFiT](https://arxiv.org/abs/1801.06146) and [OpenAI GPT](https://s3-us-west-2.amazonaws.com/openai-assets/research-covers/language-unsupervised/language_understanding_paper.pdf) shows that **pretrained language models** can achieve state-of-the-art results on a wide range of NLP tasks. Refer to review [1](https://mp.weixin.qq.com/s/A-PKyZcXwOz-2lL-hBmjsA), [2](https://zhuanlan.zhihu.com/p/49271699?utm_medium=social&utm_source=wechat_session&wechatShare=2&from=timeline&isappinstalled=0) and [3](https://mp.weixin.qq.com/s/-mdHtQ55C05eSRZZP7DlOg) see their difference.
+- [ELMo](https://arxiv.org/abs/1802.05365), [ULMFiT](https://arxiv.org/abs/1801.06146), [OpenAI GPT](https://github.com/gaoisbest/NLP-Projects/blob/master/Pretraining_LM/materials_papers/GPT.pdf) and [BERT](https://github.com/gaoisbest/NLP-Projects/blob/master/Pretraining_LM/materials_papers/BERT.pdf) show that **pretrained language models** can achieve state-of-the-art results on a wide range of NLP tasks. Refer to review [1](https://mp.weixin.qq.com/s/A-PKyZcXwOz-2lL-hBmjsA), [2](https://zhuanlan.zhihu.com/p/49271699?utm_medium=social&utm_source=wechat_session&wechatShare=2&from=timeline&isappinstalled=0) and [3](https://mp.weixin.qq.com/s/-mdHtQ55C05eSRZZP7DlOg) see their difference.
 - Word vectors built by Word2vec or GloVe can only be used as initialization of **first layer** of deep networks.
 - Gain **primal “knowledge” of the language structures** before a more specific supervised training step [4].
 
@@ -72,7 +72,7 @@ We simply run the biLM and record all of the layer representations for each word
 ### Principle
 - **Model**: multi-layer left-to-right (left-context-only) Transformer decoder
 - **Pre-training objective**: LM
-
+![](https://github.com/gaoisbest/NLP-Projects/blob/master/Pretraining_LM/materials_papers/GPT_fine-tuning.png)
 ### Implementation
 - ...
 
@@ -108,7 +108,8 @@ We simply run the biLM and record all of the layer representations for each word
         - Input: final hidden state of Transformer encoder about all tokens
         - New parameter: `start vector` and `end vector`
         - Predicted span is `[max(softmax(dot product(token i hidden state, start vector))), max(softmax(dot product(token i hidden state, end vector)))`
-![](https://github.com/gaoisbest/NLP-Projects/blob/master/Pretraining_LM/materials_papers/BERT_fine_tuning.png)
+
+![](https://github.com/gaoisbest/NLP-Projects/blob/master/Pretraining_LM/materials_papers/BERT_fine-tuning.png)
 ### Implementation
 - [Official page](https://github.com/google-research/bert) gives pretrained models about BERT
 - [Naturali](https://www.jianshu.com/p/aa2eff7ec5c1) gives details about BERT fine-tune
