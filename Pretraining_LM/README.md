@@ -74,7 +74,7 @@ We simply run the biLM and record all of the layer representations for each word
 - **Pre-training objective**: LM
 ![](https://github.com/gaoisbest/NLP-Projects/blob/master/Pretraining_LM/materials_papers/GPT_fine-tuning.png)
 ### Implementation
-- ...
+- [Official page](https://github.com/openai/finetune-transformer-lm) gives code and model about GPT
 
 ## BERT (Bidirectional Encoder Representations from Transformers)
 ### Principle
