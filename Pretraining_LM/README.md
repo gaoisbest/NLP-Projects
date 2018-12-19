@@ -5,7 +5,7 @@
 
 - Transfer learning from computer vision shows that **low-level features can be shared and high-level features are task-dependent**, therefore we can use our own data to fine-tune the pre-trained model with **same model strcuture**.
 - [History](https://zhuanlan.zhihu.com/p/49271699?utm_medium=social&utm_source=wechat_session&wechatShare=2&from=timeline&isappinstalled=0): NNLM -> Word2vec (cannot handle polysemy) -> ELMo (dynamic word embedding, biLM + biLSTM) -> ULMFiT (three steps) -> GPT (start fine-tune schema, uniLM + Transformer) -> BERT (biLM + Transformer)
-- [ELMo](https://arxiv.org/abs/1802.05365), [ULMFiT](https://arxiv.org/abs/1801.06146), [OpenAI GPT](https://github.com/gaoisbest/NLP-Projects/blob/master/Pretraining_LM/materials_papers/GPT.pdf) and [BERT](https://github.com/gaoisbest/NLP-Projects/blob/master/Pretraining_LM/materials_papers/BERT.pdf) show that **pretrained language models** can achieve state-of-the-art results on a wide range of NLP tasks. Refer to review [1](https://mp.weixin.qq.com/s/A-PKyZcXwOz-2lL-hBmjsA), [2](https://zhuanlan.zhihu.com/p/49271699?utm_medium=social&utm_source=wechat_session&wechatShare=2&from=timeline&isappinstalled=0), [3](https://mp.weixin.qq.com/s/-mdHtQ55C05eSRZZP7DlOg), [4.1](https://mp.weixin.qq.com/s/Rd3-ypRYiJObi-e2JDeOjQ) and [4.2](https://mp.weixin.qq.com/s/7imMQ3GkD52xP7N4fqNPog) see their difference.
+- [ELMo](), [ULMFiT](https://arxiv.org/abs/1801.06146), [OpenAI GPT](https://github.com/gaoisbest/NLP-Projects/blob/master/Pretraining_LM/materials_papers/GPT.pdf) and [BERT](https://github.com/gaoisbest/NLP-Projects/blob/master/Pretraining_LM/materials_papers/BERT.pdf) show that **pretrained language models** can achieve state-of-the-art results on a wide range of NLP tasks. Refer to review [1](https://mp.weixin.qq.com/s/A-PKyZcXwOz-2lL-hBmjsA), [2](https://zhuanlan.zhihu.com/p/49271699?utm_medium=social&utm_source=wechat_session&wechatShare=2&from=timeline&isappinstalled=0), [3](https://mp.weixin.qq.com/s/-mdHtQ55C05eSRZZP7DlOg), [4.1](https://mp.weixin.qq.com/s/Rd3-ypRYiJObi-e2JDeOjQ) and [4.2](https://mp.weixin.qq.com/s/7imMQ3GkD52xP7N4fqNPog) see their difference.
 - Word vectors built by Word2vec or GloVe can only be used as initialization of **first layer** of deep networks.
 - Gain **primal “knowledge” of the language structures** before a more specific supervised training step [4].
 
@@ -45,11 +45,7 @@
 - **Pre-training objective**: bidirectional LM (i.e., concatenation of independently trained left-to-right and right-to-left LMs)
 - **Features**: linear combination of all hidden states of biLM
 - ELMo is **deep contextualized** word representation, overcome the **polysemy** problem that word2vec (always fixed vectors given different context) has
-- Lower biLSTM layer catches syntax (e.x., POS tagging), and higher biLSTM layer catches semantic (e.g., word sense disambiguation).
-- **Extension of word2vec **
-- Feature-based usage
-First, fine-tuning biLM on domain specific data. Second, 
-We simply run the biLM and record all of the layer representations for each word. Then, we let the end task model learn a linear combination of these representations
+- Lower biLSTM layer catches syntax (e.x., POS tagging), and higher biLSTM layer catches semantic (e.g., word sense disambiguation
 
 ### Implementation
 [AllenNLP ELMo page](https://allennlp.org/elmo) gives a detailed explanation about ELMo. And [AllenNLp github page](https://github.com/allenai/allennlp/blob/master/tutorials/how_to/elmo.md) describes how to use ELMo:
