@@ -96,7 +96,12 @@ for i in range(len(words)):
 
 ## 3. Word2vec
 ### Principle
-- Two model: CBOW, Skip-gram.
+- Two model [2]
+    - CBOW
+![](https://github.com/gaoisbest/NLP-Projects/blob/master/Word2vec/Word2vec_CBOW.png)
+    - Skip-gram
+![](https://github.com/gaoisbest/NLP-Projects/blob/master/Word2vec/Word2vec_Skip_gram.png)
+    - Both are **two layer MLP**
 - Two algorithms: Hierarchical softmax, Negative sampling.
 - Distributional hypothesis: **Similar words have similar context**.
 
@@ -145,7 +150,8 @@ I also implemented the [Word2vec in tensorflow](https://github.com/gaoisbest/NLP
 - Key drawbacks: **cannot handle Polysemy**, different meanings of the word has same embeddings.
 
 Reference:  
-http://web.stanford.edu/class/cs224n/lecture_notes/cs224n-2017-notes1.pdf
+- [1] http://web.stanford.edu/class/cs224n/lecture_notes/cs224n-2017-notes1.pdf
+- [2] https://mp.weixin.qq.com/s/Rd3-ypRYiJObi-e2JDeOjQ
 
 
 ## 4. GloVe
@@ -153,9 +159,10 @@ http://web.stanford.edu/class/cs224n/lecture_notes/cs224n-2017-notes1.pdf
 Global vectors for word representation (GloVe) uses global statistics to predict the probability of word `j` appearing in the context of word `i` with a **least square** objective.  
 ### Formula
 ![](https://github.com/gaoisbest/NLP-Projects/blob/master/Word2vec/GolVe.png)  
-where `X` is word-word co-occurrence matrix.
+where `X` is word-word co-occurrence matrix.  
+The |GloVe vectors| can be viewed as **Keywords**, since the larger the co-occur the larger |GloVe vector| is.
 ### Difference with skip-gram
-The skip-gram tries to capture the words co-occurence **one window at a time**. GolVe tries to catpure all words co-occurence informations across the whole corpus.  
+The skip-gram tries to capture the words co-occurence **one window at a time**. GloVe tries to catpure all words co-occurence informations across the whole corpus.  
 
 Reference:  
 http://web.stanford.edu/class/cs224n/lecture_notes/cs224n-2017-notes2.pdf
