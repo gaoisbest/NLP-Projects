@@ -57,11 +57,19 @@
     - Run `allennlp train training_config/bidaf.jsonnet -s output_model_file_path`
     - See [BiDAF](https://github.com/gaoisbest/NLP-Projects/blob/master/Pretraining_LM/bidaf.jsonnet) example
 
-## ULMFIT [2]
+## ULMFiT
 ### Principle
-- ...
+- Three steps
+    - step 1: general-domain LM pretraining
+    - step 2: target task LM fine-tuning
+        -  **Discriminative fine-tuning**: tune each layer (as different layer capture different information type) with different learning rate
+        - **Gradual unfreezing**: first unfreeze the last layer and fine-tune all un-frozen layers for one epoch, then unfreeze the next lower frozen layer and repeat, until we fine-tune all layers until convergence at the last iteration
+        - **Slanted triangular learning rates**: a short increase and a long decay period for learning rate
+    - step 3: target task classifier fine-tuning
+        - `fc1_y = ReLU(Dropout(Batch normalization(fc1(X))) -> Softmax(Dropout(Batch normalization(fc2(fc1_y)))`
+        - `X = Concat(h_t, mean_pooling(H), max_pooling(H))`
 ### Implementation
-- ...
+- [Official page](http://nlp.fast.ai/category/classification.html)
 
 
 ## GPT (Generative Pre-training)
