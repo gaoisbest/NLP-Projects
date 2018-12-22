@@ -85,10 +85,12 @@
 - [Official page](https://github.com/google-research/bert) gives pretrained models about BERT
 - [Naturali](https://www.jianshu.com/p/aa2eff7ec5c1) gives details about BERT fine-tune
 - [bert-as-service](https://github.com/hanxiao/bert-as-service)
+- [Illustrated bert](https://jalammar.github.io/illustrated-bert/)
+
 
 ## Transformer
 ### Principle
-- Principle: multi-headed self-attention operation over the input context tokens followed by position-wise feedforward layers , belongs to **Encoder-Decoder** framework [3]
+- Principle: multi-headed self-attention operation over the input context tokens followed by position-wise feedforward layers , belongs to **Encoder-Decoder** framework [2]
 - Blocks
     - **Encoder block**
         - Multi-head self-attention
@@ -120,9 +122,4 @@
 
 # References
 - [1] https://zhuanlan.zhihu.com/p/49271699?utm_medium=social&utm_source=wechat_session&wechatShare=2&from=timeline&isappinstalled=0
-- [1] [NLP's ImageNet moment has arrived](https://thegradient.pub/nlp-imagenet/)
-- [2] [blog](http://nlp.fast.ai/classification/2018/05/15/introducting-ulmfit.html)
-- [3] [Transformer illustration](https://jalammar.github.io/illustrated-transformer/), [Transformer interpretation](https://www.jiqizhixin.com/articles/2018-01-10-20), [self attention](https://www.paperweekly.site/papers/notes/339) 
-- [4] https://towardsdatascience.com/deep-learning-for-specific-information-extraction-from-unstructured-texts-12c5b9dceada
-- [5] https://www.lyrn.ai/2018/11/07/explained-bert-state-of-the-art-language-model-for-nlp/
-- [6] https://jalammar.github.io/illustrated-bert/
+- [2] [Transformer interpretation](https://www.jiqizhixin.com/articles/2018-01-10-20), [self attention](https://www.paperweekly.site/papers/notes/339)
