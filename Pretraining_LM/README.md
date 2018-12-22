@@ -23,7 +23,7 @@
     - Edit `bidaf.jsonnet` from [`/training_config/`](https://github.com/allenai/allennlp/tree/master/training_config)
     - Run `allennlp train training_config/bidaf.jsonnet -s output_model_file_path`
     - See [BiDAF](https://github.com/gaoisbest/NLP-Projects/blob/master/Pretraining_LM/materials_demos/bidaf.jsonnet) example
-
+- **How to use** ? [Concatenate ELMos with context-independent word embeddings instead of replacing them](http://mlexplained.com/2018/06/15/paper-dissected-deep-contextualized-word-representations-explained/)
 ## ULMFiT
 ### Principle
 - Three steps
