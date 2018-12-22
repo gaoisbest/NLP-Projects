@@ -1,5 +1,5 @@
 # NLP-Projects
-Natural Language Processing related projects, which includes concepts and srcipts about:
+Natural Language Processing projects, which includes concepts and scripts about:
 - Word2vec: `gensim`, `fastText` and `tensorflow` implementations. See [Chinese notes](http://url.cn/5PKmy7W), [中文解读](http://url.cn/5PKmy7W).
 - Sentence2vec: `doc2vec`, `word2vec averaging` and `Smooth Inverse Frequency` implementations. See 
 - Text_classification: `tensorflow LSTM` (See [Chinese notes 1](http://url.cn/5cLDOQI), [中文解读 1](http://url.cn/5cLDOQI) and [Chinese notes 2](http://url.cn/5w5VbaI), [中文解读 2](http://url.cn/5w5VbaI)) and `fastText` implementations. 
@@ -7,6 +7,21 @@ Natural Language Processing related projects, which includes concepts and srcipt
 - Sequence_labeling-NER: brands NER via bi-directional LSTM + CRF, `tensorflow` implementation. See [Chinese notes](http://url.cn/5fcC754), [中文解读](http://url.cn/5fcC754).
 - Machine_reading_comprehension: [introduction](https://github.com/gaoisbest/NLP-Projects/blob/master/Machine_reading_comprehension/README.md), `BiDAF+ELMo` implementation.
 - Knowledge_graph: [introduction](https://github.com/gaoisbest/NLP-Projects/blob/master/Knowledge_graph/README.md)
+- Pretraining_LM: [introduction](https://github.com/gaoisbest/NLP-Projects/blob/master/Pretraining_LM/README.md), principle of ELMo, ULMFit, GPT and BERT
+
+# Awesome packages
+## Chinese
+- [pyltp](http://pyltp.readthedocs.io/zh_CN/develop/api.html)
+- [HanLP](http://hanlp.linrunsoft.com/index.html)
+
+## English
+### 1. [Spacy](https://spacy.io)
+### 2. [gensim](https://radimrehurek.com/gensim/)
+
+# Awesome public apis
+- [Baidu AI Open Platform](https://ai.baidu.com/)
+- [Tencent AI Open Platform](https://ai.qq.com/)
+- [Tencent NLP](http://nlp.qq.com/)
 
 # DL best practices in NLP
 ## 1. Word embeddings
@@ -65,16 +80,3 @@ The attention [review 1](https://lilianweng.github.io/lil-log/2018/06/24/attenti
 [1] http://ruder.io/deep-learning-nlp-best-practices/  
 [2] https://r2rt.com/recurrent-neural-networks-in-tensorflow-iii-variable-length-sequences.html  
 
-# Awesome packages
-## Chinese
-- [pyltp](http://pyltp.readthedocs.io/zh_CN/develop/api.html)
-- [HanLP](http://hanlp.linrunsoft.com/index.html)
-
-## English
-### 1. [Spacy](https://spacy.io)
-### 2. [gensim](https://radimrehurek.com/gensim/)
-
-# Awesome public apis
-- [Baidu AI Open Platform](https://ai.baidu.com/)
-- [Tencent AI Open Platform](https://ai.qq.com/)
-- [Tencent NLP](http://nlp.qq.com/)
