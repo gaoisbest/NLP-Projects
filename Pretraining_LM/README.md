@@ -90,7 +90,7 @@
 
 ## Transformer
 ### Principle
-- Principle: multi-headed self-attention operation over the input context tokens followed by position-wise feedforward layers , belongs to **Encoder-Decoder** framework [2]
+- Principle: each layer has two **sub-layers** (i.e., multi-head self-attention and position-wise feedforward), the output of each sub-layer is `LayerNorm(x+Sublayer(x))`. Additional **positional embedding** is added to embedding.
 - Blocks
     - **Encoder block**
         - Multi-head self-attention
@@ -112,10 +112,10 @@
         - Softmax the logits and choose the index with largest probability
 
 ### Implementation
-    - [The annotated transformer](http://nlp.seas.harvard.edu/2018/04/01/attention.html)
-    - [Illustrated transformer](https://jalammar.github.io/illustrated-transformer/)
-    - [pytorch](https://github.com/jadore801120/attention-is-all-you-need-pytorch)
-    - [tensorflow](https://github.com/tensorflow/tensor2tensor)  
+- [The annotated transformer](http://nlp.seas.harvard.edu/2018/04/01/attention.html)
+- [Illustrated transformer](https://jalammar.github.io/illustrated-transformer/)
+- [pytorch](https://github.com/jadore801120/attention-is-all-you-need-pytorch)
+- [tensorflow](https://github.com/tensorflow/tensor2tensor)  
 
 # BERT, GPT, ELMo comparison
 ![](https://github.com/gaoisbest/NLP-Projects/blob/master/Pretraining_LM/materials_papers/BERT_GPT_ELMo_comparison.png)
