@@ -34,6 +34,8 @@ For machine reading comprehension (mrc), [Deep read: A reading comprehension sys
     - Step 1: **extracts evidence snippets** by matching question and passage via pointer network. Add **passage ranking** as an additional task to conduct multi-task learning.
     - Step 2: generate the answer by **synthesizing the passage, question and evidence snippets** via seq2seq. Evidence snippets are labeled as features.
 - [QANet](https://arxiv.org/pdf/1804.09541.pdf)
+    - Data augmentation via backtranslation
+    - the separable convolutions capture the local structure of the context while the self-attention is able to model the global interactions between text
 - [U-Net](https://arxiv.org/pdf/1810.06638.pdf)
     - [Illustration](https://mp.weixin.qq.com/s/VmmWEJJXXGLaE5-mLMZbpQ)
     
@@ -87,6 +89,9 @@ For machine reading comprehension (mrc), [Deep read: A reading comprehension sys
                     - Novel question type: **comparison question**, which contains **yes/no question**
                     - Baseline model: [Simple and Effective Multi-Paragraph Reading Comprehension](https://arxiv.org/pdf/1710.10723.pdf), [official code](https://github.com/allenai/document-qa) and [code by HotpotQA](https://github.com/hotpotqa/hotpot/blob/master/model.py)
                 - [TriviaQA](http://nlp.cs.washington.edu/triviaqa/)
+                    - Has much longer context (2895 tokens per context on average) and may contain several paragraphs
+                    - Much noisier than SQuAD due to the lack of human labeling
+                    - Possible that the context is not related to the answer at all, as it is crawled by key words
                 - [SearchQA](https://arxiv.org/abs/1704.05179)
                 - [CoQA](https://stanfordnlp.github.io/coqa/): A Conversational Question Answering Challenge
                 - [QuAC](http://quac.ai./): Question Answering in Context
@@ -104,6 +109,12 @@ For machine reading comprehension (mrc), [Deep read: A reading comprehension sys
             - Baseline model: [BiDAF and Match-LSTM](https://github.com/baidu/DuReader)
             - Advanced model: [V-Net](https://yizhong-wang.com/papers/acl2018-reading-slides.pdf)
         - [CMRC 2018](https://hfl-rc.github.io/cmrc2018/)
+# Evaluation metrics
+- Exact Match
+- F1
+It measures the **portion of overlap tokens** between the predicted answer and groundtruth.
+- BLEU
+- ROUGE-L
 
 # Materials
 - [Naturali video version](https://mp.weixin.qq.com/s/6nAm1sJrAj3qqUAagwWutg), [text version](http://tech.163.com/18/0729/10/DNSH3QU600098IEO.html)
