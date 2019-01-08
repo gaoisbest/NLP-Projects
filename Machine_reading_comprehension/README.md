@@ -39,7 +39,16 @@ For machine reading comprehension (mrc), [Deep read: A reading comprehension sys
     - Model structure
 ![](https://github.com/gaoisbest/NLP-Projects/blob/master/Machine_reading_comprehension/materials_papers/QANet_model.png)
     - [Implementation](https://github.com/NLPLearn/QANet)
-    
+- [Multi-answer Multi-task]()
+    - Three loss for multiple answer span
+        - Average loss
+        - Weighted average loss
+        - Minimum value of the loss
+    - Combine passage ranking as multi-task learning
+        - As answer span can occur in multiple passages, **pointwise sigmoid function** instead of softmax function is used
+    - Minimum risk training
+        - Direct optimize the evaluation metric instead of maximizing MLE
+        
 - [Match-LSTM](https://arxiv.org/pdf/1608.07905.pdf)
 - [U-Net](https://arxiv.org/pdf/1810.06638.pdf)
     - [Illustration](https://mp.weixin.qq.com/s/VmmWEJJXXGLaE5-mLMZbpQ)
@@ -53,17 +62,21 @@ For machine reading comprehension (mrc), [Deep read: A reading comprehension sys
 ## Model structure
 - Embedding layer
     - Character-level embedding
-        - 1D CNN from BiDAF
-        - Last hidden states of BiRNN from R-Net
+        - 1D CNN (BiDAF)
+        - Last hidden states of BiRNN (R-Net)
         - It is useful to **OOV** tokens
     - Word-level embedding
         - GloVe pre-trained embedding is used frequently
+    - Features
+        - [Binary and weighted *word-in-question* feature (FastQA)](http://www.aclweb.org/anthology/K17-1028)
+        - [POS tag]()
 - Encoding layer
     - Concatenation of forword and backword hidden states of BiRNN (BiDAF)
     - `[convulution-layer * # + self-attention layer + feed-forward layer]` (QANet)
 - Context-query attention layer
     - Context and query similarity matrix (BiDAF, QANet)
 - Model layer
+    - BiRNN (BiDAF)
     - Gated attention-based recurrent network (R-Net)
     - Passage self-matching
     - `[convulution-layer * # + self-attention layer + feed-forward layer]` (QANet)
