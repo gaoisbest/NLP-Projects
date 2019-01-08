@@ -16,7 +16,6 @@ For machine reading comprehension (mrc), [Deep read: A reading comprehension sys
 
 # Deep learning Models
 ## Model list
-- [Match-LSTM](https://arxiv.org/pdf/1608.07905.pdf)
 - [BiDAF](https://github.com/gaoisbest/NLP-Projects/blob/master/Machine_reading_comprehension/materials_papers/BiDAF.pdf) from AllenNLP, baseline for MS-MARCO
     - Attention flow layer: **context-to-query attention** (i.e., which query words are most relevant to each context word, `softmax(row)`) and **query-to-context attention** (i.e., which context words have the closest similarity to one of the query word, `softmax(max(column))`), based on **similarity matrix**
     - Similarity function
@@ -33,20 +32,24 @@ For machine reading comprehension (mrc), [Deep read: A reading comprehension sys
 - [S-Net](https://github.com/gaoisbest/NLP-Projects/blob/master/Machine_reading_comprehension/materials_papers/S-Net.pdf) for MS-MARCO
     - Step 1: **extracts evidence snippets** by matching question and passage via pointer network. Add **passage ranking** as an additional task to conduct multi-task learning.
     - Step 2: generate the answer by **synthesizing the passage, question and evidence snippets** via seq2seq. Evidence snippets are labeled as features.
-- [QANet](https://arxiv.org/pdf/1804.09541.pdf)
+    
+- [QANet](https://github.com/gaoisbest/NLP-Projects/blob/master/Machine_reading_comprehension/materials_papers/QANet.pdf)
+    - **Separable convolution** + **self-attention** (Each position as a query to match all positions as keys)
     - Data augmentation via backtranslation
-    - the separable convolutions capture the local structure of the context while the self-attention is able to model the global interactions between text
+    - Model structure
+![](https://github.com/gaoisbest/NLP-Projects/blob/master/Machine_reading_comprehension/materials_papers/QANet_model.png)
+    - [Implementation](https://github.com/NLPLearn/QANet)
+    
+- [Match-LSTM](https://arxiv.org/pdf/1608.07905.pdf)
 - [U-Net](https://arxiv.org/pdf/1810.06638.pdf)
     - [Illustration](https://mp.weixin.qq.com/s/VmmWEJJXXGLaE5-mLMZbpQ)
-    
 - [Dual Ask-Answer Network](https://arxiv.org/abs/1809.01997)
 - [Gated Self-Matching Networks](http://www.aclweb.org/anthology/P17-1018)
 - [V-Net](https://arxiv.org/abs/1805.02220) from Baidu NLP for MS-MARCO
 - [FastQA](http://www.aclweb.org/anthology/K17-1028), [comment](http://www.shuang0420.com/2018/05/13/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0%20-%20Making%20Neural%20QA%20as%20Simple%20as%20Possible%20but%20not%20Simpler/)
 - [Documentqa](https://github.com/allenai/document-qa)
-- FusionNet
-- Reinforced M-Reader
 - Model reviews [part 1](https://mp.weixin.qq.com/s/V2HcHgmW-SfJDwzqydadoA) and [part 2](https://mp.weixin.qq.com/s/IahvlkiACOAjicX68teA0A)
+
 ## Model structure
 - Embedding layer
     - Character-level embedding
@@ -56,12 +59,17 @@ For machine reading comprehension (mrc), [Deep read: A reading comprehension sys
     - Word-level embedding
         - GloVe pre-trained embedding is used frequently
 - Encoding layer
-    - Concatenation of forword and backword hidden states of BiRNN
-
-- Matching layer
+    - Concatenation of forword and backword hidden states of BiRNN (BiDAF)
+    - `[convulution-layer * # + self-attention layer + feed-forward layer]` (QANet)
+- Context-query attention layer
+    - Context and query similarity matrix (BiDAF, QANet)
+- Model layer
     - Gated attention-based recurrent network (R-Net)
     - Passage self-matching
-- Prediction by pointer network
+    - `[convulution-layer * # + self-attention layer + feed-forward layer]` (QANet)
+- Output layer
+    - Direct output (BiDAF, QANet)
+    - Pointer network
 
 # Dataset
 - Multiple option
@@ -111,8 +119,11 @@ For machine reading comprehension (mrc), [Deep read: A reading comprehension sys
         - [CMRC 2018](https://hfl-rc.github.io/cmrc2018/)
 # Evaluation metrics
 - Exact Match
+    - Clean the text: remove a, an, the, whitespace, punctuation and lowercase
+    - [Implementation](https://github.com/HKUST-KnowComp/R-Net/blob/master/util.py#L134)
 - F1
-It measures the **portion of overlap tokens** between the predicted answer and groundtruth.
+    - It measures the **portion of overlap tokens** between the predicted answer and groundtruth
+    - [Implementation](https://github.com/HKUST-KnowComp/R-Net/blob/master/util.py#L121)
 - BLEU
 - ROUGE-L
 
