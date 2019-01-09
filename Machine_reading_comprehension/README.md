@@ -146,10 +146,6 @@ For machine reading comprehension (mrc), [Deep read: A reading comprehension sys
 - [Paperweekly seminar](https://www.bilibili.com/video/av33802404/)
 - [Zhuiyi video](http://www.mooc.ai/course/596/learn?lessonid=2928), [text 1](https://mp.weixin.qq.com/s/EQsxkCwQW_gzlB3Ozd5_ZQ) and [text 2](https://mp.weixin.qq.com/s/GrEfupJdAUFSp2l-myA1Ig)
 
-# Leading companies
-- [Zhuiyi](https://zhuiyi.ai/)
-- [Naturali](https://www.naturali.io/)
-
 # Applications
 - Learning to ask (i.e., neural questioner)
 - Open domain QA
@@ -169,6 +165,8 @@ For machine reading comprehension (mrc), [Deep read: A reading comprehension sys
 - **Transfer learning**
     - Word embedding: [GloVe is better than word2vec](https://arxiv.org/pdf/1703.00993.pdf)
     - Language model: [CoVe](https://arxiv.org/pdf/1708.00107.pdf), [ELMo](https://arxiv.org/pdf/1802.05365.pdf)
-
+- **Unanswerable question type**
+    - [Add padding position](https://github.com/gaoisbest/NLP-Projects/blob/master/Machine_reading_comprehension/materials_papers/I_Know_There_Is_No_Answer_Modeling_Answer_Validation_for_MRC.pdf)
+    - []()
 
     
