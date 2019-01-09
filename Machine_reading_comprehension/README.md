@@ -153,7 +153,7 @@ For machine reading comprehension (mrc), [Deep read: A reading comprehension sys
 # Applications
 - Learning to ask (i.e., neural questioner)
 - Open domain QA
-    - [DrQA](https://arxiv.org/pdf/1704.00051.pdf)
+    - [DrQA](https://arxiv.org/pdf/1704.00051.pdf), see [danqi's PHD thesis](https://github.com/gaoisbest/NLP-Projects/blob/master/Machine_reading_comprehension/materials_papers/Daiqi_stanford_PhD_thesis_MRC.pdf) for detailed information
     - [DS-QA](http://aclweb.org/anthology/P18-1161)
     - [R^3](https://arxiv.org/pdf/1709.00023.pdf)
 - [Search](https://mp.weixin.qq.com/s/GrEfupJdAUFSp2l-myA1Ig)
