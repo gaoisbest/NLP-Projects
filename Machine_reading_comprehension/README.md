@@ -39,7 +39,7 @@ For machine reading comprehension (mrc), [Deep read: A reading comprehension sys
     - Model structure
 ![](https://github.com/gaoisbest/NLP-Projects/blob/master/Machine_reading_comprehension/materials_papers/QANet_model.png)
     - [Implementation](https://github.com/NLPLearn/QANet)
-- [Multi-answer Multi-task]()
+- [Multi-answer Multi-task](https://github.com/gaoisbest/NLP-Projects/blob/master/Machine_reading_comprehension/materials_papers/A_multi-answer_multi-task_framework_for_real-world_MRC.pdf)
     - Three loss for multiple answer span
         - Average loss
         - Weighted average loss
@@ -48,6 +48,7 @@ For machine reading comprehension (mrc), [Deep read: A reading comprehension sys
         - As answer span can occur in multiple passages, **pointwise sigmoid function** instead of softmax function is used
     - Minimum risk training
         - Direct optimize the evaluation metric instead of maximizing MLE
+    - Prediction is only **single answer span**
         
 - [Match-LSTM](https://arxiv.org/pdf/1608.07905.pdf)
 - [U-Net](https://arxiv.org/pdf/1810.06638.pdf)
