@@ -141,10 +141,38 @@ For machine reading comprehension (mrc), [Deep read: A reading comprehension sys
 - BLEU
 - ROUGE-L
 
-# Materials
+# In action
 - [Naturali video version](https://mp.weixin.qq.com/s/6nAm1sJrAj3qqUAagwWutg), [text version](http://tech.163.com/18/0729/10/DNSH3QU600098IEO.html)
 - [Paperweekly seminar](https://www.bilibili.com/video/av33802404/)
 - [Zhuiyi video](http://www.mooc.ai/course/596/learn?lessonid=2928), [text 1](https://mp.weixin.qq.com/s/EQsxkCwQW_gzlB3Ozd5_ZQ) and [text 2](https://mp.weixin.qq.com/s/GrEfupJdAUFSp2l-myA1Ig)
+    - Data preparation
+        - Filter out query or answer in None
+        - Context normalization, i.e., lowercase, punctuation
+        - Answer length limit, context length limit (threshold is determined by statistics)
+        - Data augmentation i.e., back-translation or similar QA data
+        - Training data quality, e.g., same query type has different answer format, `1963 year`, `1990 year stop the usage`
+    - Feature engineering
+        - Query type
+            - Who, when, where, how, number, why, how long
+        - ELMo
+            - Word level
+    - Model (from R-Net)
+        - Embedding
+            - ELMo only (without word2vec)
+            - POS embedding
+            - Query type embedding
+            - Binary word-in-question feature
+        - Encoding
+            - Multi-layer BiGRU
+        - Context-query attention
+            - Gated-dropout (filtering useful message) for query
+        - Prediction
+            - Pointer network
+            - Probability = start * stop
+![](https://github.com/gaoisbest/NLP-Projects/blob/master/Machine_reading_comprehension/materials_papers/Zhuiyi_model.png)
+    - Training
+        - Born-Again Neural Network, teacher = student
+            
 
 # Applications
 - Learning to ask (i.e., neural questioner)
