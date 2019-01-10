@@ -1,4 +1,7 @@
 # Question answering
+- KBQA
+- FAQ
+- MRC
 ## 1. Knowledge Based Question Answering (KBQA)
 
 ## 2. Retrieval Based FAQ [1]
@@ -28,5 +31,9 @@
 - [Supervised Learning of Universal Sentence Representations from Natural Language Inference Data, 2017](https://arxiv.org/pdf/1705.02364.pdf)
 - **Sentence vector quick search tool**: [Faiss](https://github.com/facebookresearch/faiss)
 
+## 3. Machine Reading Comprehension (MRC)
+Please see [here](https://github.com/gaoisbest/NLP-Projects/blob/master/Machine_reading_comprehension/README.md).
+
+
 # References
-[1] [全球互联网架构大会-对话机器人的最佳实践-助理来也](https://github.com/gaoisbest/NLP-Projects/blob/master/Dialog%20system/%E5%85%A8%E7%90%83%E4%BA%92%E8%81%94%E7%BD%91%E6%9E%B6%E6%9E%84%E5%A4%A7%E4%BC%9A_%E5%AF%B9%E8%AF%9D%E6%9C%BA%E5%99%A8%E4%BA%BA%E7%9A%84%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5_%E5%8A%A9%E7%90%86%E6%9D%A5%E4%B9%9F.pdf)  
+- [1] [全球互联网架构大会-对话机器人的最佳实践-助理来也](https://github.com/gaoisbest/NLP-Projects/blob/master/Dialog%20system/%E5%85%A8%E7%90%83%E4%BA%92%E8%81%94%E7%BD%91%E6%9E%B6%E6%9E%84%E5%A4%A7%E4%BC%9A_%E5%AF%B9%E8%AF%9D%E6%9C%BA%E5%99%A8%E4%BA%BA%E7%9A%84%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5_%E5%8A%A9%E7%90%86%E6%9D%A5%E4%B9%9F.pdf)  
