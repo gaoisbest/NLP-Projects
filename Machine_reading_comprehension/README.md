@@ -99,11 +99,7 @@ For machine reading comprehension (mrc), [Deep read: A reading comprehension sys
         - Extractive
             - Single-hop (i.e., single document) reasoning
                 - [SQuAD](https://rajpurkar.github.io/SQuAD-explorer/), extractive dataset
-                    - For **unanswerable** questions, [SQuAD 2.0](https://arxiv.org/pdf/1806.03822.pdf)
-                        - [SQUADRUN Dataset](http://aclweb.org/anthology/P18-2124)
-                        - [U-Net](https://arxiv.org/pdf/1810.06638.pdf)
-                        - [Read + Verify](https://arxiv.org/pdf/1808.05759.pdf)
-                        - [Answer Verifier](https://link.springer.com/chapter/10.1007/978-3-319-99495-6_8)
+                - [SQuAD 2.0](https://github.com/gaoisbest/NLP-Projects/blob/master/Machine_reading_comprehension/materials_papers/Know_What_You_Don%E2%80%99t_Know_Unanswerable_Questions_for_SQuAD.pdf), for **unanswerable** questions
             - Multi-hop reasoning
                 - [HotpotQA](https://hotpotqa.github.io/): A Dataset for Diverse, Explainable Multi-hop Question Answering
                     - Data source: English Wikipedia dump
@@ -200,6 +196,6 @@ For machine reading comprehension (mrc), [Deep read: A reading comprehension sys
     - Language model: [CoVe](https://arxiv.org/pdf/1708.00107.pdf), [ELMo](https://arxiv.org/pdf/1802.05365.pdf)
 - **Unanswerable question type**
     - [Add padding position](https://github.com/gaoisbest/NLP-Projects/blob/master/Machine_reading_comprehension/materials_papers/I_Know_There_Is_No_Answer_Modeling_Answer_Validation_for_MRC.pdf)
-    - []()
+    - [Trainable bias](https://arxiv.org/pdf/1706.04115.pdf)
 
     
