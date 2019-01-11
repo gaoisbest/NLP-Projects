@@ -143,9 +143,16 @@ For machine reading comprehension (mrc), [Deep read: A reading comprehension sys
 
 # In action
 - [Naturali video version](https://mp.weixin.qq.com/s/6nAm1sJrAj3qqUAagwWutg), [text version](http://tech.163.com/18/0729/10/DNSH3QU600098IEO.html)
+    - Data preprocess
+
+![](https://github.com/gaoisbest/NLP-Projects/blob/master/Machine_reading_comprehension/materials_papers/Naturali_data_preprocess.png)
+    - Model
+
+![](https://github.com/gaoisbest/NLP-Projects/blob/master/Machine_reading_comprehension/materials_papers/Naturali_model.png)
+
 - [Paperweekly seminar](https://www.bilibili.com/video/av33802404/)
 - [Zhuiyi video](http://www.mooc.ai/course/596/learn?lessonid=2928), [text 1](https://mp.weixin.qq.com/s/EQsxkCwQW_gzlB3Ozd5_ZQ) and [text 2](https://mp.weixin.qq.com/s/GrEfupJdAUFSp2l-myA1Ig)
-    - Data preparation
+    - Data preprocess
         - Filter out query or answer in None
         - Context normalization, i.e., lowercase, punctuation
         - Answer length limit, context length limit (threshold is determined by statistics)
@@ -156,7 +163,7 @@ For machine reading comprehension (mrc), [Deep read: A reading comprehension sys
             - Who, when, where, how, number, why, how long
         - ELMo
             - Word level
-    - Model (from R-Net)
+    - Model (based on R-Net)
         - Embedding
             - ELMo only (without word2vec)
             - POS embedding
@@ -169,6 +176,7 @@ For machine reading comprehension (mrc), [Deep read: A reading comprehension sys
         - Prediction
             - Pointer network
             - Probability = start * stop
+
 ![](https://github.com/gaoisbest/NLP-Projects/blob/master/Machine_reading_comprehension/materials_papers/Zhuiyi_model.png)
     - Training
         - Born-Again Neural Network, teacher = student
