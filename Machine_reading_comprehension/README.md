@@ -85,7 +85,10 @@ For machine reading comprehension (mrc), [Deep read: A reading comprehension sys
     - `[convulution-layer * # + self-attention layer + feed-forward layer]` (QANet)
 - Output layer
     - Direct output (BiDAF, QANet)
-    - Pointer network
+    - [Pointer network](http://fastml.com/introduction-to-pointer-networks/) (R-Net)
+        - Simplify seq2seq mechanism
+        - It only points at the **probability** of elements and get **a permutation of inputs**
+        - Not all pointers is necessary, for mrc and summarization, for example, only two pointers is needed
 
 # Dataset
 - Multiple option
