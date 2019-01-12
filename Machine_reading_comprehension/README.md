@@ -23,6 +23,7 @@ For machine reading comprehension (mrc), [Deep read: A reading comprehension sys
     - Model structure
     ![](https://github.com/gaoisbest/NLP-Projects/blob/master/Machine_reading_comprehension/materials_papers/BiDAF_model.png)
     - [Official implementation](https://allenai.github.io/bi-att-flow/)
+    - [Model illustration](https://hanxiao.github.io/2018/04/21/Teach-Machine-to-Comprehend-Text-and-Answer-Question-with-Tensorflow/)
     - [BiDAF + Self attention + ELMo](https://arxiv.org/pdf/1710.10723.pdf)
     
 - [R-Net](https://github.com/gaoisbest/NLP-Projects/blob/master/Machine_reading_comprehension/materials_papers/R-Net.pdf) for MS-MARCO
