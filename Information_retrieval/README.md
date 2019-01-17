@@ -20,6 +20,8 @@ Deep semantic match has broad applications in **information retrieval**, **quest
     - ARC-I
 - Implementation
     - [MatchZoo](https://github.com/NTMC-Community/MatchZoo)
+    - [Annoy](https://github.com/spotify/annoy)
+    - [Faiss](https://github.com/facebookresearch/faiss)
     
 # [Evaluation metrics](https://github.com/gaoisbest/NLP-Projects/blob/master/Information_retrieval/materials_papers/IR_EvaluationMetrics.pdf)
 - Set retrieval
