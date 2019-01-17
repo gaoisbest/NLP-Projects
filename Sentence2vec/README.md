@@ -10,8 +10,7 @@
 - [Sent2vec](https://github.com/epfml/sent2vec)
 
 # Sentence encoder example
-- https://hanxiao.github.io/2018/06/25/4-Encoding-Blocks-You-Need-to-Know-Besides-LSTM-RNN-in-Tensorflow/?from=timeline&isappinstalled=0
-
+- https://hanxiao.github.io/2018/06/24/4-Encoding-Blocks-You-Need-to-Know-Besides-LSTM-RNN-in-Tensorflow/
 
 # Distance
 ## Cosine distance
