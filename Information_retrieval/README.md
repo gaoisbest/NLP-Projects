@@ -6,7 +6,16 @@ Deep semantic match has broad applications in **information retrieval**, **quest
 - TFIDF
 - BM25
 - Query likelihood
-- Jaccard distance
+- [Jaccard](https://towardsdatascience.com/overview-of-text-similarity-metrics-3397c4601f50)
+    - Size of intersection divided by size of union of two sets
+    - Word duplication does not matter
+    - ```
+    def jaccard_sim(str1, str2): 
+        a = set(str1.split()) 
+        b = set(str2.split())
+        c = a.intersection(b)
+        return float(len(c)) / (len(a) + len(b) - len(c))
+    ```
 
 ## Deep learning models
 - **Interaction-based** is **perfered**
