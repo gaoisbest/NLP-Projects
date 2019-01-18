@@ -72,18 +72,19 @@ For machine reading comprehension (mrc), [Deep read: A reading comprehension sys
     - Word-level embedding
         - GloVe pre-trained embedding is used frequently
     - Features
-        - [Binary and weighted *word-in-question* feature (FastQA)](http://www.aclweb.org/anthology/K17-1028)
-        - [POS tag]()
+        - [Binary and weighted *word-in-question* (without stop-words) feature (FastQA)](http://www.aclweb.org/anthology/K17-1028)
+        - POS tag
+        - Query type
 - Encoding layer
     - Concatenation of forword and backword hidden states of BiRNN (BiDAF)
-    - `[convulution-layer * # + self-attention layer + feed-forward layer]` (QANet)
+    - `[convolution-layer * # + self-attention layer + feed-forward layer]` (QANet)
 - Context-query attention layer
     - Context and query similarity matrix (BiDAF, QANet)
 - Model layer
     - BiRNN (BiDAF)
     - Gated attention-based recurrent network (R-Net)
     - Passage self-matching
-    - `[convulution-layer * # + self-attention layer + feed-forward layer]` (QANet)
+    - `[convolution-layer * # + self-attention layer + feed-forward layer]` (QANet)
 - Output layer
     - Direct output (BiDAF, QANet)
     - [Pointer network](http://fastml.com/introduction-to-pointer-networks/) (R-Net)
