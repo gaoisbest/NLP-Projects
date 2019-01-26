@@ -7,6 +7,7 @@
     - HAN
     - Discussion
 - Sentiment analysis
+- Unbalanced dataset
 
 ## 1. fastText
 ### Principle
@@ -102,3 +103,32 @@
 # Sentiment analysis
 ## Tools
 - [Baidu Senta](https://github.com/baidu/Senta)
+
+# Unbalanced dataset
+- Data
+    - Up-sampling of minor class
+        - Replication same samples
+        - Synthesis by SMOTE
+        - Data augmentation by replacing verb or adjective
+    - Down-sampling of major class
+- Model
+    - Ensemble
+        - Bagging and Boosting
+    - One-class SVM
+- Loss function
+    - [class_weight](https://blog.mimacom.com/text-classification/) is used as parameters to weight loss, **weight less frequent classes higher than very frequent classes**
+    - Focal loss
+- Evaluation metric
+    - Default decision threshold is not valid for imbalanced data
+    - [AUC](https://scikit-learn.org/stable/auto_examples/model_selection/plot_roc.html) gives performance across the whole range of decision thresholds, ROC curves are typically used in **binary classification**
+
+## Evaluation metric
+- TPR (True Positive Rate) = # True positives / # positives = Recall = TP / (TP+FN)
+- FPR (False Positive Rate) = # False Positives / # negatives = FP / (FP+TN)
+- Precision =# True positives / # predicted positive = TP/(TP+FP)
+- Recall = # True positives / # positives = TP / (TP+FN)
+- Recall = True Positive Rate
+
+### References
+[1] https://www.analyticsvidhya.com/blog/2017/03/imbalanced-classification-problem/  
+[2] https://www.reddit.com/r/MachineLearning/comments/12evgi/classification_when_80_of_my_training_set_is_of/
