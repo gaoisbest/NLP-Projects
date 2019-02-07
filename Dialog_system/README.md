@@ -9,6 +9,9 @@
     - **Domain identification**: text classification
     - **User intent detection**: text classification (We can incorporate preceding text information during perform classification, see [7])
     - **Slot filling**: sequence labeling
+        - Rule-based
+        - BiLSTM + CRF
+        - [**Joint learning of intent identification and slot filling**](https://www.ijcai.org/Proceedings/16/Papers/425.pdf)
   - DM: Dialogue Management
     - **Dialogue State Tracking**: estimates the goal at every turn. A probability distribution over each slot for each turn.
     - **Policy Learning**: generates next action
@@ -55,6 +58,8 @@
 - [2017第六届全国社会媒体处理大会之中文人机对话技术评测](https://github.com/HITlilingzhi/SMP2017ECDT-DATA)
 
 # Implementation
+- [Rasa](https://www.rasa.com/)
+- [DialogFlow](https://dialogflow.com/)
 - [ChatterBot](https://github.com/gunthercox/ChatterBot) supplies a framework for building chatbot, and [Awesome-Chatbot](https://github.com/fendouai/Awesome-Chatbot) gives a list of public repositories about chatbot.
 - [wxpy](https://github.com/youfou/wxpy), [wxBot](https://github.com/liuwons/wxBot), [WeRoBot](https://github.com/offu/WeRoBot): weChat bot.
 - [AIML](https://medium.com/pandorabots-blog/aiml-tutorial-creating-a-context-aware-multi-functional-chatbot-e5e82c027a6a) for pattern matching.
