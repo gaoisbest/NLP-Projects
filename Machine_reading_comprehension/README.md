@@ -107,6 +107,8 @@ For machine reading comprehension (mrc), [Deep read: A reading comprehension sys
             - Single-hop (i.e., single document) reasoning
                 - [SQuAD](https://rajpurkar.github.io/SQuAD-explorer/), extractive dataset
                 - [SQuAD 2.0](https://github.com/gaoisbest/NLP-Projects/blob/master/Machine_reading_comprehension/materials_papers/Know_What_You_Don%E2%80%99t_Know_Unanswerable_Questions_for_SQuAD.pdf), for **unanswerable** questions
+                - [Google Natural Questions](https://ai.google.com/research/NaturalQuestions) contains short and long answers
+                
             - Multi-hop reasoning
                 - [HotpotQA](https://hotpotqa.github.io/): A Dataset for Diverse, Explainable Multi-hop Question Answering
                     - Data source: English Wikipedia dump
