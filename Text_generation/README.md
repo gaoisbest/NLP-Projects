@@ -3,6 +3,9 @@
 - Dialog response generation
 - Image Captioning
 
+# Competitions
+- [Byte Cup 2018国际机器学习竞赛夺冠记](https://mp.weixin.qq.com/s/2Mh68gfbG_5gKnoICuRmeA)
+
 # Leading Researchers
 - [Xiaojun Wan](http://59.108.48.5/lcwm/wanxj/)
 - [Xipeng Qiu](http://nlp.fudan.edu.cn/xpqiu/)
