@@ -8,6 +8,7 @@
 - [LDA](https://github.com/gaoisbest/NLP-Projects/blob/master/Text%20similarity/LDA_model.py)
 - [LSI](https://github.com/gaoisbest/NLP-Projects/blob/master/Text%20similarity/LSI_model.py)
 - [Sent2vec](https://github.com/epfml/sent2vec)
+- [Simhash](https://leons.im/posts/a-python-implementation-of-simhash-algorithm/)
 
 # Sentence encoder example
 - https://hanxiao.github.io/2018/06/24/4-Encoding-Blocks-You-Need-to-Know-Besides-LSTM-RNN-in-Tensorflow/
