@@ -116,8 +116,16 @@
         - Bagging and Boosting
     - One-class SVM
 - Loss function
-    - [class_weight](https://blog.mimacom.com/text-classification/) is used as parameters to weight loss, **weight less frequent classes higher than very frequent classes**
-    - Focal loss
+    - [Class_weight](https://blog.mimacom.com/text-classification/) is used as parameters to weight loss, **weight less frequent classes higher than very frequent classes**
+    ```
+    from sklearn.utils import class_weight
+    class_weight = class_weight.compute_class_weight('balanced', np.unique(y_train), y_train)
+    ```
+    - [Focal loss](https://ldzhangyx.github.io/2018/11/16/focal-loss/), [implementation 1](https://github.com/Hsuxu/FocalLoss-PyTorch), [implementation 2](https://blog.csdn.net/Umi_you/article/details/80982190)
+    ```
+    # multi-class
+    fl = -(1-pt)^gamma * logpt
+    ```
 - Evaluation metric
     - Default decision threshold is not valid for imbalanced data
     - [AUC](https://scikit-learn.org/stable/auto_examples/model_selection/plot_roc.html) gives performance across the whole range of decision thresholds, ROC curves are typically used in **binary classification**
