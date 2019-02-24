@@ -104,6 +104,9 @@
                 - First generating different `Z_0`, `Z_1`, ... by different `Q`, `K` and `V` via `W_Q`, `W_K`, `W_V`
                 - Then generating `Z` by concatenating `Z_0`, `Z_1`, ... to `Z` and multiply with weight matrix `W_0`
                 ![](https://github.com/gaoisbest/NLP-Projects/blob/master/Pretraining_LM/materials_demos/transformer_multi-headed_self-attention.png)
+            - Why **scaled** dot-product attention ?
+                - Definition: `softmax(Q * K_T / sqtr(d_k)) * V`
+                - `Q * K_T` may large for `d_k`, cause `softmax` returns `0` or `1`
         - Position-wise feed-forward
             - The exact same feed-forward network is independently applied to each position
             - Two linear transformation: `max(0, W1x + b1)W2 + b2`
