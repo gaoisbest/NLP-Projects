@@ -9,26 +9,14 @@ Natural Language Processing projects, which includes concepts and scripts about:
 - Knowledge_graph: [introduction](https://github.com/gaoisbest/NLP-Projects/blob/master/Knowledge_graph/README.md)
 - Pretraining_LM: [introduction](https://github.com/gaoisbest/NLP-Projects/blob/master/Pretraining_LM/README.md), principle of ELMo, ULMFit, GPT and BERT
 
-# Awesome packages
-## Chinese
-- [pyltp](http://pyltp.readthedocs.io/zh_CN/develop/api.html)
-- [HanLP](http://hanlp.linrunsoft.com/index.html)
 
-## English
-### 1. [Spacy](https://spacy.io)
-### 2. [gensim](https://radimrehurek.com/gensim/)
-
-# Awesome public apis
-- [Baidu AI Open Platform](https://ai.baidu.com/)
-- [Tencent AI Open Platform](https://ai.qq.com/)
-- [Tencent NLP](http://nlp.qq.com/)
 
 # DL best practices in NLP
 ## 1. Word embeddings
 - Use **pre-trained embeddings** if available. 
 - Embedding dimension is task-dependent
-	- Smaller dimensionality (i.e., 100) works well for syntactic tasks (i.e., NER, POS tagging)
-	- Larger dimensionality (i.e., 300) is useful for semantic tasks (i.e., sentiment analysis)
+    - Smaller dimensionality (i.e., 100) works well for syntactic tasks (i.e., NER, POS tagging)
+    - Larger dimensionality (i.e., 300) is useful for semantic tasks (i.e., sentiment analysis)
 
 ## 2. Depth
 - 3 or 4 layer Bi-LSTMs (e.g. POS tagging, semantic role labelling). 
@@ -76,6 +64,34 @@ optimize = optimizer.apply_gradients(grads_and_vars=zip(clipped_gradients, varia
     - Self attention
     - Soft vs Hard attention
     - Global vs Local attention
+
+## 7. CNNs, RNNs and Transformer comparison
+- [Transformer](https://github.com/gaoisbest/NLP-Projects/blob/master/Pretraining_LM/README.md#transformer)
+    - Why **scaled** dot-product attention ?
+        - Definition: `softmax(Q * K_T / sqtr(d_k)) * V`
+        - `Q * K_T` may large for `d_k`, cause `softmax` returns `0` or `1`
+- RNNs is hard to parallelize
+
+- long-range dependencies
+
+
+## 8. Layer Normalization, batch normalization
+Layer normalization is a normalization method in deep learning that is similar to batch normalization. In layer normalization, the statistics are computed across each feature and are independent of other examples. The independence between inputs means that each input has a different normalization operation.
+
+
+# Awesome packages
+## Chinese
+- [pyltp](http://pyltp.readthedocs.io/zh_CN/develop/api.html)
+- [HanLP](http://hanlp.linrunsoft.com/index.html)
+
+## English
+- [Spacy](https://spacy.io)
+- [gensim](https://radimrehurek.com/gensim/)
+
+# Awesome public apis
+- [Baidu AI Open Platform](https://ai.baidu.com/)
+- [Tencent AI Open Platform](https://ai.qq.com/)
+- [Tencent NLP](http://nlp.qq.com/)
 
 ## Reference
 [1] http://ruder.io/deep-learning-nlp-best-practices/  
