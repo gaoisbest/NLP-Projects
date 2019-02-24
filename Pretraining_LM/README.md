@@ -93,13 +93,24 @@
 - Principle: each layer has two **sub-layers** (i.e., multi-head self-attention and position-wise feedforward), the output of each sub-layer is `LayerNorm(x+Sublayer(x))`. Additional **positional embedding** is added to embedding.
 - Blocks
     - **Encoder block**
-        - Multi-head self-attention
+        - Multi-head self-attention ()
             - A layer that helps the encoder look at other words in the input sentence as it encodes a specific word
-            - Embedding with time singal = Embeddings + Positional Encoding
+            - Embedding with time singal = **Embeddings + Positional Encoding**
+            - **One-head self-attention steps** (i.e., *scaled dot-product attention*)
+                - Packing `n` word embeddings into a matrix `X`
+                - Multiplying `X` by the weight matrices `W_Q`, `W_K`, `W_V` to generate `Q`, `K` and `V`
+                - `Z = softmax(Q * K_T / sqrt(d_k)) * V`, where `d_k` is column number of `W_Q`, `Z` shape is `(n, d_k)`
+            - **Multi-head self-attention steps**
+                - First generating different `Z_0`, `Z_1`, ... by different `Q`, `K` and `V` via `W_Q`, `W_K`, `W_V`
+                - Then generating `Z` by concatenating `Z_0`, `Z_1`, ... to `Z` and multiply with weight matrix `W_0`
+                - ![](https://github.com/gaoisbest/NLP-Projects/blob/master/Pretraining_LM/materials_demos/transformer_multi-headed_self-attention.png)
+            
         - Position-wise feed-forward
             - The exact same feed-forward network is independently applied to each position
         - Residuals
-            - Add & Layer Normalization
+            - Add & Layer Normalization, i.e.m **`LayerNorm(X + Z)`**
+            - ![](https://github.com/gaoisbest/NLP-Projects/blob/master/Pretraining_LM/materials_demos/transformer_residual_layer_norm.png)
+            
     - **Decoder block**
         - Multi-head self-attention
             - It is only allowed to attend to earlier positions in the output sequence (This is done by masking future positions (setting them to -inf) before the softmax step in the self-attention calculation) .
