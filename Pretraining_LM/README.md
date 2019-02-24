@@ -93,7 +93,7 @@
 - Principle: each layer has two **sub-layers** (i.e., multi-head self-attention and position-wise feedforward), the output of each sub-layer is `LayerNorm(x+Sublayer(x))`. Additional **positional embedding** is added to embedding.
 - Blocks
     - **Encoder block**
-        - Multi-head self-attention ()
+        - Multi-head self-attention
             - A layer that helps the encoder look at other words in the input sentence as it encodes a specific word
             - Embedding with time singal = **Embeddings + Positional Encoding**
             - **One-head self-attention steps** (i.e., *scaled dot-product attention*)
@@ -106,6 +106,7 @@
                 ![](https://github.com/gaoisbest/NLP-Projects/blob/master/Pretraining_LM/materials_demos/transformer_multi-headed_self-attention.png)
         - Position-wise feed-forward
             - The exact same feed-forward network is independently applied to each position
+            - Two linear transformation: `max(0, W1x + b1)W2 + b2`
         - Residuals
             - Add & Layer Normalization, i.e.m **`LayerNorm(X + Z)`**
             ![](https://github.com/gaoisbest/NLP-Projects/blob/master/Pretraining_LM/materials_demos/transformer_residual_layer_norm.png)
