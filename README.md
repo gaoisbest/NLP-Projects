@@ -9,55 +9,8 @@ Natural Language Processing projects, which includes concepts and scripts about:
 - Knowledge_graph: [introduction](https://github.com/gaoisbest/NLP-Projects/blob/master/Knowledge_graph/README.md)
 - Pretraining_LM: [introduction](https://github.com/gaoisbest/NLP-Projects/blob/master/Pretraining_LM/README.md), principle of ELMo, ULMFit, GPT and BERT
 
-
-
-# DL best practices in NLP
-## 1. Word embeddings
-- Use **pre-trained embeddings** if available. 
-- Embedding dimension is task-dependent
-    - Smaller dimensionality (i.e., 100) works well for syntactic tasks (i.e., NER, POS tagging)
-    - Larger dimensionality (i.e., 300) is useful for semantic tasks (i.e., sentiment analysis)
-
-## 2. Depth
-- 3 or 4 layer Bi-LSTMs (e.g. POS tagging, semantic role labelling). 
-- 8 encoder and 8 decoder layers (e.g., Google's NMT)
-- In most case, shallower model(i.e., 2 layers) is good enough.
-
-## 3. Layer connections (for avoiding vanishing gradients)
-- Highway layer
-	- `h = t * a(WX+b) + (1-t) * X`, where `t=sigmoid(W_TX+b_T)` is called **transform** gate.
-	- Application: language modelling and speech recognition.
-	- Implementation: `tf.contrib.rnn.HighwayWrapper`
-- Residual connection
-	- `h = a(WX+b) + X`
-	- Implementation: `tf.contrib.rnn.ResidualWrapper`
-- Dense connection
-	- `h_l = a(W[X_1, ..., X_l] + b)`
-	- Application: multi-task learning
-## 4. Dropout
-- Batch normalization in CV likes dropout in NLP.
-- Dropout rate of **0.5** is perferred.
-- **Recurrent dropout** ([what's the difference between recurrent dropout and traditional dropout ?](https://stackoverflow.com/questions/47415036/tensorflow-how-to-use-variational-recurrent-dropout-correctly)) applies the same dropout mask across timesteps at layer *l*. Implementation: `tf.contrib.rnn.DropoutWrapper(variational_recurrent=True)`
-
-## 5. LSTM tricks
-- Treat initial state as variable [2]
-```
-# note: if here is LSTMCell, a bug appear: https://stackoverflow.com/questions/42947351/tensorflow-dynamic-rnn-typeerror-tensor-object-is-not-iterable
-cell = tf.nn.rnn_cell.GRUCell(state_size)
-init_state = tf.get_variable('init_state', [1, state_size], initializer=tf.constant_initializer(0.0))
-# https://stackoverflow.com/questions/44486523/should-the-variables-of-the-initial-state-of-a-dynamic-rnn-among-the-inputs-of
-init_state = tf.tile(init_state, [batch_size, 1])
-```
-- Gradients clipping
-```
-variables = tf.trainable_variables()
-gradients = tf.gradients(ys=cost, xs=variables)
-clipped_gradients, _ = tf.clip_by_global_norm(gradients, clip_norm=self.clip_norm)
-optimizer = tf.train.AdamOptimizer(learning_rate=1e-3)
-optimize = optimizer.apply_gradients(grads_and_vars=zip(clipped_gradients, variables), global_step=self.global_step)
-```
-
-## 6. Attention
+# Important concepts
+## 1. Attention
 - Attention == **weighted averages**
 - The attention [review 1](https://lilianweng.github.io/lil-log/2018/06/24/attention-attention.html) and [review 2](https://zhuanlan.zhihu.com/p/31547842) summarize attention mechanism into several types:
     - Additive vs Multiplicative attention
@@ -65,19 +18,62 @@ optimize = optimizer.apply_gradients(grads_and_vars=zip(clipped_gradients, varia
     - Soft vs Hard attention
     - Global vs Local attention
 
-## 7. CNNs, RNNs and Transformer comparison
-- [Transformer](https://github.com/gaoisbest/NLP-Projects/blob/master/Pretraining_LM/README.md#transformer)
-    - Why **scaled** dot-product attention ?
-        - Definition: `softmax(Q * K_T / sqtr(d_k)) * V`
-        - `Q * K_T` may large for `d_k`, cause `softmax` returns `0` or `1`
-- RNNs is hard to parallelize
+## 2. CNNs, RNNs and Transformer
+- **Parallelization** [1]
+    - RNNs
+        - Why not good ? 
+	    - **Last step's output is input of current step**
+	- Solutions
+	    - **Simple Recurrent Units (SRU)**
+	        - Perform parallelization on each hidden state neuron independently
+	    - **Sliced RNNs**
+	        - Separate sequences into windows, use RNNs in each window, use another RNNs above windows
+	        - Same as CNNs
+    - CNNs
+        - Why good ?
+	    - For different windows in one filter
+	    - For different filters
+	
+- **Long-range dependency** [1]
+    - CNNs
+        - Why not good ?
+	    - Single convolution can only caputure window-range dependency
+	- Solutions
+	    - Dilated CNNs
+	    - Deep CNNs
+	        - `N * [Convolution + skip-connection]`
+	        - For example, window size=3 and sliding step=1, second convolution can cover 5 words (i.e., 1-2-3, 2-3-4, 3-4-5)
+    - Transformer > RNNs > CNNs
+- **Position** [1]
+    - CNNs
+        - Why not good ?
+	    - Convolution preserves **relative-order** information, but **max-pooling discards them**
+	- Solutions
+	    - Discard max-pooling, use deep CNNs with skip-connections instead
+	    - Add position embedding, just like in ConvS2S
 
-- long-range dependencies
+    - [Transformer](https://github.com/gaoisbest/NLP-Projects/blob/master/Pretraining_LM/README.md#transformer)
+        - Why not good ?
+	    - In self-attention, one word attends to other words and generate the summarization vector without relative position information
+    
+
+- **Semantic features extraction** [2]
+    - Transformer > CNNs == RNNs
 
 
-## 8. Layer Normalization, batch normalization
+
+### References
+- [1] [Review](https://zhuanlan.zhihu.com/p/54743941)
+- [2] [Why self-attention? A targeted evaluation of neural machine translation architectures](http://aclweb.org/anthology/D18-1458)
+
+## 3. Layer Normalization, batch normalization
 Layer normalization is a normalization method in deep learning that is similar to batch normalization. In layer normalization, the statistics are computed across each feature and are independent of other examples. The independence between inputs means that each input has a different normalization operation.
 
+
+# Awesome public apis
+- [Baidu AI Open Platform](https://ai.baidu.com/)
+- [Tencent AI Open Platform](https://ai.qq.com/)
+- [Tencent NLP](http://nlp.qq.com/)
 
 # Awesome packages
 ## Chinese
@@ -87,13 +83,4 @@ Layer normalization is a normalization method in deep learning that is similar t
 ## English
 - [Spacy](https://spacy.io)
 - [gensim](https://radimrehurek.com/gensim/)
-
-# Awesome public apis
-- [Baidu AI Open Platform](https://ai.baidu.com/)
-- [Tencent AI Open Platform](https://ai.qq.com/)
-- [Tencent NLP](http://nlp.qq.com/)
-
-## Reference
-[1] http://ruder.io/deep-learning-nlp-best-practices/  
-[2] https://r2rt.com/recurrent-neural-networks-in-tensorflow-iii-variable-length-sequences.html  
 
