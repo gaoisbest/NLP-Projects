@@ -103,13 +103,12 @@
             - **Multi-head self-attention steps**
                 - First generating different `Z_0`, `Z_1`, ... by different `Q`, `K` and `V` via `W_Q`, `W_K`, `W_V`
                 - Then generating `Z` by concatenating `Z_0`, `Z_1`, ... to `Z` and multiply with weight matrix `W_0`
-                - ![](https://github.com/gaoisbest/NLP-Projects/blob/master/Pretraining_LM/materials_demos/transformer_multi-headed_self-attention.png)
-            
+                ![](https://github.com/gaoisbest/NLP-Projects/blob/master/Pretraining_LM/materials_demos/transformer_multi-headed_self-attention.png)
         - Position-wise feed-forward
             - The exact same feed-forward network is independently applied to each position
         - Residuals
             - Add & Layer Normalization, i.e.m **`LayerNorm(X + Z)`**
-            - ![](https://github.com/gaoisbest/NLP-Projects/blob/master/Pretraining_LM/materials_demos/transformer_residual_layer_norm.png)
+            ![](https://github.com/gaoisbest/NLP-Projects/blob/master/Pretraining_LM/materials_demos/transformer_residual_layer_norm.png)
             
     - **Decoder block**
         - Multi-head self-attention
@@ -118,10 +117,12 @@
             - Helps the decoder focus on relevant parts of the input sentence
             - The layer works just like multiheaded self-attention, except it creates its Queries matrix from the layer below it, and takes the Keys and Values matrix from the output of the encoder stack
         - Position-wise feed-forward
+        - [Three self-attentions](https://medium.com/@bgg/seq2seq-pay-attention-to-self-attention-part-2-cf81bf32c73d)
+![](https://github.com/gaoisbest/NLP-Projects/blob/master/Pretraining_LM/materials_demos/Different_self-attention_in_encoder_decoder.png)
     - **Linear and softmax layer**
         - Linear projects the decoder output to the logits of vocabulary size
         - Softmax the logits and choose the index with largest probability
-
+    
 ### Implementation
 - [The annotated transformer](http://nlp.seas.harvard.edu/2018/04/01/attention.html)
 - [Illustrated transformer](https://jalammar.github.io/illustrated-transformer/)
