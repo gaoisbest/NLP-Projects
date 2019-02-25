@@ -59,6 +59,23 @@
 
 # Implementation
 - [Rasa](https://www.rasa.com/)
+    - Training data
+      - Generate data: [Chatito](https://rodrigopivi.github.io/Chatito/) 
+      - [Training data format](https://www.rasa.com/docs/nlu/dataformat/#section-dataformat)
+          - Format: ```
+          {
+               "rasa_nlu_data": {
+                   "common_examples": [],
+                   "regex_features" : [], # Regex features helps the classifier detect entities or intents and improve the performance
+                   "lookup_tables"  : [],
+                   "entity_synonyms": []
+               }
+          }
+            ```
+          - The `value` field in `entities` does not have to correspond exactly to the substring in your example. That way you can map synonyms, or misspellings, to the same value.
+          - To use the `synonyms`, make sure the pipeline contains the `ner_synonyms` component
+
+    
 - [DialogFlow](https://dialogflow.com/)
 - [ChatterBot](https://github.com/gunthercox/ChatterBot) supplies a framework for building chatbot, and [Awesome-Chatbot](https://github.com/fendouai/Awesome-Chatbot) gives a list of public repositories about chatbot.
 - [wxpy](https://github.com/youfou/wxpy), [wxBot](https://github.com/liuwons/wxBot), [WeRoBot](https://github.com/offu/WeRoBot): weChat bot.
