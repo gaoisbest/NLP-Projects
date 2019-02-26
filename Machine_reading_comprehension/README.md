@@ -148,7 +148,7 @@ For machine reading comprehension (mrc), [Deep read: A reading comprehension sys
 
 # In action
 - [Naturali video version](https://mp.weixin.qq.com/s/6nAm1sJrAj3qqUAagwWutg), [text version](http://tech.163.com/18/0729/10/DNSH3QU600098IEO.html)
-    - Data preprocess
+    - Data preprocess, [implementation](https://github.com/baidu/DuReader/blob/master/paddle/paragraph_extraction.py)
     ![](https://github.com/gaoisbest/NLP-Projects/blob/master/Machine_reading_comprehension/materials_papers/Naturali_data_preprocess.png)
     - Model
     ![](https://github.com/gaoisbest/NLP-Projects/blob/master/Machine_reading_comprehension/materials_papers/Naturali_model.png)
