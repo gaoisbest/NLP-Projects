@@ -83,4 +83,5 @@ Layer normalization is a normalization method in deep learning that is similar t
 ## English
 - [Spacy](https://spacy.io)
 - [gensim](https://radimrehurek.com/gensim/)
+- [Install tensorflow with one line](https://towardsdatascience.com/tensorflow-gpu-installation-made-easy-use-conda-instead-of-pip-52e5249374bc): `conda install tensorflow-gpu`
 
