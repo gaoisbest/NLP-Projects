@@ -62,21 +62,8 @@
 
 # Implementation
 - [Rasa](https://www.rasa.com/)
-    - Training data
-      - Generate data: [Chatito](https://rodrigopivi.github.io/Chatito/) 
-      - [Training data format](https://www.rasa.com/docs/nlu/dataformat/#section-dataformat)
-          - Format: ```
-          {
-               "rasa_nlu_data": {
-                   "common_examples": [],
-                   "regex_features" : [], # Regex features helps the classifier detect entities or intents and improve the performance
-                   "lookup_tables"  : [],
-                   "entity_synonyms": []
-               }
-          }
-            ```
-          - The `value` field in `entities` does not have to correspond exactly to the substring in your example. That way you can map synonyms, or misspellings, to the same value.
-          - To use the `synonyms`, make sure the pipeline contains the `ner_synonyms` component
+    - `tensorflow_embedding` in NLU from [StarSpace: Embed All The Things!](https://github.com/gaoisbest/NLP-Projects/blob/master/Dialog_system/materials_others/StarSpace-Embed%20_All_The_Things!.pdf)
+
 
     
 - [DialogFlow](https://dialogflow.com/)
