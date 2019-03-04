@@ -83,9 +83,22 @@
 ![](https://github.com/gaoisbest/NLP-Projects/blob/master/Pretraining_LM/materials_papers/BERT_fine-tuning.png)
 ### Implementation
 - [Official page](https://github.com/google-research/bert) gives pretrained models about BERT
+    - Preprocess
+        - Typically, the `Uncased` model is **better** unless that `case` information is important (e.g., NER or POS tagging)
+        - `Variable-length` problem (`doc_stride`) of SQuAD context paragraphs
+    - Tokenization
+        - For Chinese, BERT use **character-based tokenization**
+        - For all other languages, BERT use**WordPiece tokenization** 
+        - Code `BasicTokenizer` in `tokenization.py` 
+    - `Out-of-memory`
+        - `max_seq_length`
+        - `train_batch_size`
+    
 - [Naturali](https://www.jianshu.com/p/aa2eff7ec5c1) gives details about BERT fine-tune
 - [bert-as-service](https://github.com/hanxiao/bert-as-service)
 - [Illustrated bert](https://jalammar.github.io/illustrated-bert/)
+
+
 
 
 ## Transformer
