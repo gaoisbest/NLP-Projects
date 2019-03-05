@@ -147,6 +147,7 @@ For machine reading comprehension (mrc), [Deep read: A reading comprehension sys
 - ROUGE-L
 
 # In action
+- [2018 DuReader competition summary](https://github.com/gaoisbest/NLP-Projects/blob/master/Machine_reading_comprehension/materials_papers/2018_DuReader_top_solution_summary.pdf)
 - [Naturali video version](https://mp.weixin.qq.com/s/6nAm1sJrAj3qqUAagwWutg), [text version](http://tech.163.com/18/0729/10/DNSH3QU600098IEO.html)
     - Data preprocess, [implementation](https://github.com/baidu/DuReader/blob/master/paddle/paragraph_extraction.py)
     ![](https://github.com/gaoisbest/NLP-Projects/blob/master/Machine_reading_comprehension/materials_papers/Naturali_data_preprocess.png)
