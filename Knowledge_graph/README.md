@@ -48,11 +48,13 @@
     - Time 时间
     - Location 地点
     - **Event detection and tracking**
-- Knowledge fusion
+- ** 3.Knowledge fusion**
   - Entity alignment
     - Similar description
     - Similar attribute - value
     - Similar neighbor entities
+  - Schema matching
+  - Instance matching
 - Knowledge representation learning
   - Convert entity and relationship into vectors
   - Application: link prediction (given S and P, predict O) or relation prediction, knowledge reasoning
