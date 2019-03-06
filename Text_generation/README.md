@@ -2,6 +2,9 @@
 - Text summarization
 - Dialog response generation
 - Image Captioning
+# Models
+- [Adversarial Generation of Natural Language](https://www.aclweb.org/anthology/W/W17/W17-2629.pdf)
+
 
 # Competitions
 - [Byte Cup 2018国际机器学习竞赛夺冠记](https://mp.weixin.qq.com/s/2Mh68gfbG_5gKnoICuRmeA)
