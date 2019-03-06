@@ -63,15 +63,22 @@
 - [2017第六届全国社会媒体处理大会之中文人机对话技术评测](https://github.com/HITlilingzhi/SMP2017ECDT-DATA)
 
 # Implementation
+- [wxpy](https://github.com/youfou/wxpy)
+- [wxBot](https://github.com/liuwons/wxBot)
+- [WeRoBot](https://github.com/offu/WeRoBot): weChat bot
+- [Awesome-Chatbot](https://github.com/fendouai/Awesome-Chatbot) gives a list of public repositories about chatbot
+
+# Products
+- [小i机器人](http://www.xiaoi.com/)
+- [XiaoIce](https://www.msxiaobing.com/)
+- [Pandorabots](https://home.pandorabots.com/home.html)
+- [Wit.ai](https://wit.ai/)
 - [Rasa](https://www.rasa.com/)
     - `tensorflow_embedding` in NLU from [StarSpace: Embed All The Things!](https://github.com/gaoisbest/NLP-Projects/blob/master/Dialog_system/materials_others/StarSpace-Embed%20_All_The_Things!.pdf)
 - [DialogFlow](https://dialogflow.com/)
-- [ChatterBot](https://github.com/gunthercox/ChatterBot) supplies a framework for building chatbot, and [Awesome-Chatbot](https://github.com/fendouai/Awesome-Chatbot) gives a list of public repositories about chatbot
-- [wxpy](https://github.com/youfou/wxpy), [wxBot](https://github.com/liuwons/wxBot), [WeRoBot](https://github.com/offu/WeRoBot): weChat bot.
+- [ChatterBot](https://github.com/gunthercox/ChatterBot)
 
-# Products
-- Chatbots
-    - [Pandorabots](https://home.pandorabots.com/home.html)
+
 
 # References
 [1] [A Survey on Dialogue Systems: Recent Advances and New Frontiers](https://arxiv.org/pdf/1711.01731.pdf)  
