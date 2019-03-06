@@ -34,14 +34,17 @@
   - Two steps [3]:  
     - retrieval top-k response candidates by directly matching
     - reranking and give best candidate by incorporing context
-  - [Sequential matching network](https://arxiv.org/abs/1612.01627), and other [state-of-the-art models](https://mp.weixin.qq.com/s/yC8uYwti9Meyt83xkmbmcg)
+  - **Multi-turn**
+    - [Sequential matching network](https://arxiv.org/abs/1612.01627), and other [state-of-the-art models](https://mp.weixin.qq.com/s/yC8uYwti9Meyt83xkmbmcg)
   - [AIML](https://medium.com/pandorabots-blog/aiml-tutorial-creating-a-context-aware-multi-functional-chatbot-e5e82c027a6a) for pattern matching
   
 ## 2.2 Generative  
   - Generative new responses from scratch [2]
-  - [HRED](https://arxiv.org/pdf/1507.02221.pdf) transfered from [**query suggestion**](https://arxiv.org/pdf/1507.02221.pdf), see [industrail application](https://mp.weixin.qq.com/s/6dKticG2I2zqlxnZ3W0ZgQ)
-  - [VHRED](https://arxiv.org/abs/1605.06069)
-  - [Context-sensitive ACL 2018](http://aclweb.org/anthology/C18-1206)
+  - **Multi-turn**
+    - [HRED](https://arxiv.org/pdf/1507.02221.pdf) transfered from [**query suggestion**](https://arxiv.org/pdf/1507.02221.pdf), see [industrail application](https://mp.weixin.qq.com/s/6dKticG2I2zqlxnZ3W0ZgQ)
+    - [VHRED](https://arxiv.org/abs/1605.06069)
+    - [Building End-To-End Dialogue Systems Using Generative Hierarchical Neural Network Models](https://arxiv.org/pdf/1507.04808.pdf)
+    - [Context-sensitive ACL 2018](http://aclweb.org/anthology/C18-1206)
   
   
 ## 2.3 Hybrid 
