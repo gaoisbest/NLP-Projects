@@ -71,6 +71,7 @@
 - [Awesome-Chatbot](https://github.com/fendouai/Awesome-Chatbot) gives a list of public repositories about chatbot
 
 # Products
+- [Baidu UNIT](https://ai.baidu.com/unit/home)
 - [小i机器人](http://www.xiaoi.com/)
 - [XiaoIce](https://www.msxiaobing.com/)
 - [Pandorabots](https://home.pandorabots.com/home.html)
