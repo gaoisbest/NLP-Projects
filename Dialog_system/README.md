@@ -9,8 +9,7 @@
     - **Domain identification**: text classification
     - **User domain specific intent detection**: text classification (We can incorporate preceding text information during perform classification, see [7])
     - **Slot filling**: sequence labeling
-        - Rule-based
-        - BiLSTM + CRF
+        - **Parameters** of the INTENT
         - [**Joint learning of intent identification and slot filling**](https://www.ijcai.org/Proceedings/16/Papers/425.pdf)
   - DM: Dialogue Management
     - **Dialogue State Tracking**: estimates the goal at every turn. A probability distribution over each slot for each turn.
@@ -61,7 +60,7 @@
 # Dataset
 - [Ubuntu Dialogue Corpus v2.0](https://github.com/rkadlec/ubuntu-ranking-dataset-creator)
 - [A New Multi-Turn, Multi-Domain, Task-Oriented Dialogue Dataset](https://nlp.stanford.edu/blog/a-new-multi-turn-multi-domain-task-oriented-dialogue-dataset/)
-- [Dialog State Tracking Challenge 2 & 3](http://camdial.org/~mh521/dstc/)
+- [Dialog State Tracking Challenge](https://www.microsoft.com/en-us/research/event/dialog-state-tracking-challenge/)
 - [Douban Conversation Corpus](https://github.com/MarkWuNLP/MultiTurnResponseSelection#douban-conversation-corpus)
 - [2017第六届全国社会媒体处理大会之中文人机对话技术评测](https://github.com/HITlilingzhi/SMP2017ECDT-DATA)
 
