@@ -3,7 +3,7 @@ Human reading comprehension belongs to cognitive psychology field. Roughly, ther
 
 For machine reading comprehension (mrc), [Deep read: A reading comprehension system](http://www.aclweb.org/anthology/P99-1042) in ACL 1999 gives the first study. [Towards the Machine Comprehension of Text: An Essay](https://pdfs.semanticscholar.org/a4dd/e51a7f3f0f731d2c27d64948706604792efa.pdf) by Microsoft gives a review. EMNLP 2014 best paper [Modeling Biological Processes for Reading Comprehension](http://www.aclweb.org/anthology/D14-1159) proposes **feature engineering based symbolic models**. After that, lots of **deep learning models** appear. [Tencent AI part 1](https://hanxiao.github.io/2018/04/21/Teach-Machine-to-Comprehend-Text-and-Answer-Question-with-Tensorflow/) illustrates building blocks of mrc deep learning models. [Tencent AI  Part 2](https://hanxiao.github.io/2018/09/09/Dual-Ask-Answer-Network-for-Machine-Reading-Comprehension/?from=timeline&isappinstalled=0) proposes their new [Dual Ask-Answer Network](https://arxiv.org/abs/1809.01997). [bAbI](https://research.fb.com/downloads/babi/) datasets from Facebook gives the ai-complete concept.  
 
-[**MRC components**](https://github.com/gaoisbest/NLP-Projects/blob/master/Machine_reading_comprehension/materials_CCL2018/CCL2018_MRC.pdf):
+[**MRC components**](https://github.com/gaoisbest/NLP-Projects/blob/master/2_Machine_reading_comprehension/materials_CCL2018/CCL2018_MRC.pdf):
 - Passage
     - Single or multiple
 - Question
@@ -16,33 +16,33 @@ For machine reading comprehension (mrc), [Deep read: A reading comprehension sys
 
 # Deep learning Models
 ## Model list
-- [BiDAF](https://github.com/gaoisbest/NLP-Projects/blob/master/Machine_reading_comprehension/materials_papers/BiDAF.pdf) from AllenNLP, baseline for MS-MARCO
+- [BiDAF](https://github.com/gaoisbest/NLP-Projects/blob/master/2_Machine_reading_comprehension/materials_papers/BiDAF.pdf) from AllenNLP, baseline for MS-MARCO
     - Attention flow layer: **context-to-query attention** (i.e., which query words are most relevant to each context word, `softmax(row)`) and **query-to-context attention** (i.e., which context words have the closest similarity to one of the query word, `softmax(max(column))`), based on **similarity matrix**
     - Similarity function
-    ![](https://github.com/gaoisbest/NLP-Projects/blob/master/Machine_reading_comprehension/materials_papers/BiDAF_similarity_function.png)
+    ![](https://github.com/gaoisbest/NLP-Projects/blob/master/2_Machine_reading_comprehension/materials_papers/BiDAF_similarity_function.png)
     - Model structure
-    ![](https://github.com/gaoisbest/NLP-Projects/blob/master/Machine_reading_comprehension/materials_papers/BiDAF_model.png)
+    ![](https://github.com/gaoisbest/NLP-Projects/blob/master/2_Machine_reading_comprehension/materials_papers/BiDAF_model.png)
     - [Official implementation](https://allenai.github.io/bi-att-flow/)
     - [Model illustration](https://hanxiao.github.io/2018/04/21/Teach-Machine-to-Comprehend-Text-and-Answer-Question-with-Tensorflow/)
     - [BiDAF + Self attention + ELMo](https://arxiv.org/pdf/1710.10723.pdf)
     
-- [R-Net](https://github.com/gaoisbest/NLP-Projects/blob/master/Machine_reading_comprehension/materials_papers/R-Net.pdf) for MS-MARCO
+- [R-Net](https://github.com/gaoisbest/NLP-Projects/blob/master/2_Machine_reading_comprehension/materials_papers/R-Net.pdf) for MS-MARCO
     - Core layer 1: **gated (applied to passage word and attention-pooling of question) attention-based recurrent network** matches passage and question to obtain question-aware passage representation
     - Core layer 2: **self-matching** layer to aggregate the passage information
     - Model structure
-![](https://github.com/gaoisbest/NLP-Projects/blob/master/Machine_reading_comprehension/materials_papers/R-Net_model.png)
+![](https://github.com/gaoisbest/NLP-Projects/blob/master/2_Machine_reading_comprehension/materials_papers/R-Net_model.png)
     - Implementation: [pytorch](https://github.com/HKUST-KnowComp/MnemonicReader/blob/master/r_net.py), [tensorflow](https://github.com/HKUST-KnowComp/R-Net)
-- [S-Net](https://github.com/gaoisbest/NLP-Projects/blob/master/Machine_reading_comprehension/materials_papers/S-Net.pdf) for MS-MARCO
+- [S-Net](https://github.com/gaoisbest/NLP-Projects/blob/master/2_Machine_reading_comprehension/materials_papers/S-Net.pdf) for MS-MARCO
     - Step 1: **extracts evidence snippets** by matching question and passage via pointer network. Add **passage ranking** as an additional task to conduct multi-task learning.
     - Step 2: generate the answer by **synthesizing the passage, question and evidence snippets** via seq2seq. Evidence snippets are labeled as features.
     
-- [QANet](https://github.com/gaoisbest/NLP-Projects/blob/master/Machine_reading_comprehension/materials_papers/QANet.pdf)
+- [QANet](https://github.com/gaoisbest/NLP-Projects/blob/master/2_Machine_reading_comprehension/materials_papers/QANet.pdf)
     - **Separable convolution** + **self-attention** (Each position as a query to match all positions as keys)
     - Data augmentation via backtranslation
     - Model structure
-![](https://github.com/gaoisbest/NLP-Projects/blob/master/Machine_reading_comprehension/materials_papers/QANet_model.png)
+![](https://github.com/gaoisbest/NLP-Projects/blob/master/2_Machine_reading_comprehension/materials_papers/QANet_model.png)
     - [Implementation](https://github.com/NLPLearn/QANet)
-- [Multi-answer Multi-task](https://github.com/gaoisbest/NLP-Projects/blob/master/Machine_reading_comprehension/materials_papers/A_multi-answer_multi-task_framework_for_real-world_MRC.pdf)
+- [Multi-answer Multi-task](https://github.com/gaoisbest/NLP-Projects/blob/master/2_Machine_reading_comprehension/materials_papers/A_multi-answer_multi-task_framework_for_real-world_MRC.pdf)
     - Three loss for multiple answer span
         - Average loss
         - Weighted average loss
@@ -106,7 +106,7 @@ For machine reading comprehension (mrc), [Deep read: A reading comprehension sys
         - Extractive
             - Single-hop (i.e., single document) reasoning
                 - [SQuAD](https://rajpurkar.github.io/SQuAD-explorer/), extractive dataset
-                - [SQuAD 2.0](https://github.com/gaoisbest/NLP-Projects/blob/master/Machine_reading_comprehension/materials_papers/Know_What_You_Don%E2%80%99t_Know_Unanswerable_Questions_for_SQuAD.pdf), for **unanswerable** questions
+                - [SQuAD 2.0](https://github.com/gaoisbest/NLP-Projects/blob/master/2_Machine_reading_comprehension/materials_papers/Know_What_You_Don%E2%80%99t_Know_Unanswerable_Questions_for_SQuAD.pdf), for **unanswerable** questions
                 - [Google Natural Questions](https://ai.google.com/research/NaturalQuestions) contains short and long answers
                 
             - Multi-hop reasoning
@@ -147,12 +147,12 @@ For machine reading comprehension (mrc), [Deep read: A reading comprehension sys
 - ROUGE-L
 
 # In action
-- [2018 DuReader competition summary](https://github.com/gaoisbest/NLP-Projects/blob/master/Machine_reading_comprehension/materials_papers/2018_DuReader_top_solution_summary.pdf)
+- [2018 DuReader competition summary](https://github.com/gaoisbest/NLP-Projects/blob/master/2_Machine_reading_comprehension/materials_papers/2018_DuReader_top_solution_summary.pdf)
 - [Naturali video version](https://mp.weixin.qq.com/s/6nAm1sJrAj3qqUAagwWutg), [text version](http://tech.163.com/18/0729/10/DNSH3QU600098IEO.html)
     - Data preprocess, [implementation](https://github.com/baidu/DuReader/blob/master/paddle/paragraph_extraction.py)
-    ![](https://github.com/gaoisbest/NLP-Projects/blob/master/Machine_reading_comprehension/materials_papers/Naturali_data_preprocess.png)
+    ![](https://github.com/gaoisbest/NLP-Projects/blob/master/2_Machine_reading_comprehension/materials_papers/Naturali_data_preprocess.png)
     - Model
-    ![](https://github.com/gaoisbest/NLP-Projects/blob/master/Machine_reading_comprehension/materials_papers/Naturali_model.png)
+    ![](https://github.com/gaoisbest/NLP-Projects/blob/master/2_Machine_reading_comprehension/materials_papers/Naturali_model.png)
 
 - [Paperweekly seminar](https://www.bilibili.com/video/av33802404/)
 - [Zhuiyi video](http://www.mooc.ai/course/596/learn?lessonid=2928), [text 1](https://mp.weixin.qq.com/s/EQsxkCwQW_gzlB3Ozd5_ZQ) and [text 2](https://mp.weixin.qq.com/s/GrEfupJdAUFSp2l-myA1Ig)
@@ -180,7 +180,7 @@ For machine reading comprehension (mrc), [Deep read: A reading comprehension sys
         - Prediction
             - Pointer network
             - Probability = start * stop
-        ![](https://github.com/gaoisbest/NLP-Projects/blob/master/Machine_reading_comprehension/materials_papers/Zhuiyi_model.png)
+        ![](https://github.com/gaoisbest/NLP-Projects/blob/master/2_Machine_reading_comprehension/materials_papers/Zhuiyi_model.png)
     - Training
         - Born-Again Neural Network, teacher = student
             
@@ -188,7 +188,7 @@ For machine reading comprehension (mrc), [Deep read: A reading comprehension sys
 # Applications
 - Learning to ask (i.e., neural questioner)
 - Open domain QA
-    - [DrQA](https://arxiv.org/pdf/1704.00051.pdf), see [danqi's PHD thesis](https://github.com/gaoisbest/NLP-Projects/blob/master/Machine_reading_comprehension/materials_papers/Daiqi_stanford_PhD_thesis_MRC.pdf) for detailed information
+    - [DrQA](https://arxiv.org/pdf/1704.00051.pdf), see [danqi's PHD thesis](https://github.com/gaoisbest/NLP-Projects/blob/master/2_Machine_reading_comprehension/materials_papers/Daiqi_stanford_PhD_thesis_MRC.pdf) for detailed information
     - [DS-QA](http://aclweb.org/anthology/P18-1161)
     - [R^3](https://arxiv.org/pdf/1709.00023.pdf)
 - [Search](https://mp.weixin.qq.com/s/GrEfupJdAUFSp2l-myA1Ig)
@@ -205,7 +205,7 @@ For machine reading comprehension (mrc), [Deep read: A reading comprehension sys
     - Word embedding: [GloVe is better than word2vec](https://arxiv.org/pdf/1703.00993.pdf)
     - Language model: [CoVe](https://arxiv.org/pdf/1708.00107.pdf), [ELMo](https://arxiv.org/pdf/1802.05365.pdf)
 - **Unanswerable question type**
-    - [Add padding position](https://github.com/gaoisbest/NLP-Projects/blob/master/Machine_reading_comprehension/materials_papers/I_Know_There_Is_No_Answer_Modeling_Answer_Validation_for_MRC.pdf)
+    - [Add padding position](https://github.com/gaoisbest/NLP-Projects/blob/master/2_Machine_reading_comprehension/materials_papers/I_Know_There_Is_No_Answer_Modeling_Answer_Validation_for_MRC.pdf)
     - [Trainable bias](https://arxiv.org/pdf/1706.04115.pdf)
 
     
