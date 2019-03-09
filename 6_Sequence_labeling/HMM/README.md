@@ -78,4 +78,4 @@ The probabilities are in `log` scale, and the values are from [jieba](https://gi
 |   S      |    -2.24017668006 |      -3.52336181351   |      -3.62656137689    |
 
 ## Viterbi codes
-[here](https://github.com/gaoisbest/NLP-Projects/blob/master/Chinese%20word%20segmentation/HMM_viterbi_word_segmentor.py)
+[here](https://github.com/gaoisbest/NLP-Projects/blob/master/6_Sequence_labeling/HMM/HMM_viterbi_word_segmentor.py)
