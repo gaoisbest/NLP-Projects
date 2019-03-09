@@ -9,6 +9,9 @@
 - [LSI](https://github.com/gaoisbest/NLP-Projects/blob/master/Sentence2vec/LSI_model.py)
 - [Sent2vec](https://github.com/epfml/sent2vec)
 - [Simhash](https://leons.im/posts/a-python-implementation-of-simhash-algorithm/)
+- [Skip-Thought](https://papers.nips.cc/paper/5950-skip-thought-vectors.pdf)
+- [Quick thoughts](https://arxiv.org/pdf/1803.02893.pdf)
+
 
 # Sentence encoder example
 - https://hanxiao.github.io/2018/06/24/4-Encoding-Blocks-You-Need-to-Know-Besides-LSTM-RNN-in-Tensorflow/
