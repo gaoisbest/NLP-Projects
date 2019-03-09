@@ -92,15 +92,15 @@ for i in range(len(words)):
     plt.text(U[i, 0], U[i, 1], words[i])
 ```
 
-![applying SVD](https://github.com/gaoisbest/NLP-Projects/blob/master/Word2vec/svd.png)
+![applying SVD](https://github.com/gaoisbest/NLP-Projects/blob/master/0_Word2vec/svd.png)
 
 ## 3. Word2vec
 ### Principle
 - Two model [2]
     - CBOW
-![](https://github.com/gaoisbest/NLP-Projects/blob/master/Word2vec/Word2vec_CBOW.png)
+![](https://github.com/gaoisbest/NLP-Projects/blob/master/0_Word2vec/Word2vec_CBOW.png)
     - Skip-gram
-![](https://github.com/gaoisbest/NLP-Projects/blob/master/Word2vec/Word2vec_Skip_gram.png)
+![](https://github.com/gaoisbest/NLP-Projects/blob/master/0_Word2vec/Word2vec_Skip_gram.png)
     - Both are **two layer MLP**
 - Two algorithms: Hierarchical softmax, Negative sampling.
 - Distributional hypothesis: **Similar words have similar context**.
@@ -140,9 +140,9 @@ I did a very simple performance comparsion of [gensim](https://radimrehurek.com/
 The input of the about sripts is [word_vector_108000.cs](https://pan.baidu.com/s/1i5Jy4lv), which contains 108,000 documents (15,000 training data and 3,000 testing data for each category, and 6 category in total).
 
 #### tensorflow
-I also implemented the [Word2vec in tensorflow](https://github.com/gaoisbest/NLP-Projects/blob/master/Word2vec/tf_2_word2vec.ipynb) based on CS20SI. The following image show the results, it looks good enough.
+I also implemented the [Word2vec in tensorflow](https://github.com/gaoisbest/NLP-Projects/blob/master/0_Word2vec/tf_2_word2vec.ipynb) based on CS20SI. The following image show the results, it looks good enough.
 
-![ ](https://github.com/gaoisbest/NLP-Projects/blob/master/Word2vec/tf_word2vec.png)
+![ ](https://github.com/gaoisbest/NLP-Projects/blob/master/0_Word2vec/tf_word2vec.png)
 
 ### Discussion
 - **The word orders are ignored in each window.**
@@ -158,7 +158,7 @@ Reference:
 ### Principle
 Global vectors for word representation (GloVe) uses global statistics to predict the probability of word `j` appearing in the context of word `i` with a **least square** objective.  
 ### Formula
-![](https://github.com/gaoisbest/NLP-Projects/blob/master/Word2vec/GolVe.png)  
+![](https://github.com/gaoisbest/NLP-Projects/blob/master/0_Word2vec/GolVe.png)  
 where `X` is word-word co-occurrence matrix.  
 The |GloVe vectors| can be viewed as **Keywords**, since the larger the co-occur the larger |GloVe vector| is.
 ### Difference with skip-gram
