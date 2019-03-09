@@ -1,10 +1,14 @@
 # Introduction
-Deep semantic match has broad applications in **information retrieval**, **question answering**, **dialog system**, **paraphrase**, etc.
+- Deep semantic match has broad applications in **information retrieval**, **question answering**, **dialog system**, **paraphrase**, etc.
+- In production (e.g., retrieval-based chatbot), **retrieval** (e.g., Elasticsearch) **+ rerank** (e.g., deep matching model) is two steps to perform information retrieval
+
 
 # Models
 ## Statistical models
 - TFIDF
-- BM25
+- [BM25 (BestMatch)](https://en.wikipedia.org/wiki/Okapi_BM25)
+    - `k1` is term frequency saturation (词频饱和度), value between `[1.2, 2.0]`
+    - `b` is field length normalization, value between `[0, 1]`, usually `0.75`
 - Query likelihood
 - [Jaccard](https://towardsdatascience.com/overview-of-text-similarity-metrics-3397c4601f50)
     - Size of intersection divided by size of union of two sets
