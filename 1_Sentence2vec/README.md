@@ -2,11 +2,11 @@
 - Word mover's distance: [paper](http://proceedings.mlr.press/v37/kusnerb15.pdf), [gensim example](https://markroxor.github.io/gensim/static/notebooks/WMD_tutorial.html)
 - [Extension of BOW based on word2vec](https://www.zhihu.com/question/29978268/answer/55338644): The sentence vector contains top 10 word vector similarity between each word of the sentence and the vocabulary.
 - [LSTM + AutoEncoder](https://www.zhihu.com/question/29978268/answer/114093723)
-- [SIF](https://github.com/gaoisbest/NLP-Projects/blob/master/Sentence2vec/SIF.py)
-- [Mean word vectors](https://github.com/gaoisbest/NLP-Projects/blob/master/Sentence2vec/Word2vec_mean.py)
-- [Doc2vec](https://github.com/gaoisbest/NLP-Projects/blob/master/Sentence2vec/Doc2vec_model.py)
-- [LDA](https://github.com/gaoisbest/NLP-Projects/blob/master/Sentence2vec/LDA_model.py)
-- [LSI](https://github.com/gaoisbest/NLP-Projects/blob/master/Sentence2vec/LSI_model.py)
+- [SIF](https://github.com/gaoisbest/NLP-Projects/blob/master/1_Sentence2vec/SIF.py)
+- [Mean word vectors](https://github.com/gaoisbest/NLP-Projects/blob/master/1_Sentence2vec/Word2vec_mean.py)
+- [Doc2vec](https://github.com/gaoisbest/NLP-Projects/blob/master/1_Sentence2vec/Doc2vec_model.py)
+- [LDA](https://github.com/gaoisbest/NLP-Projects/blob/master/1_Sentence2vec/LDA_model.py)
+- [LSI](https://github.com/gaoisbest/NLP-Projects/blob/master/1_Sentence2vec/LSI_model.py)
 - [Sent2vec](https://github.com/epfml/sent2vec)
 - [Simhash](https://leons.im/posts/a-python-implementation-of-simhash-algorithm/)
 - [Skip-Thought](https://papers.nips.cc/paper/5950-skip-thought-vectors.pdf)
@@ -40,11 +40,11 @@ print 'scipy cosine similarity: {}, sklearn similarity: {}'.format(1 - cosine(a,
 prediction time, the paragraph vectors are inferred by fixing the word vectors and training the new paragraph vector until convergence.
 - For PV-DM: using concatenation in PV-DM is often better than sum.
 
-![PV-DM](https://github.com/gaoisbest/NLP-Projects/blob/master/Sentence2vec/PV-DM.png)
+![PV-DM](https://github.com/gaoisbest/NLP-Projects/blob/master/1_Sentence2vec/PV-DM.png)
 
 - For PV-DBOW:
 
-![PV-DBOW](https://github.com/gaoisbest/NLP-Projects/blob/master/Sentence2vec/PV-DBOW.png)
+![PV-DBOW](https://github.com/gaoisbest/NLP-Projects/blob/master/1_Sentence2vec/PV-DBOW.png)
 
 - BOW features lose the ordering of the words and also ignore semantics of the words (Dot product of any two word vector is zero). Word vector concatenation reserve the word order.
 - Weighted averaging of word vectors loses the word order in the same way as the standard bag-of-words models do.
