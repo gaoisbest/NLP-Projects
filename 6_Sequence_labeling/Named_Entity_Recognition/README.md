@@ -14,7 +14,7 @@ Examples of structure learning:
 
 # Model
 ### Model architecture
-![](https://github.com/gaoisbest/NLP-Projects/blob/master/Sequence%20labeling%20-%20NER/images/Model_architecture.png)  
+![](https://github.com/gaoisbest/NLP-Projects/tree/master/6_Sequence_labeling/Named_Entity_Recognition/images/Model_architecture.png)  
 The above edited image is from [1] shows the model architecture.  
 
 **Embedding layer**: Word embedding (Word emb.) together with character representation (Char rep.) are as inputs to bi-directional LSTM layer.   
@@ -22,25 +22,25 @@ The above edited image is from [1] shows the model architecture.
 **CRF layer**: And the CRF layer gives the final prediction.  
 
 For embedding layer, **CNN** (to extract morphological information, such as prefix or suffix [3]) or **bi-directional LSTM** [4] can be used to obtain character representation. As to the performance, they have **no significant difference** [1]. See the image from [1] below:  
-![](https://github.com/gaoisbest/NLP-Projects/blob/master/Sequence%20labeling%20-%20NER/images/Character_representation.png)
+![](https://github.com/gaoisbest/NLP-Projects/tree/master/6_Sequence_labeling/Named_Entity_Recognition/images/Character_representation.png)
 
 ### Model formula
 For an input sequence `X`, which has `n` characters (i.e., ranges from `0` to `n-1`), and it has been padded with the `start` and `end` symbols. For the sequence predictions `y`, which also been padded with the `startTag` and `endTag`.  
 
-![](https://github.com/gaoisbest/NLP-Projects/blob/master/Sequence%20labeling%20-%20NER/images/X_y.png)
+![](https://github.com/gaoisbest/NLP-Projects/tree/master/6_Sequence_labeling/Named_Entity_Recognition/images/X_y.png)
 
 Paper [4] define its score to be  
 
-![](https://github.com/gaoisbest/NLP-Projects/blob/master/Sequence%20labeling%20-%20NER/images/S_X_y.png)
+![](https://github.com/gaoisbest/NLP-Projects/tree/master/6_Sequence_labeling/Named_Entity_Recognition/images/S_X_y.png)
 
-`P` (shape of [n+2, k+2], 2 means the padded sequence and tags) is the score matrix output by the bi-directional LSTM. And ![](https://github.com/gaoisbest/NLP-Projects/blob/master/Sequence%20labeling%20-%20NER/images/P_i_j.png) is the score of the ![](https://github.com/gaoisbest/NLP-Projects/blob/master/Sequence%20labeling%20-%20NER/images/j.png) tag of ![](https://github.com/gaoisbest/NLP-Projects/blob/master/Sequence%20labeling%20-%20NER/images/i.png) character.  
-`A` is the tag transition score matrix. And ![](https://github.com/gaoisbest/NLP-Projects/blob/master/Sequence%20labeling%20-%20NER/images/A_i_j.png) means the transition score from the tag `i` to tag `j`.  
+`P` (shape of [n+2, k+2], 2 means the padded sequence and tags) is the score matrix output by the bi-directional LSTM. And ![](https://github.com/gaoisbest/NLP-Projects/tree/master/6_Sequence_labeling/Named_Entity_Recognition/images/P_i_j.png) is the score of the ![](https://github.com/gaoisbest/NLP-Projects/tree/master/6_Sequence_labeling/Named_Entity_Recognition/images/j.png) tag of ![](https://github.com/gaoisbest/NLP-Projects/tree/master/6_Sequence_labeling/Named_Entity_Recognition/images/i.png) character.  
+`A` is the tag transition score matrix. And ![](https://github.com/gaoisbest/NLP-Projects/tree/master/6_Sequence_labeling/Named_Entity_Recognition/images/A_i_j.png) means the transition score from the tag `i` to tag `j`.  
 
 The softmax over all possible tag sequences gives the probability for the sequence `y`:  
-![](https://github.com/gaoisbest/NLP-Projects/blob/master/Sequence%20labeling%20-%20NER/images/p_y_X.png)
+![](https://github.com/gaoisbest/NLP-Projects/tree/master/6_Sequence_labeling/Named_Entity_Recognition/images/p_y_X.png)
 
 The goal is maximizing the log-probability of the correct tag sequence:  
-![](https://github.com/gaoisbest/NLP-Projects/blob/master/Sequence%20labeling%20-%20NER/images/log_p_y_X.png)
+![](https://github.com/gaoisbest/NLP-Projects/tree/master/6_Sequence_labeling/Named_Entity_Recognition/images/log_p_y_X.png)
 
 This can be solved by Forward-Backward (for computing probability) and Viterbi (for decoding best tags) algorithms.
 
