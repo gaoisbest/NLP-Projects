@@ -36,7 +36,7 @@
     - [Annoy](https://github.com/spotify/annoy)
     - [Faiss](https://github.com/facebookresearch/faiss)
     
-# [Evaluation metrics](https://github.com/gaoisbest/NLP-Projects/blob/master/Information_retrieval/materials_papers/IR_EvaluationMetrics.pdf)
+# [Evaluation metrics](https://github.com/gaoisbest/NLP-Projects/blob/master/7_Information_retrieval/materials_papers/IR_EvaluationMetrics.pdf)
 - Set retrieval
     - Precision
         - Proportion of retrieved documents that are relevant, `|retrieved & relevant| / |retrieved|`
@@ -49,7 +49,7 @@
         - Proportion of top-k documents that are relevant
     - Recall@k
         - Proportion of relevant documents that are in the top-k
-    ![](https://github.com/gaoisbest/NLP-Projects/blob/master/Information_retrieval/materials_papers/Precision_at_k_recall_at_k_example.png)
+    ![](https://github.com/gaoisbest/NLP-Projects/blob/master/7_Information_retrieval/materials_papers/Precision_at_k_recall_at_k_example.png)
     
     - Precision-recall curve
     
@@ -58,13 +58,13 @@
         - **Mean Average Precision (MAP)**
             - Take mean of average precisions across a set of queries
         - Example: Number of relevant documents for thisquery is 10
-    ![](https://github.com/gaoisbest/NLP-Projects/blob/master/Information_retrieval/materials_papers/Average_precision_part_1.png)
-    ![](https://github.com/gaoisbest/NLP-Projects/blob/master/Information_retrieval/materials_papers/Average_precision_part_2.png)
+    ![](https://github.com/gaoisbest/NLP-Projects/blob/master/7_Information_retrieval/materials_papers/Average_precision_part_1.png)
+    ![](https://github.com/gaoisbest/NLP-Projects/blob/master/7_Information_retrieval/materials_papers/Average_precision_part_2.png)
     
     - Discounted Cumulative Gain (DCG)
         - Assumption: more than two levels of relevance
         - **Normalized Discounted Cumulative Gain (NDCG)**
-    ![](https://github.com/gaoisbest/NLP-Projects/blob/master/Information_retrieval/materials_papers/Discounted_cumulative_gain.png)
+    ![](https://github.com/gaoisbest/NLP-Projects/blob/master/7_Information_retrieval/materials_papers/Discounted_cumulative_gain.png)
     
 
 # Tutorials
