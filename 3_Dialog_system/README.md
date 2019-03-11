@@ -68,6 +68,9 @@
     - [VHRED](https://arxiv.org/abs/1605.06069)
     - [Building End-To-End Dialogue Systems Using Generative Hierarchical Neural Network Models](https://arxiv.org/pdf/1507.04808.pdf)
     - [Context-sensitive ACL 2018](http://aclweb.org/anthology/C18-1206)
+  - **Avoid generic responses**
+    - [Mutual information](https://web.stanford.edu/class/cs224s/lectures/224s.17.lec12.pdf)
+  - [Cs224s slides](https://web.stanford.edu/class/cs224s/lectures/224s.17.lec12.pdf)
   
   
 ## 2.3 Hybrid 
