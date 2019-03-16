@@ -73,6 +73,7 @@
 - [基于GRU和am-softmax的句子相似度模型](https://spaces.ac.cn/archives/5743)
 - [Top competition solutions](https://github.com/Smilexuhc/Data-Competition-TopSolution)
 - [问题对语义相似度计算-参赛总结](https://mp.weixin.qq.com/s?__biz=MzU4OTczNTg2OQ==&mid=2247484262&idx=1&sn=d5fb0df4e5aa641065c1b8c2df4142ef&chksm=fdc9b1b4cabe38a2103e5082ed2abccd7b375d79bafceec74576250d6a0dbb0c2e8f28a0ef81&mpshare=1&scene=23&srcid=0106iH7dvawP51FBLHUJ2Chb)
+- [平安人寿-智能问答系统的探索与实践](https://www.bilibili.com/video/av46314741/), [pdf](https://github.com/gaoisbest/NLP-Projects/blob/master/7_Information_retrieval/materials_reports/%E5%B9%B3%E5%AE%89%E4%BA%BA%E5%AF%BF_%E6%99%BA%E8%83%BD%E9%97%AE%E7%AD%94%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%8E%A2%E7%B4%A2%E4%B8%8E%E5%AE%9E%E8%B7%B5.pdf)
 
 # Industrial applications
 - [Sogou IR](https://mp.weixin.qq.com/s/9RFp4-2M0FSgD2A2LE7scA)
