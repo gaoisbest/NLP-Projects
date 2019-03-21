@@ -5,3 +5,4 @@ Extract structured information from an unstructured text. Noun phrase
 
 # Competition
 - [2019 Baidu Language and Intelligence Challenge](http://lic2019.ccf.org.cn/kg)
+- [2018 FDDC](https://tianchi.aliyun.com/competition/entrance/231659/introduction)
