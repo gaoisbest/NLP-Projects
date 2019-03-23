@@ -114,15 +114,16 @@ for i in range(len(words)):
     - cbow: **smaller datasets**, skip-gram: **larger datasets**. 
     - CBOW smoothes over a lot of the distributional information (by treating an entire context as one observation), useful for **smaller datasets**. Skip-gram treats each context-target pair as a new observation, and tends to do better when **larger datasets**.
 
+### Negative Sampling
+Negative samples are selected proportional to its frequency (`f(w)^3/4`, this power makes **less frequent words be sampled more often**). Frequent words (such as the, and) are [subsampling](http://mccormickml.com/2017/01/11/word2vec-tutorial-part-2-negative-sampling/) .
+For each word in one sentence, it can be deleted or not according its frequency. And the hyper-parameter sampling rate (i.e., `sample` in [gensim](https://radimrehurek.com/gensim/models/word2vec.html) `Word2Vec`, default value is `1e-3`)
+
 ### [Comparisons of HS and NS](https://code.google.com/archive/p/word2vec/):
 * hierarchical softmax (better for infrequent words) vs negative sampling (better for frequent words, better with low dimensional vectors), [why](https://stats.stackexchange.com/questions/180076/why-is-hierarchical-softmax-better-for-infrequent-words-while-negative-sampling)?
 * sub-sampling of frequent words: can improve both accuracy and speed for large data sets (useful values are in range 1e-3 to 1e-5), [why](https://www.quora.com/How-does-sub-sampling-of-frequent-words-work-in-the-context-of-Word2Vec)?
 * dimensionality of the word vectors: usually more is better, but not always
 * context (window) size: for skip-gram usually around 10, for CBOW around 5
 
-### Negative Sampling
-Negative samples are selected proportional to its frequency (`f(w)^3/4`). Frequent words (such as the, and) are [subsampling](http://mccormickml.com/2017/01/11/word2vec-tutorial-part-2-negative-sampling/) .
-For each word in one sentence, it can be deleted or not according its frequency. And the hyper-parameter sampling rate (i.e., `sample` in [gensim](https://radimrehurek.com/gensim/models/word2vec.html) `Word2Vec`, default value is `1e-3`)
 
 ### Implementation
 
