@@ -10,7 +10,7 @@
     - **User domain specific intent detection**: text classification (We can incorporate preceding text information during perform classification, see [7])
     - **Slot filling**: sequence labeling
         - **Parameters** of the INTENT
-        - [**Joint learning of intent identification and slot filling**](https://www.ijcai.org/Proceedings/16/Papers/425.pdf)
+        - Since **slots are intent-specific**, we can [**Joint learning of intent identification and slot filling**](https://www.ijcai.org/Proceedings/16/Papers/425.pdf)
     - Industrial
         - To avoid OOV
             - Character-based classification and sequence labeling
