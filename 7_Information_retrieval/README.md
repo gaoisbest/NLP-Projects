@@ -36,7 +36,8 @@
     - [MatchZoo](https://github.com/NTMC-Community/MatchZoo)
     - [Annoy](https://github.com/spotify/annoy)
     - [Faiss](https://github.com/facebookresearch/faiss)
-    
+## Learning to Rank
+- LambdaMART
 # [Evaluation metrics](https://github.com/gaoisbest/NLP-Projects/blob/master/7_Information_retrieval/materials_papers/IR_EvaluationMetrics.pdf)
 - Set retrieval
     - Precision
