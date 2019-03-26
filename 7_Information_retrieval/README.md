@@ -31,6 +31,7 @@
     - DSSM
     - CDSSM
     - ARC-I
+- **[Model Review: A Deep Look into Neural Ranking Models for Information Retrieval](https://arxiv.org/pdf/1903.06902.pdf)**
 - Implementation
     - [MatchZoo](https://github.com/NTMC-Community/MatchZoo)
     - [Annoy](https://github.com/spotify/annoy)
