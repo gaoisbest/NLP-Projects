@@ -39,6 +39,8 @@
             - Agenda based
             ![](https://github.com/gaoisbest/NLP-Projects/blob/master/3_Dialog_system/materials_others/DM_Agenda_based.png)
         - [Markov Decision Process](https://web.stanford.edu/class/cs224s/lectures/224s.17.lec11.pdf)
+            - Components: **Agent, Environment, State, Action, Reward**
+            - Goal: the agent’s goal is to **maximize the cumulative rewards** (i.e., expected *discounted* (i.e., care more about the immediate reward over future rewards, discount rate γ) return of rewards)
         ![](https://github.com/gaoisbest/NLP-Projects/blob/master/3_Dialog_system/materials_others/DM_Markov_decision_process.png)
         - [Neural network](https://web.stanford.edu/class/cs224s/lectures/224s.17.lec12.pdf)
         ![](https://github.com/gaoisbest/NLP-Projects/blob/master/3_Dialog_system/materials_others/DM_End_to_end.png)
