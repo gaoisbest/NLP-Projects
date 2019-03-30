@@ -41,6 +41,13 @@
         - [Markov Decision Process](https://web.stanford.edu/class/cs224s/lectures/224s.17.lec11.pdf)
             - Components: **Agent, Environment, State, Action, Reward**
             - Goal: the agent’s goal is to **maximize the cumulative rewards** (i.e., expected *discounted* (i.e., care more about the immediate reward over future rewards, discount rate γ) return of rewards)
+            - **Policy**: what's the probability for an agent to select any **action** from a given state ?
+            - **Value function**: how good is any given action or any given state for an agent ?
+            - **Q-function**: input the state-atcion pair, output the **Q-value**. The letter **“Q”** is used to represent the **quality** of taking a given action in a given state.
+            - **Bellman optimality equation**
+                - ![](https://github.com/gaoisbest/NLP-Projects/blob/master/3_Dialog_system/materials_others/Bellman_optimality_equation.png)
+                - For any state-action pair `(s,a)` at time `t`, the expected return is `R_(t+1)` (i.e. the expected reward we get from taking action `a` in state `s`) + the maximum expected discounted return that can be achieved from any possible next state-action pair.
+            
         ![](https://github.com/gaoisbest/NLP-Projects/blob/master/3_Dialog_system/materials_others/DM_Markov_decision_process.png)
         - [Neural network](https://web.stanford.edu/class/cs224s/lectures/224s.17.lec12.pdf)
         ![](https://github.com/gaoisbest/NLP-Projects/blob/master/3_Dialog_system/materials_others/DM_End_to_end.png)
