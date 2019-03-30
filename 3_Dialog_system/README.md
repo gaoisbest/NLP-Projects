@@ -54,14 +54,12 @@
                     - Initialize all Q-values in the Q-table to 0
                     - For each time-step in each episode:
                         - Choose an action (using the exploration-exploitation trade-off, i.e., **epsilon greedy** strategy)
-                            - ```
-                            if random_num > epsilon:
-                                # choose action via exploitation: choose the action with the highest Q-value for its current state
-                            else:
-                                # choose action via exploration: randomly choosing action
-                            ```
+                            - `if random_num > epsilon:` choose action via **exploitation**: choose the action with the highest Q-value for its current state
+                            - `else:` choose action via **exploration**: randomly choosing action
                         - Update the Q-value function
                             - ![](https://github.com/gaoisbest/NLP-Projects/blob/master/3_Dialog_system/materials_others/Q-value_formula.png)
+                            - where α is the **learning rate**, γ is the **discount rate**
+
             
         ![](https://github.com/gaoisbest/NLP-Projects/blob/master/3_Dialog_system/materials_others/DM_Markov_decision_process.png)
         - [Neural network](https://web.stanford.edu/class/cs224s/lectures/224s.17.lec12.pdf)
