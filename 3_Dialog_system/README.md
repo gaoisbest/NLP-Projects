@@ -59,8 +59,15 @@
                         - Update the Q-value function
                             - ![](https://github.com/gaoisbest/NLP-Projects/blob/master/3_Dialog_system/materials_others/Q-value_formula.png)
                             - where α is the **learning rate**, γ is the **discount rate**
-
-            
+            - **DQN**
+                - Use a neural network to approximate the Q-function
+                - **Input** the state, **output** the Q-values for each action that can be taken from that state, the **loss** is the gap between the output Q-values (by policy network) and the target Q-values (by target network) from Bellman equation
+                - **Experience replay**: store the agent’s experiences at each time step called the **replay memory** data set, which stores the last `N` experiences. At time `t`, the agent's experience `e_t` is defined as this tuple: `e_t=(s_t, a_t, r_t+1, s_t+1)`
+                - **Train** the network with **randomly choose** the samples in replay memory to **break the correlation between consecutive samples**
+                - **Target network**
+                    - Clone of the policy network, weights are frozen with policy network’s weights, and after `x` time steps, copy policy network's weights to target network
+                    - The goal of target network is find the value of the `max` term in Bellman euqation to calculate the target Q-value
+ 
         ![](https://github.com/gaoisbest/NLP-Projects/blob/master/3_Dialog_system/materials_others/DM_Markov_decision_process.png)
         - [Neural network](https://web.stanford.edu/class/cs224s/lectures/224s.17.lec12.pdf)
         ![](https://github.com/gaoisbest/NLP-Projects/blob/master/3_Dialog_system/materials_others/DM_End_to_end.png)
