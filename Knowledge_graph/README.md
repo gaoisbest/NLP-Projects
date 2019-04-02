@@ -84,6 +84,7 @@
 - [Zhishi.me](http://zhishi.me/) ensembles Baidu Baike, Hudong Baike and Chinese Wikipedia. [Dump data](http://openkg.cn/dataset/zhishi-me-dump)
 - [Agriculture Knowledge Graph](https://github.com/qq547276542/Agriculture_KnowledgeGraph)
 - [Knowledge graph demo](https://github.com/Shuang0420/knowledge_graph_demo)
+- [KBQA based on ES](http://openkg.cn/tool/elasticsearch-kbqa)
 
 # Reference
 [1] [NLP笔记-Relation Extraction](http://www.shuang0420.com/2017/04/10/NLP%E7%AC%94%E8%AE%B0%20-%20Relation%20Extraction/)  
