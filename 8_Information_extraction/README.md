@@ -4,6 +4,7 @@ Extract structured information from an unstructured text. Noun phrase
 [Review](https://mp.weixin.qq.com/s/NDBzWxf5uzumwZnj1ihHHw)
 
 # Tools
+- [MITIE](https://github.com/mit-nlp/MITIE)
 - [duckling](https://github.com/facebook/duckling)
 
 # Competition
