@@ -140,6 +140,7 @@
     - [Rasa Core](https://github.com/RasaHQ/rasa_core)
     - [Rasa UI](https://github.com/paschmann/rasa-ui)
     - `tensorflow_embedding` in NLU from [StarSpace: Embed All The Things!](https://github.com/gaoisbest/NLP-Projects/blob/master/3_Dialog_system/materials_others/StarSpace-Embed%20_All_The_Things!.pdf)
+    - [Chinese chatbot example](https://github.com/zqhZY/_rasa_chatbot)
 - [DialogFlow](https://dialogflow.com/)
 - [ChatterBot](https://github.com/gunthercox/ChatterBot)
 - [Rokid](https://www.rokid.com/cn/)
