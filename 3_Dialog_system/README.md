@@ -136,6 +136,7 @@
 - [Pandorabots](https://home.pandorabots.com/home.html)
 - [Wit.ai](https://wit.ai/)
 - [Rasa](https://www.rasa.com/)
+    - [Rasa NLU](https://github.com/RasaHQ/rasa_nlu), [Rasa Core](https://github.com/RasaHQ/rasa_core)
     - `tensorflow_embedding` in NLU from [StarSpace: Embed All The Things!](https://github.com/gaoisbest/NLP-Projects/blob/master/3_Dialog_system/materials_others/StarSpace-Embed%20_All_The_Things!.pdf)
 - [DialogFlow](https://dialogflow.com/)
 - [ChatterBot](https://github.com/gunthercox/ChatterBot)
