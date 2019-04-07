@@ -126,8 +126,9 @@ For each word in one sentence, it can be deleted or not according its frequency.
 
 
 ### Implementation
-
-#### gensim and fastText
+#### fastText
+For building word vectors, [fasttext](https://fasttext.cc/docs/en/unsupervised-tutorial.html) is extremely fast. The `input` format is a text corpus file which contains several lines. Each line includes **segmented word by whitespace**.
+#### gensim
 I did a very simple performance comparsion of [gensim](https://radimrehurek.com/gensim/models/word2vec.html) and [fastText](https://github.com/facebookresearch/fastText) based on the same hyper-parameters, the results of gensim seems little better than that of fastText (without n-gram).
 
 `gensim_Word2vec_cbow_hs_model_test.py`: gensim based on cbow model and hierarchical softmax trick.
