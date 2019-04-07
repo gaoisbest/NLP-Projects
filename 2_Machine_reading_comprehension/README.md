@@ -147,6 +147,7 @@ For machine reading comprehension (mrc), [Deep read: A reading comprehension sys
 - ROUGE-L
 
 # In action
+- [Sougou MRC Toolkit](https://github.com/sogou/SMRCToolkit), [paper](https://arxiv.org/pdf/1903.11848.pdf)
 - [2019 Dureader competition](http://lic2019.ccf.org.cn/read)
 - [2018 DuReader competition summary](https://github.com/gaoisbest/NLP-Projects/blob/master/2_Machine_reading_comprehension/materials_papers/2018_DuReader_top_solution_summary.pdf)
 - [Naturali video version](https://mp.weixin.qq.com/s/6nAm1sJrAj3qqUAagwWutg), [text version](http://tech.163.com/18/0729/10/DNSH3QU600098IEO.html)
