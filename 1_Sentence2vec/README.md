@@ -50,4 +50,18 @@ prediction time, the paragraph vectors are inferred by fixing the word vectors a
 - Weighted averaging of word vectors loses the word order in the same way as the standard bag-of-words models do.
 - For long documents, bag-of-words models perform quite well.
 
+# Split Chinese sentence
+```
+# from https://github.com/fxsjy/jieba/issues/575
+resentencesp = re.compile(r'([﹒﹔﹖﹗．；。！？]["’”」』]{0,2}|：(?=["‘“「『]{1,2}|$))')
 
+def split_paragraph(sentence):
+    s = sentence
+    slist = []
+    for i in resentencesp.split(s):
+        if resentencesp.match(i) and slist:
+            slist[-1] += i
+        elif i:
+            slist.append(i)
+    return slist
+```
