@@ -3,7 +3,7 @@
 - [Extension of BOW based on word2vec](https://www.zhihu.com/question/29978268/answer/55338644): The sentence vector contains top 10 word vector similarity between each word of the sentence and the vocabulary.
 - [LSTM + AutoEncoder](https://www.zhihu.com/question/29978268/answer/114093723)
 - [SIF](https://github.com/gaoisbest/NLP-Projects/blob/master/1_Sentence2vec/SIF.py)
-- [Mean word vectors](https://github.com/gaoisbest/NLP-Projects/blob/master/1_Sentence2vec/Word2vec_mean.py)
+- [Mean-pooling](https://github.com/gaoisbest/NLP-Projects/blob/master/1_Sentence2vec/Word2vec_mean.py) / max-pooling of word vectors / LSTM hidden states
 - [Doc2vec](https://github.com/gaoisbest/NLP-Projects/blob/master/1_Sentence2vec/Doc2vec_model.py)
 - [LDA](https://github.com/gaoisbest/NLP-Projects/blob/master/1_Sentence2vec/LDA_model.py)
 - [LSI](https://github.com/gaoisbest/NLP-Projects/blob/master/1_Sentence2vec/LSI_model.py)
