@@ -9,8 +9,8 @@ Natural Language Processing projects, which includes concepts and scripts about:
 - Knowledge_graph: [introduction](https://github.com/gaoisbest/NLP-Projects/blob/master/Knowledge_graph/README.md)
 - Pretraining_LM: [introduction](https://github.com/gaoisbest/NLP-Projects/blob/master/Pretraining_LM/README.md), principle of ELMo, ULMFit, GPT and BERT
 
-# Important concepts
-## 1. Attention
+# Concepts
+### 1. Attention
 - Attention == **weighted averages**
 - The attention [review 1](https://lilianweng.github.io/lil-log/2018/06/24/attention-attention.html) and [review 2](https://zhuanlan.zhihu.com/p/31547842) summarize attention mechanism into several types:
     - Additive vs Multiplicative attention
@@ -18,7 +18,7 @@ Natural Language Processing projects, which includes concepts and scripts about:
     - Soft vs Hard attention
     - Global vs Local attention
 
-## 2. CNNs, RNNs and Transformer
+### 2. CNNs, RNNs and Transformer
 - **Parallelization** [1]
     - RNNs
         - Why not good ? 
@@ -62,11 +62,11 @@ Natural Language Processing projects, which includes concepts and scripts about:
 
 
 
-### References
+#### References
 - [1] [Review](https://zhuanlan.zhihu.com/p/54743941)
 - [2] [Why self-attention? A targeted evaluation of neural machine translation architectures](http://aclweb.org/anthology/D18-1458)
 
-## 3. Layer Normalization, batch normalization
+### 3. Layer Normalization, batch normalization
 Layer normalization is a normalization method in deep learning that is similar to batch normalization. In layer normalization, the statistics are computed across each feature and are independent of other examples. The independence between inputs means that each input has a different normalization operation.
 
 
@@ -76,12 +76,15 @@ Layer normalization is a normalization method in deep learning that is similar t
 - [Tencent NLP](http://nlp.qq.com/)
 
 # Awesome packages
-## Chinese
+### Chinese
 - [pyltp](http://pyltp.readthedocs.io/zh_CN/develop/api.html)
 - [HanLP](http://hanlp.linrunsoft.com/index.html)
 
-## English
+### English
 - [Spacy](https://spacy.io)
 - [gensim](https://radimrehurek.com/gensim/)
 - [Install tensorflow with one line](https://towardsdatascience.com/tensorflow-gpu-installation-made-easy-use-conda-instead-of-pip-52e5249374bc): `conda install tensorflow-gpu`
 
+# Future directions
+- [Multi-task learning](http://web.stanford.edu/class/cs224n/slides/cs224n-2019-lecture17-multitask.pdf)
+- [Self-training](http://web.stanford.edu/class/cs224n/slides/cs224n-2019-lecture20-future.pdf)
