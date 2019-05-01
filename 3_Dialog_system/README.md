@@ -1,6 +1,7 @@
 # Dialog system categories
 - **Task-oriented** (in closed domain) vs **Non-task-oriented** (i.e., chat bots [8], in open domain) [1]
 - **Generative** vs **retrieval-based**
+- **Question answering** tells us how to do and **dialogue system** tells us the steps to do it successfully.
 
 # 1. Task-oriented
 ## 1.1 Pipeline
@@ -122,7 +123,15 @@
 
 # Tutorials
 - [阿里巴巴高级算法专家李永彬：小蜜智能对话开发平台的技术探索与场景实践](https://www.bilibili.com/video/av50791818/?redirectFrom=h5)
-
+    - **Few-shot learning (小样本学习)** for intent classification
+        - Few-shot learning = [meta learning](https://lilianweng.github.io/lil-log/2018/11/30/meta-learning.html) + supervised learning)
+        - For solving any-intent few-sample problem
+        - *Few-Shot text classification with induction network*
+            - Capsules + dynamic routing
+    - DM
+        - RL
+    - User simulator
+        - Testing dialogue pipeline
 # Implementation
 - [wxpy](https://github.com/youfou/wxpy)
 - [wxBot](https://github.com/liuwons/wxBot)
