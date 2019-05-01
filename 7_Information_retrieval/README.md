@@ -67,7 +67,10 @@
         - Assumption: more than two levels of relevance
         - **Normalized Discounted Cumulative Gain (NDCG)**
     ![](https://github.com/gaoisbest/NLP-Projects/blob/master/7_Information_retrieval/materials_papers/Discounted_cumulative_gain.png)
-    
+
+# Books
+- [Learning to Rank for Information Retrieval](https://www.cda.cn/uploadfile/image/20151220/20151220115436_46293.pdf) by Tie-Yan Liu, 2015
+- [Learning to Rank for Information Retrieval and Natural Language Processing](http://www.iro.umontreal.ca/~nie/IFT6255/Books/Learning-to-rank.pdf) by Hang Li, 2011
 
 # Tutorials
 - [SIGIR 2018 Deep Learning for Matching in Search and Recommendation](https://www.comp.nus.edu.sg/~xiangnan/sigir18-deep.pdf)
