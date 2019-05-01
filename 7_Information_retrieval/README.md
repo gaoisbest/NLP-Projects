@@ -13,7 +13,8 @@
 - [Jaccard](https://towardsdatascience.com/overview-of-text-similarity-metrics-3397c4601f50)
     - Size of intersection divided by size of union of two sets
     - Word duplication does not matter
-    - ```
+    - 
+    ```
     def jaccard_sim(str1, str2): 
         a = set(str1.split()) 
         b = set(str2.split())
@@ -37,6 +38,15 @@
     - [Annoy](https://github.com/spotify/annoy)
     - [Faiss](https://github.com/facebookresearch/faiss)
 ## Learning to Rank
+- Use machine learning models to build ranking models
+- Features
+    - BM25
+    - PageRank
+    - Edit distance
+- Categories
+    - Pointwise
+    - Pariwise
+    - Listwise
 - LambdaMART
 # [Evaluation metrics](https://github.com/gaoisbest/NLP-Projects/blob/master/7_Information_retrieval/materials_papers/IR_EvaluationMetrics.pdf)
 - Set retrieval
