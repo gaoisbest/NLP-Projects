@@ -38,7 +38,7 @@ Natural Language Processing projects, which includes concepts and scripts about:
     - CNNs
         - Why not good ?
 	    - Single convolution can only caputure window-range dependency
-	- Solutions
+	- [Solutions](http://web.stanford.edu/class/cs224n/slides/cs224n-2019-lecture11-convnets.pdf)
 	    - Dilated CNNs
 	    - Deep CNNs
 	        - `N * [Convolution + skip-connection]`
