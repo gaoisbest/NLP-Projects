@@ -15,6 +15,7 @@ Represent every word as `|V|*1` vector, with one denotes the word index, and oth
 #### Pros and cons
 - Dot product of any two word vectors is zero, therefore, one-hot vector can not tell the words similarity.
 
+
 ### 1.1. Count vector
 
 |          | also |   coffee      |   drinking |       I        |     like      |     They     |     water    |
@@ -27,6 +28,14 @@ Represent every word as `|V|*1` vector, with one denotes the word index, and oth
 * Ignore the word order 
 * Filter low frequency words
 
+#### n-gram
+```
+def n_grams(text, n):
+    return [text[i:i+n] for i in range(len(text)-n+1)]
+a = ['I', 'love', 'you']
+print(n_grams(a, 2))
+
+```
 ### 1.2. TF-IDF
 
 `TF` = word count /  total word counts in the document. E.g., TF(water, Document 1) = 2/9.
@@ -41,6 +50,7 @@ Represent every word as `|V|*1` vector, with one denotes the word index, and oth
 
 #### Pros and cons
 * Penalising common words that appeared in the corpus.
+
 
 ## 2. Co-occurence matrix
 ### Principle
@@ -181,3 +191,5 @@ Let the word embedding dimension is 100, each word **gets embedded to a point** 
 
 ## 6. Pre-trained word embedding
 - [Tencent 200d Chinese embedding](https://ai.tencent.com/ailab/nlp/embedding.html)
+
+
