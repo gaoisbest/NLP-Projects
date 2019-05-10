@@ -84,9 +84,10 @@
 ### 3.3 DPCNN
 - To do
 
-## 4. HAN
+## 4. [HAN](https://github.com/gaoisbest/NLP-Projects/blob/master/4_Text_classification/materials_papers/HAN.pdf)
+
 #### References
-[1] [Data grand]()
+[1] 
 
 ## 5. Discussion
 - For long sentence, CNNs is better than RNNs [1].
@@ -99,6 +100,9 @@
 ### References
 [1] https://www.zhihu.com/question/41625896  
 [2] https://hanxiao.github.io/2018/06/25/4-Encoding-Blocks-You-Need-to-Know-Besides-LSTM-RNN-in-Tensorflow/?from=timeline&isappinstalled=0  
+
+# Tutorials
+- [1] [Data grand competition defense](https://github.com/gaoisbest/NLP-Projects/blob/master/4_Text_classification/materials_papers/%E8%BE%BE%E8%A7%82%E5%88%86%E7%B1%BB%E7%AB%9E%E8%B5%9B%E7%AD%94%E8%BE%A9ppt.pdf)
 
 # Sentiment analysis
 ## Tools
