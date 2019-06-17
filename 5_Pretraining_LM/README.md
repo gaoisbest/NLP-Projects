@@ -97,7 +97,37 @@
 - [Naturali](https://www.jianshu.com/p/aa2eff7ec5c1) gives details about BERT fine-tune
 - [bert-as-service](https://github.com/hanxiao/bert-as-service)
 - [Illustrated bert](https://jalammar.github.io/illustrated-bert/)
+- [pytorch bert](https://github.com/huggingface/pytorch-pretrained-BERT)
 
+### Application
+- QA [4]
+    - Steps
+        - step 1: convert long documents to passage, build inverted index
+        - step 2: retrieval top k candidates passage by BM25 + RM3
+        - step 3: input (query, passage) to BERT, output contains/not contains answer or answer 90i89i9uij4start/end position
+    - Papers
+        - End-to-End Open-Domain Question Answering with BERTserini
+        - FAQ Retrieval using Query-Qestion Similarity and BERT-Based Query-Answer Relevance
+        - A BERT Baseline for the Natural Questions
+        - Data Augmentation for BERT Fine-Tuning in Open-Domain Question Answering
+![](https://github.com/gaoisbest/NLP-Projects/blob/master/5_Pretraining_LM/materials_demos/QA_bert.jpg)
+
+- IR [4]
+    - Papers
+        - Simple Applications of BERT for Ad Hoc Document Retrieval [4.1]
+        - Passage Re-ranking with BERT
+        - Investigating the Successes and Failures of BERT for Passage Re-Ranking
+    - Dealing with long document
+        - Replace document with several sentences [4.1] with ASSUMPTION: query are related to some sentences in the document
+- Dialogue system [4]
+    - Single-turn
+        - BERT for Joint Intent Classification and Slot Filling
+    - Multi-turn
+        - Comparison of Transfer-Learning Approaches for Response Selection in Multi-Turn Conversations
+- Conclusion [4]
+    - BERT is good at **sentence matching** (may be the NSP task during pre-training) and **deep semantic feature extracting** (e.g., QA, but not excel at shallow feature task such as classification and sequence labeling).
+    - BERT is not good at **sequence generation**.
+        
 
 
 
@@ -152,3 +182,5 @@
 # References
 - [1] https://zhuanlan.zhihu.com/p/49271699?utm_medium=social&utm_source=wechat_session&wechatShare=2&from=timeline&isappinstalled=0
 - [2] [Transformer interpretation](https://www.jiqizhixin.com/articles/2018-01-10-20), [self attention](https://www.paperweekly.site/papers/notes/339)
+- [3] [Bert时代的创新：Bert应用模式比较及其它](https://zhuanlan.zhihu.com/p/65470719)
+- [4] [Bert时代的创新（应用篇）：Bert在NLP各领域的应用进展](https://zhuanlan.zhihu.com/p/68446772)
