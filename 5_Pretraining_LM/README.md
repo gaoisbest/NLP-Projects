@@ -121,9 +121,9 @@
         - Replace document with several sentences [4.1] with ASSUMPTION: query are related to some sentences in the document
 - Dialogue system [4]
     - Single-turn
-        - BERT for Joint Intent Classification and Slot Filling
+        - [BERT for Joint Intent Classification and Slot Filling](https://arxiv.org/pdf/1902.10909.pdf)
     - Multi-turn
-        - Comparison of Transfer-Learning Approaches for Response Selection in Multi-Turn Conversations
+        - [Comparison of Transfer-Learning Approaches for Response Selection in Multi-Turn Conversations](https://github.com/gaoisbest/NLP-Projects/blob/master/5_Pretraining_LM/materials_papers/Comparison_of_Transfer-Learning_Approaches_for_Response_Selection%20in_Multi-Turn_Conversations.pdf)
 - Conclusion [4]
     - BERT is good at **sentence matching** (may be the NSP task during pre-training) and **deep semantic feature extracting** (e.g., QA, but not excel at shallow feature task such as classification and sequence labeling).
     - BERT is not good at **sequence generation**.
