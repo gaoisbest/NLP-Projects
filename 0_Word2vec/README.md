@@ -38,7 +38,7 @@ print(n_grams(a, 2))
 ```
 ### 1.2. TF-IDF
 
-`TF` = word count /  total word counts in the document. E.g., TF(water, Document 1) = 2/9.
+`TF` = word count /  total word counts **in one document**. E.g., TF(water, Document 1) = 2/9.
 
 `IDF = log(N/n)`, `N` the number of documents in the corpus, `n` is the number of documents that word appears. E.g., IDF(They) = log(2/2) = 0.
 
