@@ -1,7 +1,7 @@
 # Outline
 - Text classification models
     - [Sogou corpus](http://www.sogou.com/labs/resource/cs.php)
-    - fastText
+    - [fastText](https://fasttext.cc/docs/en/support.html)
     - RNNs
     - CNNs
     - HAN
@@ -15,7 +15,7 @@
 - Just like Continuous BOW model, where the **center word** is replaced by the **label** now.   
 - In another view, fastText likes CNN configured with window size = `1` (unigram) or `n` (n-grams) and average pooling [2]. 
 - When training word vectors, fastText use **subword n-grams** information
-
+- When training text classification, fastText both has **subword n-grams** (i.e., `minn` and `maxn`) and **word n-grams** (i.e., `wordNgrams`) parameters
 ### Tricks
 - Fast: [**hierarchical softmax**](https://becominghuman.ai/hierarchical-softmax-as-output-activation-function-in-neural-network-1d19089c4f49)
     - Huffman tree. 
