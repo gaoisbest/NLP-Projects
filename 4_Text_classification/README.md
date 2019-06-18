@@ -14,6 +14,7 @@
 - Averaged word (with n-grams) vectors + softmax [1].   
 - Just like Continuous BOW model, where the **center word** is replaced by the **label** now.   
 - In another view, fastText likes CNN configured with window size = `1` (unigram) or `n` (n-grams) and average pooling [2]. 
+- When training word vectors, fastText use **subword n-grams** information
 
 ### Tricks
 - Fast: [**hierarchical softmax**](https://becominghuman.ai/hierarchical-softmax-as-output-activation-function-in-neural-network-1d19089c4f49)
