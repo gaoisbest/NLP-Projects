@@ -107,7 +107,7 @@
         - step 3: input (query, passage) to BERT, output contains/not contains answer or answer 90i89i9uij4start/end position
     - Papers
         - End-to-End Open-Domain Question Answering with BERTserini
-        - FAQ Retrieval using Query-Qestion Similarity and BERT-Based Query-Answer Relevance
+        - [FAQ Retrieval using Query-Qestion Similarity and BERT-Based Query-Answer Relevance](https://github.com/gaoisbest/NLP-Projects/blob/master/5_Pretraining_LM/materials_papers/FAQ_Retrieval_using_Query-Question_Similarity_and_BERT-Based_Query-Answer_Relevance.pdf)
         - A BERT Baseline for the Natural Questions
         - Data Augmentation for BERT Fine-Tuning in Open-Domain Question Answering
 ![](https://github.com/gaoisbest/NLP-Projects/blob/master/5_Pretraining_LM/materials_demos/QA_bert.jpg)
