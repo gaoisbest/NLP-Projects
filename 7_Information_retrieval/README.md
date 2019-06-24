@@ -27,6 +27,7 @@
     - ARC-II
     - DeepMatch
     - MatchPyramid
+    - [ESIM](https://github.com/gaoisbest/NLP-Projects/blob/master/7_Information_retrieval/materials_papers/ESIM.pdf)
     
 - **Representation-based**
     - DSSM
