@@ -128,7 +128,11 @@
     - BERT is good at **sentence matching** (may be the NSP task during pre-training) and **deep semantic feature extracting** (e.g., QA, but not excel at shallow feature task such as classification and sequence labeling).
     - BERT is not good at **sequence generation**.
         
-
+## XLNet
+### Principle
+- ELMO, GPT are autoregressive LM
+- BERT is denoising autoencoder (DAE), `[MASK]` is the noise
+### Implementation
 
 
 ## Transformer
