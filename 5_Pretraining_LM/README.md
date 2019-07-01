@@ -130,8 +130,15 @@
         
 ## XLNet
 ### Principle
-- ELMO, GPT are autoregressive LM
-- BERT is denoising autoencoder (DAE), `[MASK]` is the noise
+- Two paradigms
+    - ELMO, GPT, XLNet are autoregressive LM
+    - BERT is denoising autoencoder (DAE), `[MASK]` is the noise
+- BERT disadvantages
+    - The masked positions are independent
+    - Pretrain-finetune discrepancy
+- XLNet highlights
+    - Permutation LM
+    - Transformer-XL
 ### Implementation
 
 
