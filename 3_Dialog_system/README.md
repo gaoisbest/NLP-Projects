@@ -159,6 +159,13 @@
 ![](https://github.com/gaoisbest/NLP-Projects/blob/master/3_Dialog_system/materials_others/Rokid_frame.png)
 - [DeepPavlov](https://github.com/deepmipt/DeepPavlov)
 
+# Rasa demo
+- Rasa is a framework, we can define new component to replace official one
+- Steps:
+    - Generate data with [Chatito](https://rodrigopivi.github.io/Chatito/)
+    - Train rasa-nlu, define new component if necessary
+        - Increase nlu accuracy with `button` attribute
+
 
 # References
 [1] [A Survey on Dialogue Systems: Recent Advances and New Frontiers](https://arxiv.org/pdf/1711.01731.pdf)  
