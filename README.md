@@ -60,11 +60,25 @@ Natural Language Processing projects, which includes concepts and scripts about:
 - **Semantic features extraction** [2]
     - Transformer > CNNs == RNNs
 
+### 3. Pattern of DL in NLP models [3]
+- Data
+    - Pre-training (e.g., ELMO, BERT)
+    - Multi-task learning
+    - Transfer learning
+- Model
+    - Encoder
+        - CNNs, RNNs, Transformer
+    - Structure
+        - Sequential, Tree, Graph
+- Learning (change loss definition)
+    - Adversarial learning
+    - Reinforcement learning
 
 
 #### References
 - [1] [Review](https://zhuanlan.zhihu.com/p/54743941)
 - [2] [Why self-attention? A targeted evaluation of neural machine translation architectures](http://aclweb.org/anthology/D18-1458)
+- [3] [ACL 2019 oral](https://zhuanlan.zhihu.com/p/72725518?utm_source=wechat_timeline&utm_medium=social&utm_oi=35938507948032&wechatShare=1&s_r=0&from=timeline&isappinstalled=0)
 
 ### 3. Layer Normalization, batch normalization
 Layer normalization is a normalization method in deep learning that is similar to batch normalization. In layer normalization, the statistics are computed across each feature and are independent of other examples. The independence between inputs means that each input has a different normalization operation.
