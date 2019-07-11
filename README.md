@@ -61,16 +61,16 @@ Natural Language Processing projects, which includes concepts and scripts about:
     - Transformer > CNNs == RNNs
 
 ### 3. Pattern of DL in NLP models [3]
-- Data
+- **Data**
     - Pre-training (e.g., ELMO, BERT)
-    - Multi-task learning
-    - Transfer learning
-- Model
+    - [Multi-task learning](https://mp.weixin.qq.com/s/ulZBmyt_L-RgGEGhNxrHeQ)
+    - [Transfer learning](https://mp.weixin.qq.com/s/UJlmjFHWhnlXXJoRv4zkEQ)
+- **Model**
     - Encoder
         - CNNs, RNNs, Transformer
     - Structure
         - Sequential, Tree, Graph
-- Learning (change loss definition)
+- **Learning** (change loss definition)
     - Adversarial learning
     - Reinforcement learning
 
