@@ -66,6 +66,7 @@ Natural Language Processing projects, which includes concepts and scripts about:
     - [Multi-task learning](https://mp.weixin.qq.com/s/ulZBmyt_L-RgGEGhNxrHeQ)
     - Transfer learning, [ref_1](https://mp.weixin.qq.com/s/UJlmjFHWhnlXXJoRv4zkEQ), [ref_2](http://ruder.io/transfer-learning/)
         - Use source task/domain `S` to increase target task/domain `T`
+	- If `S` has a zero/one/few instances, we call it zero-shot, one-shot, few-shot learning, respectively
 - **Model**
     - Encoder
         - CNNs, RNNs, Transformer
