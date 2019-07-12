@@ -64,7 +64,8 @@ Natural Language Processing projects, which includes concepts and scripts about:
 - **Data**
     - Pre-training (e.g., ELMO, BERT)
     - [Multi-task learning](https://mp.weixin.qq.com/s/ulZBmyt_L-RgGEGhNxrHeQ)
-    - [Transfer learning](https://mp.weixin.qq.com/s/UJlmjFHWhnlXXJoRv4zkEQ)
+    - Transfer learning, [ref_1](https://mp.weixin.qq.com/s/UJlmjFHWhnlXXJoRv4zkEQ), [ref_2](http://ruder.io/transfer-learning/)
+        - Use source task/domain `S` to increase target task/domain `T`
 - **Model**
     - Encoder
         - CNNs, RNNs, Transformer
