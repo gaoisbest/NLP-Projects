@@ -195,6 +195,8 @@ For machine reading comprehension (mrc), [Deep read: A reading comprehension sys
     - [R^3](https://arxiv.org/pdf/1709.00023.pdf)
 - [Search](https://mp.weixin.qq.com/s/GrEfupJdAUFSp2l-myA1Ig)
     - Summarization -> KBQA -> MRC
+    
+    
 # Take-home messages
 - **Context**
     - [Minimal context in ACL 2018](https://arxiv.org/pdf/1805.08092.pdf)
@@ -209,5 +211,8 @@ For machine reading comprehension (mrc), [Deep read: A reading comprehension sys
 - **Unanswerable question type**
     - [Add padding position](https://github.com/gaoisbest/NLP-Projects/blob/master/2_Machine_reading_comprehension/materials_papers/I_Know_There_Is_No_Answer_Modeling_Answer_Validation_for_MRC.pdf)
     - [Trainable bias](https://arxiv.org/pdf/1706.04115.pdf)
+    - [Two-Stage Synthesis Networks for Transfer Learning in Machine Comprehension](https://github.com/davidgolub/QuestionGeneration)
+        - Based on SQuAD, train answer and question generation network `gen`
+        - For new dataset, use `gen` to generate new question, answer datasets, then train new MRC model based on these datasets
 
     
