@@ -28,6 +28,7 @@
     - DeepMatch
     - MatchPyramid
     - [ESIM](https://github.com/gaoisbest/NLP-Projects/blob/master/7_Information_retrieval/materials_papers/ESIM.pdf)
+    - [Kernel pooling network](https://arxiv.org/pdf/1706.06613.pdf)
     
 - **Representation-based**
     - DSSM
