@@ -130,14 +130,16 @@
         
 ## XLNet
 ### Principle
-- Two paradigms
+- [Two paradigms](https://zhuanlan.zhihu.com/p/70257427)
     - ELMO, GPT, XLNet are autoregressive LM
     - BERT is denoising autoencoder (DAE), `[MASK]` is the noise
         - The masked positions are independent
         - Pretrain-finetune discrepancy
 - XLNet highlights
-    - Permutation LM
-    - Transformer-XL
+    - Permutation LM for **bidirectional context** in AR framework
+        - Two-Stream Self-Attention
+    - Transformer-XL for **long document**
+    - More data
 ### Implementation
 - [official codes](https://github.com/zihangdai/xlnet)
 
