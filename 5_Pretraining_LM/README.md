@@ -138,7 +138,11 @@
 - XLNet highlights
     - Permutation LM for **bidirectional context** in AR framework
         - Two-Stream Self-Attention
-    - Transformer-XL for **long document**
+    - [Transformer-XL(eXtra Long)](https://arxiv.org/pdf/1901.02860.pdf) for **long document**
+        - Highlights
+            - Segment-level recurrence with state reuse
+            - Relative positional encoding
+        - [Official codes](https://github.com/kimiyoung/transformer-xl)
     - More data
 ### Implementation
 - [official codes](https://github.com/zihangdai/xlnet)
