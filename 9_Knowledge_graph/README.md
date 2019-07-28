@@ -20,7 +20,7 @@
 - **2. Knowledge extraction from 1.3 Unstructured data**
   - **2.1 Entity extraction**
     - Value/number detection and recognition
-    - [Running example](https://github.com/gaoisbest/NLP-Projects/blob/master/Sequence%20labeling%20-%20NER/README.md)
+    - [Running example](https://github.com/gaoisbest/NLP-Projects/blob/master/6_Sequence_labeling/Named_Entity_Recognition/README.md)
     - **Entity linking**
       - Definition: Find the entity (i.e., **entity mention** 实体指称项) in text and linking it to existing knowledge graph
       - Entity Disambiguation 实体消歧, page rank
