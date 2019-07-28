@@ -1,13 +1,39 @@
 # NLP-Projects
 Natural Language Processing projects, which includes concepts and scripts about:
-- Word2vec: `gensim`, `fastText` and `tensorflow` implementations. See [Chinese notes](http://url.cn/5PKmy7W), [中文解读](http://url.cn/5PKmy7W).
-- Sentence2vec: `doc2vec`, `word2vec averaging` and `Smooth Inverse Frequency` implementations. See 
-- Text_classification: `tensorflow LSTM` (See [Chinese notes 1](http://url.cn/5cLDOQI), [中文解读 1](http://url.cn/5cLDOQI) and [Chinese notes 2](http://url.cn/5w5VbaI), [中文解读 2](http://url.cn/5w5VbaI)) and `fastText` implementations. 
-- Chinese_word_segmentation: `HMM Viterbi` implementations. See [Chinese notes](http://url.cn/5x4KR8u), [中文解读](http://url.cn/5x4KR8u).
-- Sequence_labeling-NER: brands NER via bi-directional LSTM + CRF, `tensorflow` implementation. See [Chinese notes](http://url.cn/5fcC754), [中文解读](http://url.cn/5fcC754).
-- Machine_reading_comprehension: [introduction](https://github.com/gaoisbest/NLP-Projects/blob/master/Machine_reading_comprehension/README.md), `BiDAF+ELMo` implementation.
-- Knowledge_graph: [introduction](https://github.com/gaoisbest/NLP-Projects/blob/master/Knowledge_graph/README.md)
-- Pretraining_LM: [introduction](https://github.com/gaoisbest/NLP-Projects/blob/master/Pretraining_LM/README.md), principle of ELMo, ULMFit, GPT and BERT
+- [0_Word2vec](https://github.com/gaoisbest/NLP-Projects/blob/master/0_Word2vec/README.md)
+    - `gensim`, `fastText` and `tensorflow` implementations. See [Chinese notes](http://url.cn/5PKmy7W), [中文解读](http://url.cn/5PKmy7W)
+
+- [1_Sentence2vec](https://github.com/gaoisbest/NLP-Projects/blob/master/1_Sentence2vec/README.md)
+    - `doc2vec`, `word2vec averaging` and `Smooth Inverse Frequency` implementations
+
+- [2_Machine_reading_comprehension](https://github.com/gaoisbest/NLP-Projects/blob/master/2_Machine_reading_comprehension/README.md)
+
+- [3_Dialog_system](https://github.com/gaoisbest/NLP-Projects/blob/master/3_Dialog_system/README.md)
+    - Categories and components of dialog system
+
+- [4_Text_classification](https://github.com/gaoisbest/NLP-Projects/blob/master/4_Text_classification/README.md)
+    - `tensorflow LSTM` (See [Chinese notes 1](http://url.cn/5cLDOQI), [中文解读 1](http://url.cn/5cLDOQI) and [Chinese notes 2](http://url.cn/5w5VbaI), [中文解读 2](http://url.cn/5w5VbaI))
+    - `fastText` implementation
+
+- [5_Pretraining_LM](https://github.com/gaoisbest/NLP-Projects/blob/master/5_Pretraining_LM/README.md)
+    - Principle of ELMo, ULMFit, GPT, BERT, XLNet
+
+- [6_Sequence_labeling](https://github.com/gaoisbest/NLP-Projects/blob/master/6_Sequence_labeling/README.md)
+    - [Chinese_word_segmentation](https://github.com/gaoisbest/NLP-Projects/blob/master/6_Sequence_labeling/Chinese_word_segmentation/README.md)
+        - `HMM Viterbi` implementations. See [Chinese notes](http://url.cn/5x4KR8u), [中文解读](http://url.cn/5x4KR8u)
+    - [Named_Entity_Recognition](https://github.com/gaoisbest/NLP-Projects/tree/master/6_Sequence_labeling/Named_Entity_Recognition)
+        - Brands NER via bi-directional LSTM + CRF, `tensorflow` implementation. See [Chinese notes](http://url.cn/5fcC754), [中文解读](http://url.cn/5fcC754)
+
+- [7_Information_retrieval](https://github.com/gaoisbest/NLP-Projects/blob/master/7_Information_retrieval/README.md)
+
+- [8_Information_extraction](https://github.com/gaoisbest/NLP-Projects/blob/master/8_Information_extraction/README.md)
+
+- [9_Knowledge_graph](https://github.com/gaoisbest/NLP-Projects/blob/master/9_Knowledge_graph/README.md)
+
+- [10_Text_generation](https://github.com/gaoisbest/NLP-Projects/blob/master/10_Text_generation/README.md)
+
+- [11_Network_embedding](https://github.com/gaoisbest/NLP-Projects/blob/master/11_Network_embedding/README.md)
+
 
 # Concepts
 ### 1. Attention
@@ -76,15 +102,10 @@ Natural Language Processing projects, which includes concepts and scripts about:
     - Adversarial learning
     - Reinforcement learning
 
-
 #### References
 - [1] [Review](https://zhuanlan.zhihu.com/p/54743941)
 - [2] [Why self-attention? A targeted evaluation of neural machine translation architectures](http://aclweb.org/anthology/D18-1458)
 - [3] [ACL 2019 oral](https://zhuanlan.zhihu.com/p/72725518?utm_source=wechat_timeline&utm_medium=social&utm_oi=35938507948032&wechatShare=1&s_r=0&from=timeline&isappinstalled=0)
-
-### 3. Layer Normalization, batch normalization
-Layer normalization is a normalization method in deep learning that is similar to batch normalization. In layer normalization, the statistics are computed across each feature and are independent of other examples. The independence between inputs means that each input has a different normalization operation.
-
 
 # Awesome public apis
 - [Baidu AI Open Platform](https://ai.baidu.com/)
