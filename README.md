@@ -88,11 +88,15 @@ Natural Language Processing projects, which includes concepts and scripts about:
 
 ### 3. Pattern of DL in NLP models [3]
 - **Data**
+    - Preprocess
+        - [Sub-word segmentation](https://medium.com/@makcedward/how-subword-helps-on-your-nlp-model-83dd1b836f46) to avoid OOV and reduce vocabulary size
+            - [sentencepiece](https://github.com/google/sentencepiece)
     - Pre-training (e.g., ELMO, BERT)
     - [Multi-task learning](https://mp.weixin.qq.com/s/ulZBmyt_L-RgGEGhNxrHeQ)
     - Transfer learning, [ref_1](https://mp.weixin.qq.com/s/UJlmjFHWhnlXXJoRv4zkEQ), [ref_2](http://ruder.io/transfer-learning/)
         - Use source task/domain `S` to increase target task/domain `T`
 	- If `S` has a zero/one/few instances, we call it zero-shot, one-shot, few-shot learning, respectively
+    
 - **Model**
     - Encoder
         - CNNs, RNNs, Transformer
