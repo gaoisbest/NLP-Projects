@@ -1,6 +1,6 @@
 # Introduction
 - Deep semantic match has broad applications in **information retrieval**, **question answering**, **dialog system**, **paraphrase**, etc.
-- In production (e.g., retrieval-based chatbot), **retrieval** (e.g., Elasticsearch) **+ rerank** (e.g., deep matching model) is two steps to perform information retrieval
+- In production (e.g., retrieval-based chatbot), **retrieval** (e.g., Elasticsearch, *inverted index*) + ** rerank** (e.g., deep matching model) is two steps to perform information retrieval
 
 
 # Models
@@ -13,7 +13,6 @@
 - [Jaccard](https://towardsdatascience.com/overview-of-text-similarity-metrics-3397c4601f50)
     - Size of intersection divided by size of union of two sets
     - Word duplication does not matter
-    - 
     ```
     def jaccard_sim(str1, str2): 
         a = set(str1.split()) 
@@ -34,6 +33,7 @@
     - DSSM
     - CDSSM
     - ARC-I
+    
 - **[Model Review: A Deep Look into Neural Ranking Models for Information Retrieval](https://arxiv.org/pdf/1903.06902.pdf)**
 - Implementation
     - [MatchZoo](https://github.com/NTMC-Community/MatchZoo)
