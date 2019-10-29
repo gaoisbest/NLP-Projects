@@ -147,6 +147,28 @@
 ### Implementation
 - [official codes](https://github.com/zihangdai/xlnet)
 
+## RoBERTa
+### Principle
+to do...
+
+### Implementation
+- [official codes](https://github.com/pytorch/fairseq/tree/master/examples/roberta)
+
+
+## DistilBERT, TinyBERT
+
+### Principle
+to do...
+
+### Implementation
+to do...
+
+## ALBERT
+### Principle
+to do...
+
+### Implementation
+to do...
 
 ## Transformer
 ### Principle
