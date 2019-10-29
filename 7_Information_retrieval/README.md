@@ -23,16 +23,20 @@
 
 ## Deep learning models
 - **Interaction-based** is **perfered**
-    - ARC-II
-    - DeepMatch
-    - MatchPyramid
-    - [ESIM](https://github.com/gaoisbest/NLP-Projects/blob/master/7_Information_retrieval/materials_papers/ESIM.pdf)
-    - [Kernel pooling network](https://arxiv.org/pdf/1706.06613.pdf)
+    - Principle
+        - ![](https://github.com/gaoisbest/NLP-Projects/blob/master/7_Information_retrieval/materials_pngs/Interaction_based.png)
+        - ![](https://github.com/gaoisbest/NLP-Projects/blob/master/7_Information_retrieval/materials_pngs/Type_of_interaction.png)
+    - Examples
+        - ARC-II, DeepMatch, MatchPyramid
+        - [ESIM](https://github.com/gaoisbest/NLP-Projects/blob/master/7_Information_retrieval/materials_papers/ESIM.pdf)
+        - [Kernel pooling network](https://arxiv.org/pdf/1706.06613.pdf)
     
 - **Representation-based**
-    - DSSM
-    - CDSSM
-    - ARC-I
+    - Principle
+        - ![](https://github.com/gaoisbest/NLP-Projects/blob/master/7_Information_retrieval/materials_pngs/Representation_based.png)
+        - ![](https://github.com/gaoisbest/NLP-Projects/blob/master/7_Information_retrieval/materials_pngs/Matching_functions.png)
+    - Examples
+        - DSSM, CDSSM, ARC-I
     
 - **[Model Review: A Deep Look into Neural Ranking Models for Information Retrieval](https://arxiv.org/pdf/1903.06902.pdf)**
 - Implementation
