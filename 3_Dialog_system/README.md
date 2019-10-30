@@ -121,6 +121,8 @@
 - [Wit.ai](https://wit.ai/)
 - [Rasa](https://www.rasa.com/)
     - [Rasa NLU](https://github.com/RasaHQ/rasa_nlu)
+        - [Intent classification](https://blog.rasa.com/rasa-nlu-in-depth-part-1-intent-classification/)
+        - [Entity recognition](https://blog.rasa.com/rasa-nlu-in-depth-part-2-entity-recognition/)
     - [Rasa Core](https://github.com/RasaHQ/rasa_core)
     - [Rasa UI](https://github.com/paschmann/rasa-ui)
     - `tensorflow_embedding` in NLU from [StarSpace: Embed All The Things!](https://github.com/gaoisbest/NLP-Projects/blob/master/3_Dialog_system/materials_others/StarSpace-Embed%20_All_The_Things!.pdf)
