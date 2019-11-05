@@ -147,15 +147,31 @@
 ### Implementation
 - [official codes](https://github.com/zihangdai/xlnet)
 
-## RoBERTa
+## RoBERTa (Robustly optimized BERT approach)
 ### Principle
-to do...
+- Dynamic masking
+    - Generate the masking pattern every time when feed a sequence to the model
+- FULL-SENTENCEs without NSP loss
+    - Each input is packed with full sentences sampled contiguously from one or more documents, such that the total length is at most 512 tokens. Inputs may cross document boundaries. When we reach the end of one document, we begin sampling sentences from the next document and add an extra separator token between documents
+    
+- Larger mini-batches
+    - 8K per batch
+- Larger byte-level BPE
+    - 50K sub-word units
 
 ### Implementation
 - [official codes](https://github.com/pytorch/fairseq/tree/master/examples/roberta)
 
 
-## DistilBERT, TinyBERT
+## DistilBERT
+
+### Principle
+to do...
+
+### Implementation
+to do...
+
+## TinyBERT
 
 ### Principle
 to do...
