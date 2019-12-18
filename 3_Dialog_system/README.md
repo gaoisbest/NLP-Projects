@@ -152,5 +152,6 @@
 [7] [Sequential Short-Text Classification with
 Recurrent and Convolutional Neural Networks](https://arxiv.org/pdf/1603.03827.pdf)  
 [8] [“Chitty-Chitty-Chat Bot”: Deep Learning for Conversational AI](https://www.ijcai.org/proceedings/2018/0778.pdf)  
-[9] [End-to-End Task-Completion Neural Dialogue Systems](http://aclweb.org/anthology/I17-1074), [implementation](https://github.com/MiuLab/TC-Bot)
+[9] [End-to-End Task-Completion Neural Dialogue Systems](http://aclweb.org/anthology/I17-1074), [implementation](https://github.com/MiuLab/TC-Bot)  
+[10] [任务型对话系统研究综述](https://github.com/gaoisbest/NLP-Projects/blob/master/3_Dialog_system/materials_others/%E4%BB%BB%E5%8A%A1%E5%9E%8B%E5%AF%B9%E8%AF%9D%E7%B3%BB%E7%BB%9F%E7%A0%94%E7%A9%B6%E7%BB%BC%E8%BF%B0.pdf)
 
