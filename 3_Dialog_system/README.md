@@ -1,7 +1,12 @@
-# Dialog system categories
-- **Task-oriented** (in closed domain) vs **Non-task-oriented** (i.e., chat bots [8], in open domain) [1]
-- **Generative** vs **retrieval-based**
-- **Question answering** tells us how to do and **dialogue system** tells us the steps to do it successfully.
+# Introduction
+- History
+    - Rule-based (e.g., [AIML](https://medium.com/pandorabots-blog/aiml-tutorial-creating-a-context-aware-multi-functional-chatbot-e5e82c027a6a))
+    - Statistical-based (e.g., POMDP (Partially Observable Markov Decision Process))
+    - Deep learning-based
+- Categories
+    - Task-oriented (in closed domain)
+    - Non-task-oriented (i.e., chat bots [8], in open domain) [1]
+- **Question answering** tells us how to do and **dialogue system** tells us the steps to do it successfully
 
 # 1. Task-oriented
 ## 1.1 Pipeline
@@ -155,5 +160,6 @@ Recurrent and Convolutional Neural Networks](https://arxiv.org/pdf/1603.03827.pd
 [8] [“Chitty-Chitty-Chat Bot”: Deep Learning for Conversational AI](https://www.ijcai.org/proceedings/2018/0778.pdf)  
 [9] [End-to-End Task-Completion Neural Dialogue Systems](http://aclweb.org/anthology/I17-1074), [implementation](https://github.com/MiuLab/TC-Bot)  
 [10] [任务型对话系统研究综述](https://github.com/gaoisbest/NLP-Projects/blob/master/3_Dialog_system/materials_others/%E4%BB%BB%E5%8A%A1%E5%9E%8B%E5%AF%B9%E8%AF%9D%E7%B3%BB%E7%BB%9F%E7%A0%94%E7%A9%B6%E7%BB%BC%E8%BF%B0.pdf)  
-[11] [多轮人机对话与对话管理技术探索与实践](https://mp.weixin.qq.com/s/k-Uatc59J1MxZY8ZaUwS8w)
+[11] [多轮人机对话与对话管理技术探索与实践](https://mp.weixin.qq.com/s/k-Uatc59J1MxZY8ZaUwS8w)  
+[12] [任务导向型对话系统——对话管理模型研究最新进展](https://mp.weixin.qq.com/s/6wSz8wAi0vrHebZ0EJ2sZA)
 
