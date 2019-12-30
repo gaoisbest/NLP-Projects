@@ -26,7 +26,8 @@
             - Zero-shot learning
             ![](https://github.com/gaoisbest/NLP-Projects/blob/master/3_Dialog_system/materials_others/Rokid_new_intent.png)
   - DM: Dialogue Management
-    - **Dialogue State Tracking**: estimates the goal at every turn. A probability distribution over each slot for each turn.
+    - **Dialogue State Tracking**: estimates the goal at every turn. A probability distribution over each slot for each turn
+        - [TRADE](https://github.com/gaoisbest/NLP-Projects/blob/master/3_Dialog_system/papers_DST/Transferable_Multi-Domain_State_Generator_for_Task-Oriented_Dialogue_Systems.pdf), with [implementation](https://github.com/jasonwu0731/trade-dst)
         
     - **Policy Learning**: generates next action
         - Supervised learning
