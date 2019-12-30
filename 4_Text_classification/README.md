@@ -116,6 +116,7 @@
         - Synthesis by SMOTE
         - Data augmentation by replacing verb or adjective
     - Down-sampling of major class
+    - [sample by multinormal distribution](https://github.com/ufoym/imbalanced-dataset-sampler)
 - Model
     - Ensemble
         - Bagging and Boosting
