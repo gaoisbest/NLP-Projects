@@ -1,7 +1,7 @@
 # Introduction
 - History
     - Rule-based (e.g., [AIML](https://medium.com/pandorabots-blog/aiml-tutorial-creating-a-context-aware-multi-functional-chatbot-e5e82c027a6a))
-    - Statistical-based (e.g., POMDP (Partially Observable Markov Decision Process): the next action is determined by an estimated current state)
+    - Statistical-based (e.g., [POMDP (Partially Observable Markov Decision Process)](http://mi.eng.cam.ac.uk/~sjy/papers/ygtw13.pdf): the next action is determined by an estimated current state)
     - Deep learning-based
 - Categories
     - Task-oriented (in closed domain)
