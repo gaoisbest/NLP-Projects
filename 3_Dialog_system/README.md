@@ -60,7 +60,7 @@
   - [2017_EACL_A Network-based End-to-End Trainable Task-oriented Dialogue System](https://arxiv.org/abs/1604.04562)
   - [2017_ICLR_Learning_end-to-end_goal_oriented_dialog](https://arxiv.org/abs/1605.07683): memory network
   
-  - see report of [Dr.Che](https://github.com/gaoisbest/NLP-Projects/blob/master/3_Dialog_system/NLPCC2018_Day3_Tencent_workshop_chewangxiang.pdf)
+  - Report of [Dr.Che](https://github.com/gaoisbest/NLP-Projects/blob/master/3_Dialog_system/materials_NLPCC2018/NLPCC2018_Day3_Tencent_workshop_chewangxiang.pdf)
 
 ## 1.3 Knowledge grounded
 - [Mem2Seq](https://github.com/HLTCHKUST/Mem2Seq)
