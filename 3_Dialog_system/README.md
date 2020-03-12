@@ -60,6 +60,7 @@
       - RL is based on **whole dialogue**, not each turn. A rule-based agent is used to warm-start the system (i.e., experience replay), via supervised learning. **Episode** is a whole dialogue. `s_t, a_t, r, s_t+1`
       - **Error control** to mimic mistake of real user
       - Based on `request_slots` (i.e., user want to ask) and `inform_slots` (i.e., user can provide) to generate simulation data
+      - A [simplified](https://github.com/maxbren/GO-Bot-DRL) version, and [blog](https://towardsdatascience.com/training-a-goal-oriented-chatbot-with-deep-reinforcement-learning-part-i-introduction-and-dce3af21d383), RECOMMEND!
   - [2017_EACL_A Network-based End-to-End Trainable Task-oriented Dialogue System](https://arxiv.org/abs/1604.04562)
   - [2017_ICLR_Learning_end-to-end_goal_oriented_dialog](https://arxiv.org/abs/1605.07683): memory network
   
