@@ -57,6 +57,9 @@
           
 ## 1.2 End-to-end
   - [2017_IJCNLP_End-to-End Task-Completion Neural Dialogue Systems.pdf](https://github.com/gaoisbest/NLP-Projects/blob/master/3_Dialog_system/materials_others/End-to-End_Task-Completion_Neural_Dialogue_Systems.pdf), [A_User_Simulator_for_Task-Completion_Dialogues](https://github.com/gaoisbest/NLP-Projects/blob/master/3_Dialog_system/materials_others/A_User_Simulator_for_Task-Completion_Dialogues.pdf): RL to train DM based on simulation data
+      - RL is based on **whole dialogue**, not each turn. A rule-based agent is used to warm-start the system (i.e., experience replay), via supervised learning. **Episode** is a whole dialogue. `s_t, a_t, r, s_t+1`
+      - **Error control** to mimic mistake of real user
+      - Based on `request_slots` (i.e., user want to ask) and `inform_slots` (i.e., user can provide) to generate simulation data
   - [2017_EACL_A Network-based End-to-End Trainable Task-oriented Dialogue System](https://arxiv.org/abs/1604.04562)
   - [2017_ICLR_Learning_end-to-end_goal_oriented_dialog](https://arxiv.org/abs/1605.07683): memory network
   
