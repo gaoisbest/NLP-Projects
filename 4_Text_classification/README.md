@@ -86,11 +86,24 @@
 - To do
 
 ## 4. [HAN](https://github.com/gaoisbest/NLP-Projects/blob/master/4_Text_classification/materials_papers/HAN.pdf)
-
 #### References
 [1] 
 
-## 5. Discussion
+## 5. [BERT](https://github.com/gaoisbest/NLP-Projects/blob/master/5_Pretraining_LM/materials_papers/How_to_fine-tune_bert_for_text_classification.pdf)
+- **Pre-training**
+    - *Within-task and in-domain* further can significantly boost its performance
+- **Fine-tuning**
+    - Features from different layers， the top layer of BERT is more useful for text classification
+    - With an appropriate layer-wise decreasing learning rate, BERT can overcome the catastrophic forgetting problem
+- **Long text**
+    - Truncation methods
+        - Head-only: keep the first 510 tokens
+        - Tail-only: keep the last 510 tokens
+        - Head+tail: empirically select the first 128 and the last 382 tokens
+    - Hierarchical methods
+        - The input text is firstly divided into k = L/510 fractions, which is fed into BERT to obtain the representation of the k text fractions. The representation of each fraction is the hidden state of the [CLS] tokens of the last layer. Then we use mean pooling, max pooling and self-attention to combine the representations of all the fractions
+
+## 6. Discussion
 - For long sentence, CNNs is better than RNNs [1].
 - **Long-term dependency** is **not significant** for text classification problem [2].
 - [Recursive NNs](https://nlp.stanford.edu/~socherr/EMNLP2013_RNTN.pdf) incorporate **syntax** information.
