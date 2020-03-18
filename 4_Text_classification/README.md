@@ -129,7 +129,7 @@
         - Synthesis by SMOTE
         - Data augmentation by replacing verb or adjective
     - Down-sampling of major class
-    - [sample by multinormal distribution](https://github.com/ufoym/imbalanced-dataset-sampler)
+    - [sample by multinormal distribution](https://github.com/jasonwu0731/trade-dst/blob/e6dce870361517a8b7c2865991e4a2303521c6b5/utils/utils_multiWOZ_DST.py#L351)
 - Model
     - Ensemble
         - Bagging and Boosting
