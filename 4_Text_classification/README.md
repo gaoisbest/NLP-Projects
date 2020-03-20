@@ -102,6 +102,7 @@
         - Head+tail: empirically select the first 128 and the last 382 tokens
     - Hierarchical methods
         - The input text is firstly divided into k = L/510 fractions, which is fed into BERT to obtain the representation of the k text fractions. The representation of each fraction is the hidden state of the [CLS] tokens of the last layer. Then we use mean pooling, max pooling and self-attention to combine the representations of all the fractions
+- [Official implementation](https://github.com/xuyige/BERT4doc-Classification)
 
 ## 6. Discussion
 - For long sentence, CNNs is better than RNNs [1].
@@ -135,7 +136,7 @@
         - Bagging and Boosting
     - One-class SVM
 - Loss function
-    - [Class_weight](https://blog.mimacom.com/text-classification/) is used as parameters to weight loss, **weight less frequent classes higher than very frequent classes**
+    - [Class_weight](https://blog.mimacom.com/text-classification/) is used as parameters to weight loss, **weight less frequent classes higher than very frequent classes**. [How to add class weight to `nn.CrossEntropyLoss`](https://discuss.pytorch.org/t/what-is-the-weight-values-mean-in-torch-nn-crossentropyloss/11455/10)
     ```
     from sklearn.utils import class_weight
     class_weight = class_weight.compute_class_weight('balanced', np.unique(y_train), y_train)
