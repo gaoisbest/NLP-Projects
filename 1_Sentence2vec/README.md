@@ -15,6 +15,7 @@
 
 # Sentence encoder example
 - https://hanxiao.github.io/2018/06/24/4-Encoding-Blocks-You-Need-to-Know-Besides-LSTM-RNN-in-Tensorflow/
+- [sentence-transformers](https://github.com/UKPLab/sentence-transformers), can be trained with sentence pairs (e.g., for copurs from text classification)
 
 # Distance
 ## Cosine distance
