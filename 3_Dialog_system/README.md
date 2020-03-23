@@ -18,6 +18,8 @@
         - **Parameters** of the INTENT
         - Since **slots are intent-specific**, we can [**Joint learning of intent identification and slot filling**](https://www.ijcai.org/Proceedings/16/Papers/425.pdf)
     - Industrial
+        - **Not slot**: for example, the user do not like something
+        - **Interchange of different intents**: when the bot ask the slot of one intent, the user ask another intent
         - To avoid OOV
             - Character-based classification and sequence labeling
             - Fasttext sub n-gram
