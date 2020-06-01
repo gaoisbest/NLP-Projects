@@ -1,4 +1,4 @@
-# Unsupervised sentence embedding models
+# Unsupervised models
 - Word mover's distance: [paper](http://proceedings.mlr.press/v37/kusnerb15.pdf), [gensim example](https://markroxor.github.io/gensim/static/notebooks/WMD_tutorial.html)
 - [Extension of BOW based on word2vec](https://www.zhihu.com/question/29978268/answer/55338644): The sentence vector contains top 10 word vector similarity between each word of the sentence and the vocabulary.
 - [LSTM + AutoEncoder](https://www.zhihu.com/question/29978268/answer/114093723)
@@ -12,6 +12,8 @@
 - [Skip-Thought](https://papers.nips.cc/paper/5950-skip-thought-vectors.pdf)
 - [Quick thoughts](https://arxiv.org/pdf/1803.02893.pdf)
 
+# Supervised models
+- [Sentence-BERT](https://github.com/UKPLab/sentence-transformers): pre-train Siamese BERT on SNLI data
 
 # Sentence encoder example
 - https://hanxiao.github.io/2018/06/24/4-Encoding-Blocks-You-Need-to-Know-Besides-LSTM-RNN-in-Tensorflow/
@@ -29,6 +31,10 @@ a = np.array([0, 1, 2, 3])
 b = np.array([0, 1, 3, 3]) 
 print 'scipy cosine similarity: {}, sklearn similarity: {}'.format(1 - cosine(a, b), cosine_similarity(a.reshape(1, -1), b.reshape(1, -1))[0][0])
 # scipy cosine similarity: 0.981022943176, sklearn similarity: 0.981022943176
+
+# scipy vectorization
+distances = scipy.spatial.distance.cdist(np.array([query_embedding]), [list of array], "cosine")[0]
+tmp_sims = 1 - distances
 
 ```
 ## Edit distance
