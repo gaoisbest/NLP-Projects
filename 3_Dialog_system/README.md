@@ -9,14 +9,15 @@
 - **Question answering** tells us how to do and **dialogue system** tells us the steps to do it successfully
 
 # 1. Task-oriented
-## 1.1 Pipeline
-  - ASR -> NLU -> DM -> NLG
+## 1.1 Pipeline (ASR -> NLU -> DM -> NLG)
   - NLU: maps the utterance into semantic slots
     - **Domain identification**: text classification
     - **User domain specific intent detection**: text classification (We can incorporate preceding text information during perform classification, see [7])
+        - [Contextual(i.e. multi-turn) SLU with memory network](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/06/IS16_ContextualSLU.pdf) and [implementation](https://github.com/yvchen/ContextualSLU)
     - **Slot filling**: sequence labeling
         - **Parameters** of the INTENT
         - Since **slots are intent-specific**, we can [**Joint learning of intent identification and slot filling**](https://www.ijcai.org/Proceedings/16/Papers/425.pdf)
+        - Add [lexicon feature](https://arxiv.org/pdf/1511.08308v4.pdf)
     - Industrial
         - **Not slot**: for example, the user do not like something
         - **Interchange of different intents**: when the bot ask the slot of one intent, the user ask another intent
@@ -28,7 +29,8 @@
             - Zero-shot learning
             ![](https://github.com/gaoisbest/NLP-Projects/blob/master/3_Dialog_system/materials_others/Rokid_new_intent.png)
   - DM: Dialogue Management
-    - **Dialogue State Tracking**: estimates the goal at every turn. A probability distribution over each slot for each turn
+    - **Dialogue State Tracking**: a probability distribution over each slot for each turn
+        - [DSTC](http://camdial.org/~mh521/dstc/downloads/handbook.pdf)
         - [TRADE](https://github.com/gaoisbest/NLP-Projects/blob/master/3_Dialog_system/papers_DST/Transferable_Multi-Domain_State_Generator_for_Task-Oriented_Dialogue_Systems.pdf), with [implementation](https://github.com/jasonwu0731/trade-dst)
         
     - **Policy Learning**: generates next action
