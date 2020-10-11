@@ -6,6 +6,9 @@
 - Categories
     - Task-oriented (in closed domain)
     - Non-task-oriented (i.e., chat bots [8], in open domain) [1]
+    - Question answering
+        - FAQ based
+        - KBQA
 - **Question answering** tells us how to do and **dialogue system** tells us the steps to do it successfully
 
 # 1. Task-oriented
@@ -98,6 +101,13 @@
   
 ## 2.3 Hybrid 
   - [Alime](http://www.aclweb.org/anthology/P/P17/P17-2079.pdf)
+
+# 3. Question answering
+## 3.1 FAQ based
+    - [FAQ automatically building](https://flashgene.com/archives/112570.html)
+    
+## 3.2 KBQA
+to do...
 
 
 # Dataset
