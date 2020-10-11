@@ -110,7 +110,8 @@
 
 
 # Implementation
-- [DialogFlow](https://dialogflow.com/)
+- [Baidu UNIT](https://ai.baidu.com/unit/home) and [lecture](https://mp.weixin.qq.com/s/7wX258Joi-bs_4FbWbwF0A)
+- [Google DialogFlow](https://dialogflow.com/) and [lecture](https://www.coursera.org/learn/conversational-experiences-dialogflow)
 - [Rasa](https://www.rasa.com/)
     - [Rasa NLU](https://github.com/RasaHQ/rasa_nlu)
         - [Intent classification](https://blog.rasa.com/rasa-nlu-in-depth-part-1-intent-classification/)
@@ -127,7 +128,6 @@
 - [WeRoBot](https://github.com/offu/WeRoBot): weChat bot
 - [Awesome-Chatbot](https://github.com/fendouai/Awesome-Chatbot) gives a list of public repositories about chatbot
 - [DeepPavlov](https://github.com/deepmipt/DeepPavlov)
-- [Baidu UNIT](https://ai.baidu.com/unit/home)
 - [Wit.ai](https://wit.ai/)
 - [ChatterBot](https://github.com/gunthercox/ChatterBot)
 - [pyDial](http://www.camdial.org/pydial/): The Cambridge University Python Multi-domain Statistical Dialogue System Toolkit
