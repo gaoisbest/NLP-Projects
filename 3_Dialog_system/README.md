@@ -13,10 +13,10 @@
   - NLU: maps the utterance into semantic slots
     - **Domain identification**: text classification
     - **User domain specific intent detection**: text classification (We can incorporate preceding text information during perform classification, see [7])
-        - [Contextual(i.e. multi-turn) SLU with memory network](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/06/IS16_ContextualSLU.pdf) and [implementation](https://github.com/yvchen/ContextualSLU)
+        - [Contextual(i.e. multi-turn) SLU with memory network](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/06/IS16_ContextualSLU.pdf) with  [implementation](https://github.com/yvchen/ContextualSLU) and [tutorial](https://www.coursera.org/learn/language-processing/lecture/3KFLa/adding-context-to-nlu)
     - **Slot filling**: sequence labeling
         - **Parameters** of the INTENT
-        - Since **slots are intent-specific**, we can [**Joint learning of intent identification and slot filling**](https://www.ijcai.org/Proceedings/16/Papers/425.pdf)
+        - Since **slots are intent-specific**, we can [**Joint learning of intent identification and slot filling**](https://www.ijcai.org/Proceedings/16/Papers/425.pdf), but [**put more emphasis** on slot error](https://arxiv.org/pdf/1703.07055.pdf)
         - Add [lexicon feature](https://arxiv.org/pdf/1511.08308v4.pdf)
     - Industrial
         - **Not slot**: for example, the user do not like something
