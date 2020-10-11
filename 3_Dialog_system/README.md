@@ -7,8 +7,8 @@
     - Task-oriented (in closed domain)
     - Non-task-oriented (i.e., chat bots [8], in open domain) [1]
     - Question answering
-        - FAQ based
-        - KBQA
+      - FAQ based
+      - KBQA
 - **Question answering** tells us how to do and **dialogue system** tells us the steps to do it successfully
 
 # 1. Task-oriented
@@ -104,7 +104,8 @@
 
 # 3. Question answering
 ## 3.1 FAQ based
-    - [FAQ automatically building](https://flashgene.com/archives/112570.html)
+  - [FAQ automatically building](https://flashgene.com/archives/112570.html)
+  - [Industrial experiences](https://zhuanlan.zhihu.com/p/50799128)
     
 ## 3.2 KBQA
 to do...
