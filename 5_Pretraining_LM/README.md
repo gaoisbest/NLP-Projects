@@ -163,29 +163,6 @@
 - [official codes](https://github.com/pytorch/fairseq/tree/master/examples/roberta)
 
 
-## DistilBERT
-
-### Principle
-to do...
-
-### Implementation
-to do...
-
-## TinyBERT
-
-### Principle
-to do...
-
-### Implementation
-to do...
-
-## ALBERT
-### Principle
-to do...
-
-### Implementation
-to do...
-
 ## Transformer
 ### Principle
 - Principle: each layer has two **sub-layers** (i.e., multi-head self-attention and position-wise feedforward), the output of each sub-layer is `LayerNorm(x+Sublayer(x))`. Additional **positional embedding** is added to embedding.
@@ -234,8 +211,10 @@ to do...
 # BERT, GPT, ELMo comparison
 ![](https://github.com/gaoisbest/NLP-Projects/blob/master/5_Pretraining_LM/materials_papers/BERT_GPT_ELMo_comparison.png)
 
+
 # References
 - [1] https://zhuanlan.zhihu.com/p/49271699?utm_medium=social&utm_source=wechat_session&wechatShare=2&from=timeline&isappinstalled=0
 - [2] [Transformer interpretation](https://www.jiqizhixin.com/articles/2018-01-10-20), [self attention](https://www.paperweekly.site/papers/notes/339)
 - [3] [Bert时代的创新：Bert应用模式比较及其它](https://zhuanlan.zhihu.com/p/65470719)
 - [4] [Bert时代的创新（应用篇）：Bert在NLP各领域的应用进展](https://zhuanlan.zhihu.com/p/68446772)
+- [5] [NLPCC 2020 tutorial](https://github.com/gaoisbest/NLP-Projects/blob/master/5_Pretraining_LM/materials_papers/NLPCC2020_Revisiting_Pre-Trained_Models_for_Natural_Language_Processing.pdf)
