@@ -7,6 +7,7 @@
 - [Huggingface transformers](https://github.com/huggingface/transformers) keeps sota pretraining language models, such as longformer and reformer for long document
 - Industrial experience for Chinese
     - [Electra](https://huggingface.co/transformers/model_doc/electra.html) is good for sequence labelling taks (e.g., correction), but worse in text classification, xlnet is worse in all nlp tasks
+- [TextBrewer](https://github.com/airaria/TextBrewer) is a model distillation toolkit
     
 # Models
 ## ELMo (Embeddings from Language Models)
