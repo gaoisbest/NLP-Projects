@@ -4,7 +4,10 @@
 - Two stages: unsupervised **pre-training** on large corpus, then supervised **feature-based** (e.g., ELMo, BERT) or **fine-tuning** (e.g., GPT, BERT) to downstream tasks
     - **Feature-based** strategy uses task-specific architecture that includes the pre-trained representations as additional features
     - **Fine-tuning** stragety introduces minimal task-specific parameters and is trained on downstream tasks by fine-tuning the pretrained parameters
-
+- [Huggingface transformers](https://github.com/huggingface/transformers) keeps sota pretraining language models, such as longformer and reformer for long document
+- Industrial experience for Chinese
+    - [Electra](https://huggingface.co/transformers/model_doc/electra.html) is good for sequence labelling taks (e.g., correction), but worse in text classification, xlnet is worse in all nlp tasks
+    
 # Models
 ## ELMo (Embeddings from Language Models)
 ### Principle
