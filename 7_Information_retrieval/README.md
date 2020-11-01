@@ -43,6 +43,12 @@
     - [MatchZoo](https://github.com/NTMC-Community/MatchZoo)
     - [Annoy](https://github.com/spotify/annoy)
     - [Faiss](https://github.com/facebookresearch/faiss)
+    - [HNSW](https://github.com/nmslib/hnswlib)
+        - How to get k-NN points for the query?
+            - The search starts from a random sample on the top layer. The search on one layer stops as no closer neighbor could be found. 
+            - The discovered closest neighbor on the current layer is treated as the starting point (i.e., “enter point”) of the search on the lower layer, until it reaches to the bottom layer
+            - The standard NN-Descent search is adopted to search for top-k nearest neighbors on this layer
+            
 ## Learning to Rank
 - Use machine learning models to build ranking models
 - Features
