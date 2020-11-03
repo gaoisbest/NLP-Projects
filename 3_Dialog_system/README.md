@@ -118,7 +118,8 @@ to do...
 - [Dialog State Tracking Challenge](https://www.microsoft.com/en-us/research/event/dialog-state-tracking-challenge/)
 - [Douban Conversation Corpus](https://github.com/MarkWuNLP/MultiTurnResponseSelection#douban-conversation-corpus)
 - [2017第六届全国社会媒体处理大会之中文人机对话技术评测](https://github.com/HITlilingzhi/SMP2017ECDT-DATA)
-
+- [MultiWOZ](https://github.com/budzianowski/multiwoz): contains 7 domain and 30 (do-main, slot) pairs
+- [CrossWOZ](https://github.com/thu-coai/CrossWOZ): Chinese Cross-Domain WOZ, it contains 5 domains (i.e., hotel, restaurant, attraction, metro, and taxi)
 
 # Implementation
 - [Baidu UNIT](https://ai.baidu.com/unit/home) and [lecture](https://mp.weixin.qq.com/s/7wX258Joi-bs_4FbWbwF0A)
@@ -134,6 +135,7 @@ to do...
     - [Chinese chatbot example](https://github.com/zqhZY/_rasa_chatbot)
 
 - [ConvLab](https://github.com/ConvLab/ConvLab): multi-domain end-to-end dialog system platform, aiming to enable researchers to quickly set up experiments
+- [ConvLab 2](https://github.com/thu-coai/ConvLab-2)
 - [wxpy](https://github.com/youfou/wxpy)
 - [wxBot](https://github.com/liuwons/wxBot)
 - [WeRoBot](https://github.com/offu/WeRoBot): weChat bot
