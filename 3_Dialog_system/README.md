@@ -32,7 +32,7 @@
             - Zero-shot learning
             ![](https://github.com/gaoisbest/NLP-Projects/blob/master/3_Dialog_system/materials_others/Rokid_new_intent.png)
   - DM: Dialogue Management
-    - **Dialogue State Tracking**: a probability distribution over each slot for each turn
+    - **Dialogue State Tracking**: aka belief state, is a probability distribution over each slot for each turn
         - [DSTC](http://camdial.org/~mh521/dstc/downloads/handbook.pdf)
         - [TRADE](https://github.com/gaoisbest/NLP-Projects/blob/master/3_Dialog_system/papers_DST/Transferable_Multi-Domain_State_Generator_for_Task-Oriented_Dialogue_Systems.pdf), with [implementation](https://github.com/jasonwu0731/trade-dst)
         
@@ -76,6 +76,12 @@
 ## 1.3 Knowledge grounded
 - [Mem2Seq](https://github.com/HLTCHKUST/Mem2Seq)
 - [GLMP](https://github.com/jasonwu0731/GLMP)
+
+## 1.4 User simulator
+- [How to Build User Simulators to Train RL-based Dialog Systems](https://github.com/wyshi/user-simulator)
+
+## 1.5 Additional concept
+- [Dialog act](http://vishnumenon.com/2019/02/12/dialog-acts/): more **general** intentions, such as statement, question, option
 
 
 # 2. Non-task-oriented
