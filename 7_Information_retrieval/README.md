@@ -41,6 +41,7 @@
 - **[Model Review: A Deep Look into Neural Ranking Models for Information Retrieval](https://arxiv.org/pdf/1903.06902.pdf)**
 - Implementation
     - [MatchZoo](https://github.com/NTMC-Community/MatchZoo)
+    - [SPTAG](https://github.com/microsoft/SPTAG)
     - [Annoy](https://github.com/spotify/annoy)
     - [Faiss](https://github.com/facebookresearch/faiss)
     - [HNSW](https://github.com/nmslib/hnswlib)
