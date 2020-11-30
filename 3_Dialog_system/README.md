@@ -116,6 +116,9 @@
 ## 3.2 KBQA
 to do...
 
+# 4. Dialogue history mining
+## 4.1  Intent automatic induction
+- [Alternating view k-means]()
 
 # Dataset
 - [bAbI](https://research.fb.com/downloads/babi/): book a table at a restaurant
