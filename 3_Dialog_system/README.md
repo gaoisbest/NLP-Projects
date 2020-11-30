@@ -108,17 +108,17 @@
 ## 2.3 Hybrid 
   - [Alime](http://www.aclweb.org/anthology/P/P17/P17-2079.pdf)
 
-# 3. Question answering
-## 3.1 FAQ based
-  - [FAQ automatically building](https://flashgene.com/archives/112570.html)
-  - [Industrial experiences](https://zhuanlan.zhihu.com/p/50799128)
-    
-## 3.2 KBQA
+# 3. KBQA
 to do...
 
 # 4. Dialogue history mining
 ## 4.1  Intent automatic induction
-- [Alternating view k-means]()
+- [Alternating view k-means](https://github.com/gaoisbest/NLP-Projects/blob/master/3_Dialog_system/materials_others/2019_Dialog_Intent_Induction_with_Deep_Multi-View_Clustering.pdf): two encoders (one for user first utterance, another for remaining dialogue), one encoder -> clustering -> update another encoder by prototypical training, and alternating the above step
+
+## 4.2 FAQ based
+  - [FAQ automatically building](https://flashgene.com/archives/112570.html)
+  - [Industrial experiences](https://zhuanlan.zhihu.com/p/50799128)
+    
 
 # Dataset
 - [bAbI](https://research.fb.com/downloads/babi/): book a table at a restaurant
