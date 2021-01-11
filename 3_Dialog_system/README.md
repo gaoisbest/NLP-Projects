@@ -31,6 +31,7 @@
         - New intent or new domain
             - Zero-shot learning
             ![](https://github.com/gaoisbest/NLP-Projects/blob/master/3_Dialog_system/materials_others/Rokid_new_intent.png)
+        - For [intent conflicts in multiple domain](https://github.com/gaoisbest/NLP-Projects/blob/master/3_Dialog_system/materials_others/2020_SIGIR_ServiceGroup%20A%20Human-Machine%20Cooperation%20Solution%20for%20Group%20Chat%20Customer%20Service.pdf), we can use [adversarial multi-task learning](https://www.aclweb.org/anthology/P17-1001/)
   - DM: Dialogue Management
     - **Dialogue State Tracking**: aka belief state, is a probability distribution over each slot for each turn
         - [DSTC](http://camdial.org/~mh521/dstc/downloads/handbook.pdf)
@@ -89,7 +90,9 @@
   - Given pre-defined responses, retrieval based model predict one response given current input context [2]
   - Two steps [3]:  
     - retrieval top-k response candidates by directly matching
+        - [Elasticsearch](https://github.com/gaoisbest/NLP-Projects/blob/master/3_Dialog_system/materials_others/2020_SIGIR_ServiceGroup%20A%20Human-Machine%20Cooperation%20Solution%20for%20Group%20Chat%20Customer%20Service.pdf)
     - reranking and give best candidate by incorporing context
+        - [Apply knlowledge distillation from BERT to ESIM](https://github.com/gaoisbest/NLP-Projects/blob/master/3_Dialog_system/materials_others/2020_SIGIR_ServiceGroup%20A%20Human-Machine%20Cooperation%20Solution%20for%20Group%20Chat%20Customer%20Service.pdf)
   - **Multi-turn matching**
     - [https://github.com/JasonForJoy/Leaderboards-for-Multi-Turn-Response-Selection](Leaderboard of state-of-the-art models)
   
